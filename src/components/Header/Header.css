@@ -1,7 +1,7 @@
 @reference "../../index.css";
 
 .section_header {
-  border-bottom: 1px solid var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-bge-alt);
 }
 
 .header_content {
