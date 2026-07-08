@@ -64,8 +64,9 @@
   --color-accent: #d1ff6e;
   --color-surface: #ebece2;
   --color-surface-alt: #e3e5d7;
-  --color-bg: #f8f9f3;
-  --color-bg-alt: #e4e5dc;
+  --color-bge: #f8f9f3;
+  --color-bge-alt: #e4e5dc;
+  --color-muted: #E9EBDE;
 
   /* --- Font Families --- */
   --font-base: "Inter Display", sans-serif;

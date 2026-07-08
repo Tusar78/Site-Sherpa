@@ -1,6 +1,18 @@
+import { useState } from "react";
+import {
+  circleIcon,
+  heroImgOne,
+  heroImgTwo,
+  heroImgThree,
+  heroImgFour,
+  shieldAlert,
+  audiLicense,
+} from "../../assets/images";
+import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 import "./Hero.css";
 
 function Hero() {
+  const [activeTab, setActiveTab] = useState("risk");
   return (
     <section className="section_hero">
       <div className="global-padding">
@@ -8,7 +20,14 @@ function Hero() {
           <div className="hero_content">
             <div className="hero_left">
               <div className="hero_badge">
-                <span className="hero_badge-dot"></span>
+                <div className="hero_badge-left">
+                  <img
+                    className="hero_badge-dot"
+                    src={circleIcon}
+                    alt="Shield icon"
+                  />
+                  <span className="hero_badge-txt">AI-Powered</span>
+                </div>
                 <span className="hero_badge-text">
                   Safety software built by operators, for operators
                 </span>
@@ -23,29 +42,59 @@ function Hero() {
               </p>
 
               <div className="hero_actions">
-                <button className="hero_cta">Book a demo</button>
-                <button className="hero_arrow-btn">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </button>
+                <PrimaryBtn href="#" text="Book a demo" />
               </div>
             </div>
 
             <div className="hero_visual">
-            <img
-              src="/src/assets/images/hero-mockup.png"
-              alt="SiteSherpa dashboard"
-              className="hero_image"
-            />
-          </div>
+              {/* Hero Visual Section - Right Side */}
+              <div className="hero_visual-bg"></div>
+
+              {/* Cards Container */}
+              <div className="hero_visual-elements">
+                <div className="hero_card-left">
+                  <div className="hero_card hero_card-site">
+                    <img src={heroImgTwo} alt="Site Details" />
+                  </div>
+
+                  <div className="hero_card hero_card-portrait">
+                    <img src={heroImgOne} alt="Safety Officer" />
+                  </div>
+                </div>
+                <div className="hero_card-right">
+                  <div className="hero_card hero_card-site">
+                    <img src={heroImgThree} alt="Site Details" />
+                  </div>
+
+                  <div className="hero_card hero_card-portrait">
+                    <img src={heroImgFour} alt="Safety Officer" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Tabs */}
+              <div className="hero_visual-tabs">
+                <div className="tab_container">
+                  {/* Risk Assessment Tab */}
+                  <button
+                    className={`tab_btn ${activeTab === "risk" ? "tab_btn--active" : ""}`}
+                    onClick={() => setActiveTab("risk")}
+                  >
+                    <img src={shieldAlert} alt="Risk" className="tab_icon" />
+                    Risk assessment
+                  </button>
+
+                  {/* Voice Incident Tab */}
+                  <button
+                    className={`tab_btn ${activeTab === "voice" ? "tab_btn--active" : ""}`}
+                    onClick={() => setActiveTab("voice")}
+                  >
+                    <img src={audiLicense} alt="Voice" className="tab_icon" />
+                    Voice Incident Logged
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
