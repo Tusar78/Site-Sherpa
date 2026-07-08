@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+/* ============================
+   FONT FACES
+============================ */
+@font-face {
+  font-family: "Inter Display";
+  src: url("./assets/fonts/InterDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("./assets/fonts/InterDisplay-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("./assets/fonts/InterDisplay-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Display";
+  src: url("./assets/fonts/InterDisplay-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Google Sans";
+  src: url("./assets/fonts/GoogleSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* ============================
+   THEME VARIABLES
+============================ */
+
+@theme {
+  /* --- Colors --- */
+  --color-primary: #072c2c;
+  --color-dark: #041a1a;
+  --color-accent: #d1ff6e;
+  --color-surface: #ebece2;
+  --color-surface-alt: #e3e5d7;
+  --color-bg: #f8f9f3;
+  --color-bg-alt: #e4e5dc;
+
+  /* --- Font Families --- */
+  --font-base: "Inter Display", sans-serif;
+  --font-body: "Google Sans", sans-serif;
+
+  /* --- Font Sizes (size + line-height + letter-spacing bundled) --- */
+  --text-h1: 60px;
+  --text-h1--line-height: 66px;
+  --text-h1--letter-spacing: -0.03em;
+
+  --text-h2: 48px;
+  --text-h2--line-height: 58px;
+  --text-h2--letter-spacing: -0.03em;
+
+  --text-h3: 40px;
+  --text-h3--line-height: 48px;
+  --text-h3--letter-spacing: -0.03em;
+
+  --text-h4: 28px;
+  --text-h4--line-height: 32px;
+
+  --text-medium: 18px;
+  --text-medium--line-height: 28px;
+
+  --text-regular: 16px;
+  --text-regular--line-height: 24px;
+
+  --text-small: 14px;
+  --text-small--line-height: 20px;
+
+  --text-xsmall: 13px;
+  --text-xsmall--line-height: 20px;
+
+  --text-caption: 16px;
+  --text-caption--line-height: 150%;
+
+  /* --- Gradients --- */
+  --gradient-teal: linear-gradient(
+    90deg,
+    #4cb38e 0%,
+    #005d71 31%,
+    #005d71 44%,
+    #005d71 54%,
+    #137f58 72%,
+    #1bb9bf 86%
+  );
+  --gradient-sunset: linear-gradient(
+    90deg,
+    #b64131 0%,
+    #f47430 33%,
+    #f5a53d 69%,
+    #b64131 100%
+  );
+}
+
+/* ============================
+   CUSTOM UTILITIES (Webflow Class-এর মতো)
+============================ */
+@utility container-regular {
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@utility global-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @variant md {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  @variant lg {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+
+body {
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-size: var(--text-regular);
+  color: var(--color-primary);
+  background: var(--color-bg);
+}

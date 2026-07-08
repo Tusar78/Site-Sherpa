@@ -1,0 +1,15 @@
+@reference "../../index.css";
+
+.hero_content {
+    @apply flex justify-between gap-10;
+}
+
+.hero_left {
+    @apply w-full flex flex-col items-start;
+    max-width: 520px;
+}
+
+.hero_badge {
+    @apply bg-surface-alt;
+
+}
