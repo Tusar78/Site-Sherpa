@@ -25,7 +25,9 @@
 }
 
 .partner_quote-text {
-  @apply text-medium;
+  @apply text-[20px];
+  line-height: 32px;
+  letter-spacing: -0.01em;
 }
 
 .partner_quote-author {

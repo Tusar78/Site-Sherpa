@@ -16,7 +16,7 @@
 }
 .header_logo-img {
   width: 92px;
-  height: 36px;
+  height: 35.5px;
 }
 
 .header_nav {
@@ -30,12 +30,12 @@
 
 .header_nav-link,
 .header_signin {
-  @apply font-medium text-primary;
+  @apply font-medium text-small;
+  line-height: 24px;
 }
 
 .header_cta {
-  @apply bg-accent font-medium flex items-center;
-  height: 40px;
-  padding: 10px 20px;
+  @apply bg-accent font-medium text-small flex items-center h-[40] py-2.5 px-5;
   border-radius: 6px;
+  cursor: pointer;
 }

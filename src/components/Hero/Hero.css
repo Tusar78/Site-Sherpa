@@ -29,23 +29,23 @@
 }
 
 .hero_badge-txt {
-  @apply bg-[image:var(--gradient-sunset)] bg-clip-text text-transparent;
+  @apply bg-[image:var(--gradient-sunset)] bg-clip-text text-transparent font-medium text-xsmall;
 }
 
 .hero_badge-text {
-  @apply bg-white text-primary/80 font-medium;
-  padding: 4px 8px;
+  @apply bg-white text-xsmall text-primary/80 font-medium;
+  padding: 2px 8px;
   border-radius: 4px;
 }
 
 .hero_title {
-  @apply text-h1 font-medium;
+  @apply text-h1 font-medium text-primary;
   margin: 12px 0 16px;
 }
 
 .hero_description {
-  @apply w-full text-regular text-primary/70;
-  max-width: 380px;
+  @apply w-full text-medium text-primary/70;
+  max-width: 396px;
   margin-bottom: 32px;
 }
 

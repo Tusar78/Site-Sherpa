@@ -8,11 +8,13 @@ function Header() {
         <div className="container-regular">
           <div className="header_content">
             <div className="header_logo">
-              <img
-                src={logo}
-                alt="Website logo"
-                className="header_logo-img"
-              />
+              <a href="#">
+                <img
+                  src={logo}
+                  alt="Website logo"
+                  className="header_logo-img"
+                />
+              </a>
             </div>
 
             <nav className="header_nav">
