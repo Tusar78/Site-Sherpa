@@ -1,0 +1,16 @@
+@reference "../../index.css";
+
+.primary-btn {
+  @apply flex items-center gap-1 w-fit;
+}
+
+.primary-btn_text {
+  @apply flex h-12 items-center bg-accent font-medium text-primary;
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+.primary-btn_icon {
+  @apply bg-accent text-primary w-12 h-12 flex items-center justify-center;
+  border-radius: 6px;
+}

@@ -1,6 +1,7 @@
 @reference "../../index.css";
 
 .section_header {
+  @apply bg-bge relative z-10;
   border-bottom: 1px solid var(--color-bge-alt);
 }
 

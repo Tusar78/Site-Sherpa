@@ -86,7 +86,7 @@
 }
 
 .tab_container {
-  @apply flex items-center overflow-hidden;
+  @apply flex items-center overflow-hidden bg-bge;
   border: 1px solid var(--color-surface-alt);
   border-radius: 8px;
   width: 416px;

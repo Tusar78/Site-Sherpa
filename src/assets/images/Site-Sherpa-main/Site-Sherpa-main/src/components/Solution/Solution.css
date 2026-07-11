@@ -1,0 +1,160 @@
+@reference "../../index.css";
+
+.solution_section {
+  @apply py-24 md:py-[250px] bg-[#031719];
+  background-image: url("../../assets/images/Solution/solution-bg.svg");
+  background-repeat: repeat-x;
+  background-position: -100px 0;
+}
+
+.solution_header {
+  @apply max-w-[890px] mb-12;
+}
+
+.solution_kicker {
+  @apply inline-flex gap-[7px] font-semibold uppercase text-[#6de3be];
+}
+
+.solution_kicker-dot {
+  @apply block w-2 h-2;
+}
+
+.solution_kicker-icon {
+  @apply w-6 h-6;
+}
+
+.solution_kicker-text {
+  @apply text-regular font-semibold uppercase;
+}
+
+.solution_header h2 {
+  @apply text-h2 text-white mt-[12px] md:mt-[16px];
+}
+
+.solution_layout {
+  @apply grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[24px] md:gap-[29px] items-start;
+}
+
+.solution_tabs {
+  @apply grid gap-0 ;
+}
+
+.solution_tab-item {
+  @apply relative md:gap-[19px] md:my-[19px];
+  border-bottom: 1px solid rgba(255, 255, 255, 0.747);
+}
+
+.solution_tab {
+  @apply flex items-center gap-[11px] w-full py-[19px] text-left text-base transition-all relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.solution_tab:hover {
+  @apply text-white;
+}
+
+.solution_tab--active {
+  @apply text-white pl-[31px];
+}
+
+.solution_tab-bullet {
+  @apply w-[20px] h-[20px] rounded-[6px] opacity-0 transition-all;
+  background: #d1ff6e;
+}
+
+.solution_tab--active .solution_tab-bullet {
+  @apply opacity-100;
+}
+
+.solution_tab-text {
+  @apply text-h4;
+}
+
+.solution_tab-indicator {
+  @apply absolute left-0 top-1/2 w-1 h-6 bg-[#d1ff6e] rounded-r transition-all;
+  transform: translateY(-50%);
+}
+
+.solution_tab-divider {
+  @apply h-px bg-gradient-to-r from-white/20 to-transparent mx-5;
+}
+
+.solution_panel {
+  @apply flex justify-center;
+}
+
+.solution_card {
+  @apply w-full rounded-[8px] border border-white/10 bg-gradient-to-br from-white/6 to-white/2  shadow-[0_20px_75px_rgba(0,0,0,0.25)];
+  background-color: #122323;
+}
+
+.solution_card-visual {
+  @apply flex items-center justify-center min-h-96 md:min-h-full py-8 md:py-0 px-8 md:px-8;
+  background: radial-gradient(circle at center, rgba(109, 227, 190, 0.05) 0%, rgba(3, 23, 25, 0.4) 100%);
+}
+
+.solution_card-image {
+  @apply w-full h-auto max-w-xs object-contain;
+}
+
+.solution_card-content {
+  @apply flex flex-col gap-[12px] py-8 md:py-8 pr-8 md:pr-8;
+}
+
+.solution_card-title {
+  @apply m-0 text-medium font-medium text-white;
+}
+
+.solution_card-description {
+  @apply m-0 text-medium font-medium  text-[#dfe7e6];
+}
+
+@media (max-width: 1023px) {
+  .solution_layout {
+    @apply grid-cols-1;
+  }
+
+  .solution_card {
+    @apply grid-cols-1;
+    gap: 1.5rem;
+  }
+
+  .solution_card-visual {
+    @apply min-h-72;
+  }
+}
+
+@media (max-width: 767px) {
+  .solution_section {
+    @apply py-18;
+  }
+
+  .solution_header h2 {
+    font-size: clamp(2rem, 7vw, 2.7rem);
+  }
+
+  .solution_card {
+    gap: 1rem;
+  }
+
+  .solution_card-visual {
+    @apply min-h-56 px-4;
+  }
+
+  .solution_card-content {
+    @apply py-6 px-4;
+  }
+
+  .solution_card-title {
+    @apply text-xl;
+  }
+
+  .solution_card-description {
+    @apply text-sm;
+  }
+
+  .solution_tab {
+    @apply px-4 py-3 text-sm gap-2;
+  }
+}

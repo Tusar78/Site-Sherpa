@@ -1,0 +1,139 @@
+@reference "../../index.css";
+
+.solution-section {
+  @apply w-full overflow-x-hidden bg-bge;
+}
+
+.solution-hero {
+  @apply relative w-full overflow-hidden; 
+}
+
+.solution-shadow {
+  @apply absolute z-10 w-full top-10;
+}
+
+.solution_shell-wrap {
+  @apply w-full bg-dark;
+}
+
+.solution-shell {
+  @apply w-full max-w-[1240px] mx-auto  pb-10 md:pb-14 lg:pb-20 xl:pb-28;
+}
+
+.solution-inner {
+  @apply mx-auto w-full max-w-[1240px] lg:relative flex justify-between gap-7;
+}
+
+.solution_header {
+  @apply relative z-10 mx-auto mb-12 max-w-[1240px];
+}
+
+.solution_subtext-wrapper {
+  @apply flex items-center gap-2 mt-[400px];
+}
+
+.solution_subtext-icon {
+  @apply w-[14px];
+}
+
+.solution_subtext {
+  @apply text-[15px] font-semibold font-body uppercase tracking-[0.2em] text-[#1BB9BF];
+}
+
+.solution_title {
+  @apply mt-[12px] text-h2 font-medium text-white max-w-[890px];
+}
+
+.solution_tabs-wrapper {
+  @apply relative z-10 w-full lg:max-w-[651px];
+}
+
+.solution_tablist {
+  @apply -mx-4 flex flex-nowrap gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:overflow-visible sm:px-0 sm:pb-0 md:gap-x-8 lg:block;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.solution_tablist::-webkit-scrollbar {
+  display: none;
+}
+
+.solution_tab {
+  @apply flex py-[19px] w-full items-center gap-3 text-h4 text-white/40;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.solution_tab:hover {
+  @apply text-white/70;
+}
+
+.solution_tab--active {
+  @apply rounded-md bg-white/[0.04] text-white sm:rounded-none sm:bg-transparent;
+}
+
+.solution_tab-bullet {
+  @apply h-5 w-5 shrink-0 rounded-[6px] bg-transparent opacity-0 transition duration-200 lg:ml-0;
+}
+
+.solution_tab-bullet.is-active {
+  @apply bg-[#D1FF6E] opacity-100;
+}
+
+.solution_tab:hover .solution_tab-bullet {
+  @apply bg-white/10 opacity-100;
+}
+
+.solution_tab-text {
+  @apply whitespace-nowrap font-['Inter_Display','Inter',sans-serif] text-[15px] font-medium leading-6 sm:whitespace-normal sm:text-[18px] sm:leading-6 md:text-[20px] md:leading-7 lg:whitespace-nowrap lg:text-[28px] lg:leading-8;
+}
+
+.solution-tab-fade {
+  animation: solutionTabFade 260ms ease-out both;
+}
+
+@keyframes solutionTabFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.solution_panel {
+  @apply w-full overflow-hidden rounded-lg bg-[#122323] max-w-[560px];
+}
+
+.solution_card {
+  @apply w-full overflow-hidden rounded-lg border border-white/10 bg-[#122323] h-full flex flex-col justify-between;
+}
+
+.solution_card-visual {
+  @apply flex min-h-[260px] items-center justify-center overflow-hidden h-[393px] relative;
+}
+
+.solution_card-visual-figure {
+  @apply flex h-full min-h-[260px] w-full max-w-full items-center justify-center overflow-hidden rounded-lg bg-[#122323] lg:min-h-0 lg:rounded-none;
+}
+
+.solution_card-image {
+  @apply h-auto max-h-[280px] w-full max-w-full object-contain object-center sm:max-h-[320px] md:h-full md:max-h-none md:object-cover lg:h-[540px] lg:w-[560px];
+}
+
+.solution_card-content {
+  @apply px-8 pt-7 pb-6 gap-3 ;
+}
+
+.solution_card-title {
+  @apply m-0 text-medium font-medium leading-7 text-white max-w-[406px];
+}
+
+.solution_card-description {
+  @apply mt-3 text-medium text-white/70 max-w-[406px];
+}
+
+.solution_btns {
+  @apply mt-8 lg:mt-14
+}

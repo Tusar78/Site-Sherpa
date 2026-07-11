@@ -120,6 +120,11 @@
     #f5a53d 69%,
     #b64131 100%
   );
+  --gradient-teal-alt: linear-gradient(
+    45deg,
+    #137F58 0%,
+    #1BB9BF 100%
+  );
 }
 
 /* ============================
@@ -151,5 +156,5 @@ body {
   font-weight: 400;
   font-size: var(--text-regular);
   color: var(--color-primary);
-  background: var(--color-bg);
+  background: var(--color-bge);
 }

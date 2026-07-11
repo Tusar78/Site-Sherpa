@@ -1,0 +1,68 @@
+@reference "../../index.css";
+
+.partner_section {
+  @apply w-full py-14
+}
+
+.partner_header {
+  @apply mb-[26px];
+}
+
+.partner_header-eyebrow {
+  @apply text-regular uppercase font-body font-semibold text-primary/50;
+}
+
+.partner_shell {
+  @apply rounded-[7px] border border-surface-alt bg-surface-alt p-[1px] grid md:grid-cols-[0.6fr_1.4fr] gap-[2px];
+}
+
+.partner_quote-card {
+  @apply flex flex-col justify-between
+         min-h-[280px] sm:min-h-[320px] md:min-h-[372px]
+         rounded-[4px] md:rounded-[7px]
+         bg-bge
+         p-4 md:p-5;
+}
+
+.partner_quote-text {
+  @apply text-medium;
+}
+
+.partner_quote-author {
+  @apply mt-8 flex items-center gap-4;
+}
+
+.partner_author-avatar {
+  @apply grid h-12 w-12 place-items-center rounded-[6px] overflow-hidden;
+}
+
+.partner_author-name {
+  @apply m-0 text-regular;
+}
+
+.partner_author-role {
+  @apply mt-[4px] text-small text-primary/60;
+}
+
+.partner_logo-grid {
+  @apply grid grid-cols-2 gap-[2px];
+}
+
+.partner_logo-card {
+  @apply flex min-h-[72px] md:min-h-[104px]
+         items-center justify-center
+         rounded-[5px] md:rounded-[7px]
+         bg-bge
+         p-2 md:p-4
+         text-center;
+}
+
+.partner_logo-image {
+  @apply h-[20px] sm:h-[30px] md:h-[35px] lg:h-[40px] w-full object-contain;
+}
+
+@media (min-width: 768px) {
+  .partner_logo-grid {
+    @apply grid-cols-4;
+  }
+}

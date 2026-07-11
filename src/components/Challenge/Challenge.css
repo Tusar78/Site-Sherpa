@@ -1,0 +1,160 @@
+@reference "../../index.css";
+
+.challenge_section {
+  @apply relative my-[222px];
+  background-image: url("../../assets/images/Challenge/challenge-bg.svg");
+  background-size: fill;
+  background-position: center;
+  max-width: 1294px;
+}
+
+.challenge_frame {
+  @apply  mx-auto w-full;
+}
+
+.challenge_inner {
+  @apply relative z-10 grid items-center justify-items-center gap-[72px];
+}
+
+.challenge_overlays {
+  @apply pointer-events-none absolute inset-0;
+}
+
+.challenge_float {
+  @apply absolute aspect-square w-[min(220px,22%)] max-w-[240px] object-contain opacity-[0.95];
+}
+
+.challenge_float-top-left {
+  top: 30px;
+  left: 30px;
+}
+
+.challenge_float-top-right {
+  top: 24px;
+  right: 24px;
+}
+
+.challenge_float-bottom-left {
+  bottom: 24px;
+  left: 24px;
+}
+
+.challenge_float-bottom-right {
+  bottom: 30px;
+  right: 30px;
+}
+
+.challenge_header {
+  @apply max-w-[720px] text-center;
+}
+
+.challenge_label {
+  @apply inline-flex items-center gap-2 text-[0.85rem] font-bold uppercase tracking-[0.24em] text-[#ec382c];
+}
+
+.challenge_label-icon {
+  @apply h-5 w-5 object-contain;
+}
+
+.challenge_label-text {
+  @apply inline-flex;
+}
+
+.challenge_header-title {
+  @apply mx-auto mt-[18px] max-w-[700px] text-[clamp(2.75rem,3.8vw,4.5rem)] leading-[1.05] text-primary;
+}
+
+.challenge_header-text {
+  @apply mx-auto mt-5 max-w-[560px] text-[1.05rem] leading-[1.9] text-primary/60;
+}
+
+.challenge_cards {
+  @apply grid w-full gap-8;
+}
+
+.challenge_cards_top,
+.challenge_cards_bottom {
+  @apply grid gap-8 md:grid-cols-2;
+}
+
+.challenge_card {
+  @apply relative min-h-[240px] overflow-hidden rounded-[32px] border border-[#c6ccbd]/55 bg-white/95 shadow-[0_20px_55px_rgba(15,31,31,0.08)];
+}
+
+.challenge_card-content {
+  @apply relative grid gap-[14px] px-8 py-9;
+}
+
+.challenge_card-title {
+  @apply m-0 text-[1.1rem] leading-[1.35] text-primary;
+}
+
+.challenge_card-text {
+  @apply m-0 leading-[1.75] text-primary/60;
+}
+
+@media (max-width: 1023px) {
+  .challenge_frame {
+    @apply min-h-0;
+  }
+
+  .challenge_inner {
+    @apply gap-[52px] px-5 py-8;
+  }
+
+  .challenge_header-title {
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+  }
+
+  .challenge_header-text {
+    font-size: 1rem;
+  }
+
+  .challenge_cards_top,
+  .challenge_cards_bottom {
+    @apply grid-cols-1 gap-6;
+  }
+
+  .challenge_float {
+    width: min(170px, 28%);
+  }
+
+  .challenge_float-top-left,
+  .challenge_float-top-right,
+  .challenge_float-bottom-left,
+  .challenge_float-bottom-right {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .challenge_overlays {
+    @apply hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .challenge_section {
+    @apply py-[72px] pb-[80px];
+  }
+
+  .challenge_inner {
+    @apply gap-9 px-4 py-6;
+  }
+
+  .challenge_card {
+    @apply rounded-[24px];
+  }
+
+  .challenge_card-content {
+    @apply px-[22px] py-7;
+  }
+
+  .challenge_header-title {
+    font-size: clamp(1.9rem, 7vw, 2.7rem);
+  }
+}

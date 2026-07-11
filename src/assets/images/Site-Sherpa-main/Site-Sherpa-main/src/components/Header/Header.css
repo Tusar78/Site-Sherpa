@@ -1,0 +1,40 @@
+@reference "../../index.css";
+
+.section_header {
+  border-bottom: 1px solid var(--color-bge-alt);
+}
+
+.header_content {
+  @apply w-full flex justify-between items-center;
+  height: 56px;
+}
+
+.header_logo {
+  @apply w-full;
+  max-width: 220px;
+}
+.header_logo-img {
+  width: 92px;
+  height: 36px;
+}
+
+.header_nav {
+  @apply flex gap-7;
+}
+
+.header_actions {
+  @apply w-full flex justify-end items-center gap-5;
+  max-width: 220px;
+}
+
+.header_nav-link,
+.header_signin {
+  @apply font-medium text-primary;
+}
+
+.header_cta {
+  @apply bg-accent font-medium flex items-center;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
