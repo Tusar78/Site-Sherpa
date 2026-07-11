@@ -9,7 +9,7 @@ import { ProblemSection } from "./components/Problem/Problem";
 import Solution from "./components/Solution/Solution";
 import { Testimonials } from "./components/Testimonials/Testimonials";
 import { UseCase } from "./components/UseCase/UseCase";
-import Challenge from "./components/challenge/Challenge";
+// import Challenge from "./components/challenge/Challenge";
 
 function App() {
   return (

@@ -15,7 +15,6 @@ export const FounderNote = ({
     boxSizing: 'border-box',
     position: 'relative',
     overflow: 'hidden',
-    marginBottom: "140px",
     backgroundColor: 'rgba(235, 236, 226, 1)',
     border: '1px solid rgba(227, 229, 215, 1)',
     borderRadius: '10px',
@@ -24,7 +23,7 @@ export const FounderNote = ({
     padding: 'clamp(32px, 5vw, 39px) clamp(28px, 6vw, 48px)',
     display: 'flex',
     flexDirection: 'column',
-    margin: 'auto',
+    margin: '0 auto 120px',
     ...style
   };
 
