@@ -142,10 +142,3 @@
   @apply absolute inset-0
 }
 
-.video_wrapper {
-  @apply w-4/5 h-auto overflow-hidden inset-0;
-}
-
-.video_element {
-  @apply w-full h-full object-cover;
-}

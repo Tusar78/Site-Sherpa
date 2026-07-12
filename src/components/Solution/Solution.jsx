@@ -188,19 +188,7 @@ function BookDemoButton(props) {
                 <div className="solution_card">
                   <div className="solution_card-visual">
                     <img className="solution_dotted-bg" src={dottedPattern} alt="pattern" />
-                    {/* <div className="video_wrapper">
-                      <video
-                        className="video_element"
-                        src={activePanel.videoUrl}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    </div> */}
-
+                    
                     <img src={activePanel.imgUrl} alt="" className="solution_img" style={{
                       maxWidth: activePanel.width,
                       height: activePanel.height

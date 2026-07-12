@@ -1,0 +1,9 @@
+@reference "../../index.css";
+
+.video_wrapper {
+  @apply w-full h-full overflow-hidden inset-0 rounded-[8px];
+}
+
+.video_element {
+  @apply w-full h-full object-cover;
+}

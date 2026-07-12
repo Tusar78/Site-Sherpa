@@ -105,13 +105,13 @@
 
   /* --- Gradients --- */
   --gradient-teal: linear-gradient(
-    90deg,
-    #4cb38e 0%,
-    #005d71 31%,
-    #005d71 44%,
-    #005d71 54%,
-    #137f58 72%,
-    #1bb9bf 86%
+    89deg,
+    #4cb38e -50.18%,
+    #005d71 -1.49%,
+    #005d71 18.64%,
+    #005d71 34.62%,
+    #137f58 61.8%,
+    #1bb9bf 83.11%
   );
   --gradient-sunset: linear-gradient(
     90deg,
