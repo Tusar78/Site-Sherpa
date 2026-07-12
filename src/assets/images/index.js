@@ -1,19 +1,69 @@
 import logo from "./logo.svg";
 import circleIcon from "./circleicon.png";
 import heroImgOne from "./hero-img (1).webp";
-import heroImgTwo from "./hero-img(2).webp"; 
-import heroImgThree from "./hero-img (3).webp"; 
-import heroImgFour from "./hero-img (4).webp"; 
-import shieldAlert from "./shield-alert.svg"; 
-import audiLicense from "./audio-lines.svg"; 
-import shadow from "./shadow.png"; 
-import solutionIcon from "./solutionIcon.svg"; 
-import dottedPattern from "./dotterpatter.svg"; 
-import tabImg from "./tabimg.png";
+import heroImgTwo from "./hero-img(2).webp";
+import heroImgThree from "./hero-img (3).webp";
+import heroImgFour from "./hero-img (4).webp";
+import shieldAlert from "./shield-alert.svg";
+import audiLicense from "./audio-lines.svg";
+import shadow from "./shadow.png";
+import solutionIcon from "./solutionIcon.svg";
+import dottedPattern from "./dotterpatter.svg";
 import Problem1 from "./Problem/problem1.svg";
 import Problem2 from "./Problem/problem2.svg";
 import Problem3 from "./Problem/problem3.svg";
 import Problem4 from "./Problem/problem4.svg";
 import circleAlert from "./Problem/circle-alert.svg";
+import tabImage1 from "./Solution/tabimage1.png";
+import tabImage2 from "./Solution/tabimage2.png";
+import tabImage3 from "./Solution/tabimage3.png";
+import tabImage4 from "./Solution/tabimage4.png";
+import tabImage5 from "./Solution/tabimage5.png";
+import tabImage6 from "./Solution/tabimage6.png";
+import tabImage7 from "./Solution/tabimage7.png";
+import tabImage8 from "./Solution/tabimage8.png";
 
-export { logo, circleIcon, heroImgOne, heroImgTwo, heroImgThree, heroImgFour, shieldAlert, audiLicense, shadow, solutionIcon, dottedPattern, tabImg, Problem1, Problem2, Problem3, Problem4, circleAlert };
+
+
+// Video Part
+import videoOne from "./Animation/Always-know-who-s-on-your-site.mp4";
+import videoTwo from "./Animation/Hero-Voice-Report.mp4";
+import videoThree from "./Animation/Know-where-your-team-is-and-when-they-checked-in.mp4";
+import videoFour from "./Animation/Notification.mp4";
+import videoFive from "./Animation/Pre-Qualification.mp4";
+import videoSix from "./Animation/Risk-Assesment.mp4";
+import videoSeven from "./Animation/Setup-ORG.mp4";
+
+export {
+  logo,
+  circleIcon,
+  heroImgOne,
+  heroImgTwo,
+  heroImgThree,
+  heroImgFour,
+  shieldAlert,
+  audiLicense,
+  shadow,
+  solutionIcon,
+  dottedPattern,
+  Problem1,
+  Problem2,
+  Problem3,
+  Problem4,
+  circleAlert,
+  tabImage1,
+  tabImage2,
+  tabImage3,
+  tabImage4,
+  tabImage5,
+  tabImage6,
+  tabImage7,
+  tabImage8,
+  videoOne,
+  videoTwo,
+  videoThree,
+  videoFour,
+  videoFive,
+  videoSix,
+  videoSeven,
+};

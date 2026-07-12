@@ -66,7 +66,7 @@
   --color-surface-alt: #e3e5d7;
   --color-bge: #f8f9f3;
   --color-bge-alt: #e4e5dc;
-  --color-muted: #E9EBDE;
+  --color-muted: #e9ebde;
 
   /* --- Font Families --- */
   --font-base: "Inter Display", sans-serif;
@@ -115,23 +115,31 @@
   );
   --gradient-sunset: linear-gradient(
     90deg,
-    #b64131 0%,
-    #f47430 33%,
-    #f5a53d 69%,
-    #b64131 100%
+    #b64131 2.9%,
+    #f47430 37.59%,
+    #f5a53d 74.31%,
+    #b64131 106.52%
   );
-  --gradient-teal-alt: linear-gradient(
-    45deg,
-    #137F58 0%,
-    #1BB9BF 100%
-  );
+  --gradient-teal-alt: linear-gradient(45deg, #137f58 0%, #1bb9bf 100%);
   --gradient-red: linear-gradient(
-    45deg,
-    #C12A15 0%,
-    #F43A30 33%,
-    #FF6868 100%,
-    #83190A 100%
+    90deg,
+    #c12a15 2.9%,
+    #f43a30 37.59%,
+    #ff6868 74.31%,
+    #83190a 106.52%
   );
+
+  --gradient-sky: linear-gradient(
+    89deg,
+    #4cb38e -430.37%,
+    #137f58 -430.31%,
+    #1bb9bf 27.99%
+  );
+
+  /* background: linear-gradient(89deg, #4CB38E -430.37%, #137F58 -430.31%, #1BB9BF 27.99%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
 }
 
 /* ============================

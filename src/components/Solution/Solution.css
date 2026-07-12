@@ -37,7 +37,7 @@
 }
 
 .solution_subtext {
-  @apply text-[15px] font-semibold font-body uppercase tracking-[0.2em] text-[#1BB9BF];
+  @apply text-regular font-semibold font-body uppercase bg-[image:var(--gradient-sky)] bg-clip-text text-transparent;
 }
 
 .solution_title {
@@ -59,7 +59,7 @@
 }
 
 .solution_tab {
-  @apply flex py-[19px] w-full items-center gap-3 text-h4 text-white/40;
+  @apply flex py-[16px] w-full items-center gap-3 text-h4 text-white/40;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -136,4 +136,16 @@
 
 .solution_btns {
   @apply mt-8 lg:mt-14
+}
+
+.solution_dotted-bg {
+  @apply absolute inset-0
+}
+
+.video_wrapper {
+  @apply w-4/5 h-auto overflow-hidden inset-0;
+}
+
+.video_element {
+  @apply w-full h-full object-cover;
 }

@@ -1,5 +1,24 @@
 import React, { useState } from "react";
-import { shadow, solutionIcon, dottedPattern, tabImg } from "../../assets/images";
+import {
+  shadow,
+  solutionIcon,
+  dottedPattern,
+  videoOne,
+  videoTwo,
+  videoThree,
+  videoFour,
+  videoFive,
+  videoSix,
+  videoSeven,
+  tabImage1,
+  tabImage2,
+  tabImage3,
+  tabImage4,
+  tabImage5,
+  tabImage6,
+  tabImage7,
+  tabImage8,
+} from "../../assets/images";
 import "./Solution.css";
 import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 
@@ -19,60 +38,76 @@ const heroImageUrl =
 
 const tabPanelContent = {
   "contractor-management": {
-    imageUrl: tabImg,
+    imgUrl: tabImage1,
     imageAlt:
       "Contractor readiness workspace representing insurance, licence and worker pre-qualification status",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in.",
+    width: '434px',
+    height: 'auto'
   },
   "risk-assessments": {
-    imageUrl: tabImg,
+    imgUrl: tabImage2,
     imageAlt:
       "Risk assessment draft workspace representing hazards, controls and SWMS preparation",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    width: '488px',
+    height: 'auto'
   },
   "toolbox-talks": {
-    imageUrl: tabImg,
+    imgUrl: tabImage3,
     imageAlt:
       "Toolbox talk record workspace representing briefings, attendance and worker acknowledgements",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    width: '374px',
+    height: 'auto'
   },
   "voice-first-reporting": {
-    imageUrl: heroImageUrl,
+    imgUrl: tabImage4,
     imageAlt:
       "Voice-first reporting interface with a recording card and incident reporting workflow",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    width: '360px',
+    height: 'auto'
   },
   "whs-dashboard": {
-    imageUrl: tabImg,
+    imgUrl: tabImage5,
     imageAlt:
       "WHS dashboard workspace representing site status, trends, open risks and overdue actions",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in.",
+    width: '434px',
+    height: 'auto'
   },
   "actions-tasks": {
-    imageUrl:tabImg,
+    imgUrl: tabImage6,
     imageAlt:
       "Tracked actions workspace representing owners, due dates and closure evidence",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    width: '475px',
+    height: 'auto'
   },
   "iso-compliance": {
-    imageUrl: tabImg,
+    imgUrl: tabImage7,
     imageAlt:
       "ISO evidence workspace representing mapped controls, documents and audit trails",
-    title: "ISO evidence",
+    title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    width: '434px',
+    height: 'auto'
   },
   "learning-inductions": {
-    imageUrl:tabImg,
+    imgUrl: tabImage8,
     imageAlt:
       "Learning and inductions workspace representing training paths, tickets and site readiness",
     title: "Pre-qualify your entire contractor list →",
     text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    width: '397px',
+    height: 'auto'
   },
 };
 
@@ -98,78 +133,95 @@ function BookDemoButton(props) {
 
         <div className="solution_shell-wrap">
           <div className="solution-shell">
-          <div className="solution_header">
-            <div className="solution_subtext-wrapper">
-              <img
-                className="solution_subtext-icon"
-                src={solutionIcon}
-                alt="Solution Icon"
-              />
-              <span className="solution_subtext">Our Solution</span>
+            <div className="solution_header">
+              <div className="solution_subtext-wrapper">
+                <img
+                  className="solution_subtext-icon"
+                  src={solutionIcon}
+                  alt="Solution Icon"
+                />
+                <span className="solution_subtext">Our Solution</span>
+              </div>
+              <h2 className="solution_title">
+                Get on site faster, stay compliant, and put SiteSherpa’s AI to
+                work from day one.
+              </h2>
             </div>
-            <h2 className="solution_title">
-              Get on site faster, stay compliant, and put SiteSherpa’s AI to
-              work from day one.
-            </h2>
-          </div>
-          <div className="solution-inner">
-            <div className="solution_tabs-wrapper">
+            <div className="solution-inner">
+              <div className="solution_tabs-wrapper">
+                <div
+                  className="solution_tablist"
+                  role="tablist"
+                  aria-label="SiteSherpa solution features"
+                >
+                  {solutionTabs.map((tab) => {
+                    const isActive = tab.id === activeTab;
+                    return (
+                      <button
+                        key={tab.id}
+                        type="button"
+                        role="tab"
+                        aria-selected={isActive}
+                        aria-controls="solution-tab-panel"
+                        onClick={() => setActiveTab(tab.id)}
+                        className={`solution_tab ${isActive ? "solution_tab--active" : ""}`.trim()}
+                      >
+                        <span
+                          className={`solution_tab-bullet ${isActive ? "is-active" : ""}`.trim()}
+                          aria-hidden="true"
+                        />
+                        <span className="solution_tab-text">
+                          <span>{tab.label}</span>
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
               <div
-                className="solution_tablist"
-                role="tablist"
-                aria-label="SiteSherpa solution features"
+                key={activeContent.id}
+                id="solution-tab-panel"
+                role="tabpanel"
+                className="solution-tab-fade solution_panel"
               >
-                {solutionTabs.map((tab) => {
-                  const isActive = tab.id === activeTab;
-                  return (
-                    <button
-                      key={tab.id}
-                      type="button"
-                      role="tab"
-                      aria-selected={isActive}
-                      aria-controls="solution-tab-panel"
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`solution_tab ${isActive ? "solution_tab--active" : ""}`.trim()}
-                    >
-                      <span
-                        className={`solution_tab-bullet ${isActive ? "is-active" : ""}`.trim()}
-                        aria-hidden="true"
-                      />
-                      <span className="solution_tab-text">
-                        <span>{tab.label}</span>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+                <div className="solution_card">
+                  <div className="solution_card-visual">
+                    <img className="solution_dotted-bg" src={dottedPattern} alt="pattern" />
+                    {/* <div className="video_wrapper">
+                      <video
+                        className="video_element"
+                        src={activePanel.videoUrl}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    </div> */}
 
-            <div
-              key={activeContent.id}
-              id="solution-tab-panel"
-              role="tabpanel"
-              className="solution-tab-fade solution_panel"
-            >
-              <div className="solution_card">
-                <div className="solution_card-visual">
-                  <img className="solution_dotted-bg" src={dottedPattern} alt="pattern" />
-                </div>
-                <div className="solution_card-content">
-                  <h2 className="solution_card-title">
-                    <span>{activePanel.title}</span>
-                  </h2>
-                  <p className="solution_card-description">
-                    <span>{activePanel.text}</span>
-                  </p>
+                    <img src={activePanel.imgUrl} alt="" className="solution_img" style={{
+                      maxWidth: activePanel.width,
+                      height: activePanel.height
+                    }} />
+                  </div>
+                  <div className="solution_card-content">
+                    <h2 className="solution_card-title">
+                      <a href="#">{activePanel.title}</a>
+                    </h2>
+                    <p className="solution_card-description">
+                      <span>{activePanel.text}</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="solution_btns">
-            <PrimaryBtn href="#" text="Book a demo"  />
+            <div className="solution_btns">
+              <PrimaryBtn href="#" text="Book a demo" />
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </section>
