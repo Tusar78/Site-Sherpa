@@ -389,7 +389,7 @@ function UseCase(props) {
               <div className="min-w-0 rounded-[8px] border border-[#E3E5D7] p-3 sm:p-4 md:p-4 lg:min-h-[500px] lg:p-2" role="tabpanel">
                 <div key={activeTab.id} className="grid min-w-0 gap-7 animate-[fadeIn_280ms_ease-out] md:grid-cols-[minmax(0,1fr)_minmax(220px,38%)] md:gap-4 lg:grid-cols-[1fr_381px] lg:gap-6">
                   <div className="flex justify-between gap-5 min-h-0 min-w-0 flex-col px-0 py-1 sm:px-2 sm:py-2 md:min-h-[420px] lg:min-h-[460px] lg:px-4 lg:py-4">
-                    <div className="grid min-w-0 gap-x-8 gap-y-7 sm:grid-cols-2 md:grid-cols-1 lg:mt-auto lg:grid-cols-2 lg:gap-x-12 lg:gap-y-9 lg:pb-7">
+                    <div className="grid min-w-0 gap-x-8 gap-y-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-9 lg:pb-7">
                       {activeTab.useCases.map(useCase => (
                         <article key={useCase.id} className="w-full max-w-none sm:max-w-[260px] md:max-w-none lg:max-w-[211px]">
                           <div className="flex items-center gap-2">
@@ -408,7 +408,7 @@ function UseCase(props) {
                     <PrimaryBtn text={"Book a demo"} />
                   </div>
 
-                  <figure className="m-0 min-w-0 overflow-hidden rounded-[8px] md:min-h-[360px] lg:h-[484px] lg:min-h-0">
+                  <figure className="m-0 min-w-0 overflow-hidden rounded-[8px] md:min-h-[360px]  lg:min-h-0">
                     <img src={activeTab.imageUrl} alt={`${activeTab.label} industry safety operations`} className="h-auto max-h-[320px] min-h-[220px] w-full object-cover object-center sm:h-[320px] sm:max-h-none md:h-full lg:h-full" />
                   </figure>
                 </div>
