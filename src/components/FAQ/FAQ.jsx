@@ -68,14 +68,9 @@ export const FaqSection = () => {
         }}
       >
         <span
-          className="tagline"
+          className="tagline bg-[image:var(--gradient-sunset)] items-start"
           style={{
-            display: "inline-block",
-            background:
-              "linear-gradient(180deg, #B64131 0%, #F47430 33%, #F5A53D 69%, #B64131 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
+            display: "inline-block",        
             fontSize: "16px",
             fontFamily: '"Google Sans Code", monospace',
             fontWeight: 600,
@@ -141,7 +136,8 @@ export const FaqSection = () => {
           flexDirection: "column",
           borderRadius: "8px",
           overflow: "hidden",
-          border: '1px solid #E3E5D7'
+          border: '1px solid #E3E5D7',
+          borderBottom: 'none'
         }}
       >
         {FAQ_DATA.map((item, index) => (
@@ -152,11 +148,11 @@ export const FaqSection = () => {
               width: "100%",
               borderBottom: "1px solid #E3E5D7",
               // borderBottom:
-              //   index === FAQ_DATA.length - 1 ? "1px solid #E3E5D7" : "none",
+              //   index === FAQ_DATA.length - 0 ? "1px solid #E3E5D7" : "none",
               boxSizing: "border-box",
               cursor: "pointer",
               backgroundColor: "transparent",
-              transition: "all 0.3s ease",
+              transition: "all 0.4s ease-out",
               overflow: "hidden",
             }}
           >
@@ -201,7 +197,7 @@ export const FaqSection = () => {
               style={{
                 maxHeight: activeIndex === index ? "200px" : "0px",
                 opacity: activeIndex === index ? 1 : 0,
-                transition: "all 0.3s ease-in-out",
+                transition: "all 0.4s ease-out",
                 padding: activeIndex === index ? "0 24px 24px 24px" : "0 24px",
               }}
             >
