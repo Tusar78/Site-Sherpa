@@ -461,7 +461,7 @@ function UseCase(props) {
             </h1>
           </div>
 
-          <div className="relative z-10 mx-auto mt-8 w-full max-w-[1240px] min-w-0 rounded-[12px] bg-white p-2 sm:mt-10 lg:mt-12">
+          <div className="relative z-10 mx-auto mt-8 w-full max-w-[1240px] min-w-0 rounded-[12px] bg-white py-2 pr-2 pl-6 sm:mt-10 lg:mt-12">
             <div className="grid min-w-0 gap-4 md:grid-cols-[220px_minmax(0,1fr)] md:items-start lg:grid-cols-[280px_minmax(0,1fr)]">
               <nav
                 aria-label="Industries"
@@ -475,7 +475,7 @@ function UseCase(props) {
                         key={tab.id}
                         type="button"
                         onClick={() => setActiveTabId(tab.id)}
-                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] sm:shrink md:w-[220px] md:min-w-0 md:flex-none lg:w-[100%] ${isActive ? "border-[#072C2C] pl-3 text-[#072C2C] sm:pl-4" : "border-[#E3E5D7] pl-0 text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"}`}
+                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] sm:shrink md:w-[220px] md:min-w-0 md:flex-none lg:w-[100%] ${isActive ? "border-[#072C2C] text-[#072C2C]" : "border-[#E3E5D7] pl-0 text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"}`}
                         aria-selected={isActive}
                         role="tab"
                       >

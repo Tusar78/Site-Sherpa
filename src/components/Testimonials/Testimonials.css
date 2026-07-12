@@ -88,7 +88,7 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
-  padding: 24px;
+  padding: 20px;
 }
 
 .testimonials__quote-group {
@@ -126,13 +126,7 @@
 }
 
 .testimonials__quote {
-  min-width: 0;
-  font-family: 'Inter Display', Inter, sans-serif;
-  font-size: clamp(18px, 2.5vw, 20px);
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: -0.01em;
-  color: #072c2c;
+  @apply text-regular text-primary
 }
 
 .testimonials__quote p {
@@ -255,10 +249,6 @@
 
   .testimonials__rows {
     gap: 16px;
-  }
-
-  .testimonials__card-content {
-    padding: 32px;
   }
 
   .testimonials__image--mobile {
