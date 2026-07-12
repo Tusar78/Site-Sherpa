@@ -187,7 +187,7 @@ const Benefits = ({ className, style }) => {
 
   return (
     <section className={`w-full overflow-x-hidden bg-[#F8F9F3] ${className || ''}`} style={style} aria-labelledby="benefits-heading">
-      <div className="mx-auto w-full px-4 py-12 sm:px-8 sm:py-16 lg:px-8 lg:py-[120px]">
+      <div className="mx-auto w-full py-12 sm:py-16 lg:py-[120px]">
         <div className="mx-auto flex max-w-[628px] flex-col items-center text-center">
           <p className="mb-[17px] inline-flex font-semibold font-body bg-[linear-gradient(89deg,#4CB38E_-50.18%,#005D71_-1.49%,#005D71_18.64%,#005D71_34.62%,#137F58_61.8%,#1BB9BF_83.11%)] bg-clip-text text-transparent uppercase">
             <span>Benefits</span>
