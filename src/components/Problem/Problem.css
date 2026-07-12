@@ -1,0 +1,11 @@
+@reference "../../index.css";
+
+
+.problem_subtext {
+    @apply font-body text-regular uppercase font-semibold bg-[image:var(--gradient-red)] bg-clip-text text-transparent;
+    
+}
+
+.problem_title {
+    @apply text-h2 font-medium text-primary w-full max-w-[535px]
+}

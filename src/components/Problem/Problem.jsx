@@ -1,45 +1,59 @@
 import React from 'react';
+import './Problem.css'
+import { circleAlert, Problem1, Problem2, Problem3, Problem4 } from '../../assets/images';
 
-const floatingAssets = [
+const floatingAssets = [ //2
   {
     id: 'dashboard-interface',
-    src: 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/38bb9b50-1b82-4467-a3b4-f9322b828554.png',
+    src: Problem4,
     alt: 'Dashboard interface preview',
     width: 501,
     height: 281,
-    desktopTop: 0,
+    desktopTop: 44,
     desktopLeft: 777,
-    rotation: 'rotate(11.18deg)'
+    rotation: 'rotate(11.18deg)',
+    top: '54px',
+    left: '26px',
+    text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
   },
   {
-    id: 'onboarding-workflow',
-    src: 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/28909fcb-7665-432a-8ab7-d51852046a22.png',
+    id: 'onboarding-workflow', //3
+    src: Problem3,
     alt: 'Onboarding workflow preview',
     width: 493,
     height: 250,
     desktopTop: 397,
     desktopLeft: 0,
-    rotation: 'rotate(7.14deg)'
+    rotation: 'rotate(7.14deg)',
+    top: '54px',
+    left: '26px',
+    text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
   },
   {
-    id: 'safety-compliance-card',
-    src: 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/d1f8be99-edad-4990-9a87-735a9e4176df.png',
+    id: 'safety-compliance-card', //4
+    src: Problem2,
     alt: 'Safety compliance card preview',
     width: 492,
     height: 248,
     desktopTop: 394,
     desktopLeft: 802,
-    rotation: 'rotate(-6.93deg)'
+    rotation: 'rotate(-6.93deg)',
+    top: '60px',
+    left: '30px',
+    text: `Your time is too valuable to be rewriting the same documents for every new job that expired last week.`,
   },
   {
-    id: 'site-access-management',
-    src: 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/0a56265a-8ce9-459e-82bb-45786ff69482.png',
+    id: 'site-access-management', //1
+    src: Problem1,
     alt: 'Site access management preview',
     width: 494,
     height: 252,
-    desktopTop: 13,
-    desktopLeft: 9,
-    rotation: 'rotate(-7.5deg)'
+    desktopTop: 35,
+    desktopLeft: -9,
+    rotation: 'rotate(-7.5deg)',
+    top: '65px',
+    left: '26px',
+    text: `Until your documentation is sorted, no one's working and nothing's moving.`,
   }
 ];
 
@@ -105,24 +119,14 @@ export const ProblemSection = ({ className, style }) => {
 
           <div className="problem-content relative z-20 order-1 flex w-full max-w-[566px] min-w-0 flex-col items-center pt-4 text-center sm:pt-10 lg:absolute lg:left-[365px] lg:top-[212px] lg:h-[224px] lg:w-[566px] lg:max-w-none lg:pt-0">
             <div className="mb-3 flex items-center gap-2">
-              <img src="https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/157eb921-dc81-455d-901f-44f166c35ca2.svg" alt="Alert symbol" className="h-5 w-5 shrink-0" />
-              <span className="text-[15px] font-semibold uppercase leading-6 tracking-[0.05em] sm:text-base" style={{
-                background: 'linear-gradient(180deg, #C12A15 0%, #F43A30 33%, #FF6868 69%, #83190A 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                fontFamily: '"Google Sans Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace'
-              }}>
+              <img src={circleAlert} alt="Alert symbol" className="h-5 w-5 shrink-0" className="w-5 h-5" />
+              <span className='problem_subtext'>
                 Sound familiar?
               </span>
             </div>
 
-            <h2 id="problem-heading" className="m-0 max-w-full text-[30px] font-medium leading-[36px] tracking-[-0.9px] sm:max-w-[566px] sm:text-[42px] sm:leading-[50px] sm:tracking-[-1.26px] md:text-[44px] md:leading-[52px] lg:w-[566px] lg:text-[48px] lg:leading-[58px] lg:tracking-[-1.44px]" style={{
-              color: '#072C2C',
-              fontFamily: '"Inter Display", Inter, ui-sans-serif, system-ui, sans-serif'
-            }}>
-              <span className="hidden lg:inline">Getting on site shouldn't<br /> be this complicated</span>
-              <span className="lg:hidden">Getting on site shouldn't be this complicated</span>
+            <h2 id="problem-heading" className="problem_title">
+              Getting on site shouldn't be this complicated
             </h2>
 
             <p className="m-0 mt-4 max-w-full text-base font-normal leading-7 sm:max-w-[340px] sm:text-[18px] sm:leading-7 lg:w-[340px]" style={{
@@ -145,6 +149,16 @@ export const ProblemSection = ({ className, style }) => {
                   transform: asset.rotation,
                   transformOrigin: 'center center'
                 }} draggable={false} />
+
+                <div className='absolute flex flex-col' style={{
+                  transform: asset.rotation,
+                  gap: '44px',
+                  top: asset.top,
+                  left: asset.left
+                }}>
+                  <span className='text-medium font-medium text-primary'>You can't start earning until you're on-site</span>
+                  <span className='text-regular text-primary/70 max-w-[390px]'>{asset.text}</span>
+                </div>
               </figure>
             ))}
           </div>
