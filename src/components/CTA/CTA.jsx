@@ -18,6 +18,9 @@ export function CTA({ className = "", style }) {
           className="solution-shadow"
           src={shadow}
           alt="Shadow Illustration"
+          style={{
+            top: '28px'
+          }}
         />
 
         <div
