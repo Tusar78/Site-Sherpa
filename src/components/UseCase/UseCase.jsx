@@ -465,7 +465,7 @@ function UseCase(props) {
             <div className="grid min-w-0 gap-4 md:grid-cols-[220px_minmax(0,1fr)] md:items-start lg:grid-cols-[280px_minmax(0,1fr)]">
               <nav
                 aria-label="Industries"
-                className="min-w-0 md:min-h-[500px] lg:min-h-[500px]"
+                className="min-w-0 lg:min-h-[500px]"
               >
                 <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible md:block md:overflow-visible md:pb-0 lg:block lg:overflow-visible lg:pb-0">
                   {tabs.map((tab) => {
@@ -493,7 +493,7 @@ function UseCase(props) {
               </nav>
 
               <div
-                className="min-w-0 rounded-[8px] border border-[#E3E5D7] p-3 sm:p-4 md:p-4 lg:min-h-[500px] lg:p-2"
+                className="min-w-0 rounded-[8px] border border-[#E3E5D7] p-3 sm:p-4 md:p-4 lg:p-2"
                 role="tabpanel"
               >
                 <div
