@@ -23,7 +23,18 @@ import tabImage6 from "./Solution/tabimage6.png";
 import tabImage7 from "./Solution/tabimage7.png";
 import tabImage8 from "./Solution/tabimage8.png";
 
-
+import benifitsClientImg01 from "./Benifits/client-(1).png";
+import benifitsClientImg02 from "./Benifits/client-(2).png";
+import benifitsClientImg03 from "./Benifits/client-(3).png";
+import benifitsCheckIcon from "./Benifits/check-check.svg";
+import benifitsFileCheckIcon from "./Benifits/file-check.svg";
+import benifitsListCheckIcon from "./Benifits/list-checks.svg";
+import benifitsTicket from "./Benifits/ticket.svg";
+import benifitsUserCheck from "./Benifits/user-round-check.svg";
+import benifitsUserSetting from "./Benifits/user-round-cog.svg";
+import benifitCardImg01 from "./Benifits/benifitCardImg01.png";
+import benifitCardImg02 from "./Benifits/benifitCardImg02.png";
+import benifitCardImg03 from "./Benifits/benifitCardImg03.png";
 
 // Video Part
 import videoOne from "./Animation/Always-know-who-s-on-your-site.mp4";
@@ -66,4 +77,16 @@ export {
   videoFive,
   videoSix,
   videoSeven,
+  benifitsClientImg01,
+  benifitsClientImg02,
+  benifitsClientImg03,
+  benifitsCheckIcon,
+  benifitsFileCheckIcon,
+  benifitsListCheckIcon,
+  benifitsTicket,
+  benifitsUserCheck,
+  benifitsUserSetting,
+  benifitCardImg01,
+  benifitCardImg02,
+  benifitCardImg03,
 };
