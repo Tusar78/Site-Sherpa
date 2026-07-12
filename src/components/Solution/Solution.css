@@ -9,7 +9,7 @@
 }
 
 .solution-shadow {
-  @apply absolute z-10 w-full top-10;
+  @apply absolute z-10 w-full top-28;
 }
 
 .solution_shell-wrap {
