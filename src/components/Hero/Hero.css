@@ -1,22 +1,21 @@
 @reference "../../index.css";
 
-
-
+/* ============================
+   RESPONSIVE HERO LAYOUT
+============================ */
 .hero_content {
-  @apply flex justify-between items-center gap-10;
-  padding: 60px 0;
+  @apply flex flex-col md:flex-row justify-between items-center gap-10 lg:gap-5 pt-[40px] lg:pt-[60px] pb-[20px] md:pb-[40px] lg:pb-[60px];
 }
 
 .hero_left {
-  @apply w-full flex flex-col items-start;
-  max-width: 520px;
+  @apply w-full flex flex-col items-start max-w-full max-w-[420px] pl-3 md:pl-0;
+  /* max-width: 420px; */
 }
 
 .hero_badge {
-  @apply flex items-center bg-surface-alt text-xsmall;
+  @apply flex items-center flex-col lg:flex-row bg-surface-alt text-xsmall pt-[6px] md:pt-[2px] pl-[2px] lg:pl-[6px] pr-[2px] pb-[2px];
   gap: 6px;
   border-radius: 6px;
-  padding: 2px 2px 2px 6px;
 }
 
 .hero_badge-left {
@@ -39,7 +38,7 @@
 }
 
 .hero_title {
-  @apply text-h1 font-medium text-primary;
+  @apply text-h1 font-medium text-primary max-w-[600px] md:max-w-full;
   margin: 12px 0 16px;
 }
 
@@ -52,24 +51,40 @@
 /* ============================
    HERO VISUAL SECTION
 ============================ */
-
 .hero_visual {
-  @apply relative w-full h-full;
+  @apply relative w-full h-full flex md:block flex-col-reverse gap-8 md:gap-0;
   max-width: 636px;
 }
 
-/* .hero_visual-bg {
-  @apply absolute inset-0 z-0 opacity-50 bg-cover bg-no-repeat bg-center;
-} */
+.hero_visual-bg {
+  @apply absolute inset-0 z-0 bg-cover bg-no-repeat bg-center hidden md:block h-[600px] lg:h-[800px];
+  background-image: url(/src/assets/images/herobg.png);
+  width: 100%;
+  max-width: 500px;
+  left: 0;
+  right: 0;
+  top: -90px;
+  margin: 0 auto;
+}
 
 /* Cards Layout */
 .hero_visual-elements {
-  @apply relative flex gap-3;
+  @apply relative flex flex-row gap-3;
+}
+
+/* Card Content Fade Animation on tab switch */
+.animate-fade {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero_card-left,
 .hero_card-right {
-  @apply flex flex-col gap-3;
+  @apply flex flex-col gap-3 w-full sm:w-1/2;
 }
 
 .hero_card {
@@ -80,30 +95,97 @@
   @apply w-full block;
 }
 
-/* Tabs Styling */
+/* ============================
+   TABS & PROGRESS BAR ANIMATION
+============================ */
 .hero_visual-tabs {
-  @apply mx-auto mt-6 flex justify-center w-full z-20 relative;
+  @apply mx-auto mt-2 sm:mt-6 flex justify-center w-full z-20 relative;
 }
 
 .tab_container {
-  @apply flex items-center overflow-hidden bg-bge;
+  @apply flex flex-col sm:flex-row items-center overflow-hidden bg-bge w-full;
   border: 1px solid var(--color-surface-alt);
   border-radius: 8px;
-  width: 416px;
+  max-width: 416px;
 }
 
 .tab_btn {
-  @apply flex items-center w-full gap-2 px-4 py-2 text-primary/70 hover:text-primary font-medium text-sm transition-all;
-  max-width: 208px;
-  border-right: 1px solid var(--color-surface-alt);
+  @apply flex items-center justify-center sm:justify-start w-full gap-2 px-4 py-2 text-primary/70 hover:text-primary font-medium text-sm transition-colors relative z-10;
+  /* border handling for responsive */
+  border-bottom: 1px solid var(--color-surface-alt);
+  border-right: none;
+  cursor: pointer;
 }
 
-.tab_btn:last-child {
-  @apply border-r-0;
+/* Desktop border handling */
+@media (min-width: 640px) {
+  .tab_btn {
+    border-bottom: none;
+    border-right: 1px solid var(--color-surface-alt);
+  }
+  .tab_btn:last-child {
+    border-right: none;
+  }
+
+  .tab_btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .tab_container {
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .tab_btn {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-surface-alt);
+  }
+
+  .tab_btn:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 767.99px) {
+  .tab_container {
+    flex-direction: row;
+    max-width: 450px;
+  }
+
+  .tab_btn {
+    border-right: 1px solid var(--color-surface-alt);
+    border-bottom: 0;
+  }
+
+  .tab_btn:last-child {
+    border-right: none;
+  }
+}
+
+@media (max-width: 455.99px) {
+  .tab_container {
+    flex-direction: column;
+    max-width: 300px;
+  }
+
+  .tab_btn {
+    border-right: 0;
+    border-bottom: 1px solid var(--color-surface-alt);
+  }
+
+  .tab_btn:last-child {
+    border-bottom: none;
+  }
+
+  .hero_left {
+    padding-left: 0;
+  }
 }
 
 .tab_btn--active {
-  @apply  text-primary hover:text-primary font-medium;
+  @apply text-primary font-medium;
 }
 
 .tab_icon {
@@ -114,14 +196,19 @@
   @apply w-5 h-5;
 }
 
-.hero_visual-bg {
-  @apply absolute inset-0 z-0 bg-cover bg-no-repeat bg-center;
-    background-repeat: no-repeat;
-    background-image: url(/src/assets/images/herobg.png);
-    background-size: cover;
-    width: 500px;
-    height: 800px;
-    left: 0;
-    right: 0;
-    top: -90px;
+/* --- The Magic: Auto Progress Background --- */
+.tab_btn::before {
+  content: "";
+  @apply absolute top-0 left-0 h-full -z-10;
+  width: 0%;
+  background-color: var(--color-surface-alt); /* Using your existing light bg variable */
+}
+
+.tab_btn--active::before {
+  animation: tabProgress 3s linear forwards;
+}
+
+@keyframes tabProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
