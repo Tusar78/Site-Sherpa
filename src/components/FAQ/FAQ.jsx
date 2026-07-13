@@ -58,17 +58,18 @@ export const FaqSection = () => {
     >
       {/* Left Content Side */}
       <div
-        className="group-2147223534"
+        className="group-2147223534 items-start bg-clip-text"
         style={{
           width: "100%",
           maxWidth: "578px",
           display: "flex",
           flexDirection: "column",
           gap: "12px",
+          
         }}
       >
         <span
-          className="tagline bg-[image:var(--gradient-sunset)] items-start"
+          className="tagline bg-[image:var(--gradient-sunset)] bg-clip-text text-transparent"
           style={{
             display: "inline-block",        
             fontSize: "16px",
