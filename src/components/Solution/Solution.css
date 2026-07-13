@@ -64,7 +64,7 @@
 }
 
 .solution_tab:hover {
-  @apply text-white/70;
+  @apply text-white;
 }
 
 .solution_tab--active {
@@ -80,7 +80,7 @@
 }
 
 .solution_tab:hover .solution_tab-bullet {
-  @apply bg-white/10 opacity-100;
+  @apply bg-[#D1FF6E] opacity-100;
 }
 
 .solution_tab-text {

@@ -163,7 +163,7 @@ function BookDemoButton(props) {
                         role="tab"
                         aria-selected={isActive}
                         aria-controls="solution-tab-panel"
-                        onClick={() => setActiveTab(tab.id)}
+                        onMouseEnter={() => setActiveTab(tab.id)}
                         className={`solution_tab ${isActive ? "solution_tab--active" : ""}`.trim()}
                       >
                         <span
