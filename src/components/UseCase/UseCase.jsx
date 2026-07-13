@@ -436,7 +436,7 @@ function UseCase(props) {
       style={props.style}
     >
       <section
-        className="w-full overflow-hidden px-4 py-4 sm:px-6 sm:py-8 lg:px-10 lg:py-10 xl:px-5"
+        className="w-full overflow-hidden px-2 py-4 sm:px-6 sm:py-8 lg:px-4 lg:py-10 xl:px-5"
         aria-labelledby="industries-heading"
       >
         <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[10px] bg-cover bg-center px-4 py-10 sm:px-8 sm:py-14 md:py-16 lg:min-h-[951px] lg:px-20 lg:py-[100px]">
@@ -461,13 +461,13 @@ function UseCase(props) {
             </h1>
           </div>
 
-          <div className="relative z-10 mx-auto mt-8 w-full max-w-[1240px] min-w-0 rounded-[12px] bg-white py-2 pr-2 pl-6 sm:mt-10 lg:mt-12">
-            <div className="grid min-w-0 gap-4 md:grid-cols-[220px_minmax(0,1fr)] md:items-start lg:grid-cols-[280px_minmax(0,1fr)]">
+          <div className="relative z-10 mx-auto mt-8 w-full max-w-[1240px] min-w-0 rounded-[12px] bg-white py-2 pr-2 pl-2 lg:pl-6 sm:mt-10 lg:mt-12">
+            <div className="flex min-w-0 flex-col gap-4 lg:flex-row">
               <nav
                 aria-label="Industries"
                 className="min-w-0 lg:min-h-[500px]"
               >
-                <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible md:block md:overflow-visible md:pb-0 lg:block lg:overflow-visible lg:pb-0">
+                <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible md:overflow-visible md:pb-0 lg:block lg:overflow-visible lg:pb-0">
                   {tabs.map((tab) => {
                     const isActive = tab.id === activeTab.id;
                     return (
@@ -475,7 +475,7 @@ function UseCase(props) {
                         key={tab.id}
                         type="button"
                         onClick={() => setActiveTabId(tab.id)}
-                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] sm:shrink md:w-[220px] md:min-w-0 md:flex-none lg:w-[100%] ${isActive ? "border-[#072C2C] text-[#072C2C]" : "border-[#E3E5D7] pl-0 text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"}`}
+                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] lg:w-[100%] ${isActive ? "border-[#072C2C] text-[#072C2C]" : "border-[#E3E5D7] pl-0 text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"}`}
                         aria-selected={isActive}
                         role="tab"
                       >
@@ -498,7 +498,7 @@ function UseCase(props) {
               >
                 <div
                   key={activeTab.id}
-                  className="grid min-w-0 gap-7 animate-[fadeIn_280ms_ease-out] md:grid-cols-[minmax(0,1fr)_minmax(220px,38%)] md:gap-4 lg:grid-cols-[1fr_381px] lg:gap-6"
+                  className="h-full flex min-w-0 flex-col gap-7 animate-[fadeIn_280ms_ease-out] md:flex-row md:gap-4 lg:gap-6"
                 >
                   <div className="flex justify-between gap-5 min-h-0 min-w-0 flex-col px-0 py-1 sm:px-2 sm:py-2 md:min-h-[420px] lg:min-h-[460px] lg:px-4 lg:py-4">
                     <div className="grid min-w-0 gap-x-8 gap-y-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-9 lg:pb-7">
@@ -507,7 +507,7 @@ function UseCase(props) {
                           key={useCase.id}
                           className="w-full max-w-none sm:max-w-[260px] md:max-w-none lg:max-w-[211px]"
                         >
-                          <div className="flex items-center gap-2">
+                          <div className="flex flex-wrap items-center gap-2">
                             <img
                               src={useCase.iconUrl}
                               alt={useCase.iconAlt}
@@ -527,7 +527,7 @@ function UseCase(props) {
                     <PrimaryBtn text={"Book a demo"} />
                   </div>
 
-                  <figure className="m-0 min-w-0 overflow-hidden rounded-[8px] md:min-h-[360px]  lg:min-h-0">
+                  <figure className="m-0 min-w-0 md:max-w-[380px] overflow-hidden rounded-[8px] md:min-h-[360px]  lg:min-h-0">
                     <img
                       src={activeTab.imageUrl}
                       alt={`${activeTab.label} industry safety operations`}

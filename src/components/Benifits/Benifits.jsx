@@ -379,58 +379,60 @@ const Benefits = ({ className, style }) => {
           <div className="h-[2px] bg-surface-alt min-w-[100vw] absolute bottom-0"></div>
         </div>
 
-        <div
-          key={activeTab}
-          className="mx-auto max-w-[1240px] flex flex-col gap-15 motion-safe:animate-[benefitContentIn_250ms_ease] mt-8 lg:mt-10"
-        >
-          {activeContent.cards.map((card) => (
-            <article
-              key={card.id}
-              className="flex justify-between items-center overflow-hidden rounded-[12px] bg-surface"
-            >
-              <div className="flex flex-col justify-center px-8 py-8 sm:px-8 sm:py-10 lg:py-12 lg:px-12">
-                <h3 className="text-h3 font-medium text-primary whitespace-pre-line">
-                  {card.title}
-                </h3>
-                <div className="mt-[24px] flex flex-col sm:mt-[32px] lg:mt-[40px] max-w-[530px]">
-                  {card.features.map((feature) => (
-                    <div
-                      key={feature.id}
-                      className="flex items-center gap-4 border-b border-dashed border-[#C1C79C] py-4 first:pt-0 sm:gap-4 sm:py-4"
+        <div className=" px-2 sm:px-4 lg:px-6">
+          <div
+            key={activeTab}
+            className="mx-auto max-w-[1240px] flex flex-col gap-15 motion-safe:animate-[benefitContentIn_250ms_ease] mt-8 lg:mt-10"
+          >
+            {activeContent.cards.map((card) => (
+              <article
+                key={card.id}
+                className="flex flex-col lg:flex-row justify-between items-start lg:items-center overflow-hidden rounded-[12px] bg-surface"
+              >
+                <div className="flex flex-col justify-center px-8 py-8 sm:px-8 sm:py-10 lg:py-12 lg:px-12">
+                  <h3 className="text-h3 font-medium text-primary whitespace-pre-line">
+                    {card.title}
+                  </h3>
+                  <div className="mt-[24px] flex flex-col sm:mt-[32px] lg:mt-[40px] lg:max-w-[530px]">
+                    {card.features.map((feature) => (
+                      <div
+                        key={feature.id}
+                        className="flex items-center gap-4 border-b border-dashed border-[#C1C79C] py-4 first:pt-0 sm:gap-4 sm:py-4"
+                      >
+                        <img
+                          className="mt-1 h-4 w-4 shrink-0"
+                          src={feature.checkIcon}
+                          alt=""
+                          aria-hidden="true"
+                        />
+                        <p className="text-medium text-primary ">
+                          {feature.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <figure className="lg:h-100  w-full lg:max-w-[560px] p-2 pt-0 sm:h-full sm:min-h-[420px] sm:p-2 lg:min-h-[560px]">
+                  <div className="video_wrapper">
+                    <video
+                      className="video_element"
+                      src={card.image}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
                     >
-                      <img
-                        className="mt-1 h-4 w-4 shrink-0"
-                        src={feature.checkIcon}
-                        alt=""
-                        aria-hidden="true"
-                      />
-                      <p className="text-medium text-primary ">
-                        {feature.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <figure className="lg:h-100  w-full md:max-w-[560px] p-2 pt-0 sm:h-full sm:min-h-[420px] sm:p-2 lg:min-h-[560px]">
-                <div className="video_wrapper">
-                  <video
-                    className="video_element"
-                    src={card.image}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-              </figure>
-            </article>
-          ))}
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </figure>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
 
-      <section className="w-full bg-[#F8F9F3] text-[#072C2C]">
+      <section className="w-full bg-[#F8F9F3] text-[#072C2C] px-2 sm:px-4 lg:px-6">
         <div className="mx-auto w-full max-w-[1240px]">
           {/* Feature Bento Grid */}
           <div
@@ -440,7 +442,7 @@ const Benefits = ({ className, style }) => {
             {CARDS_DATA.map((card) => (
               <article
                 key={card.id}
-                className="flex min-h-[516px] w-full flex-col justify-between rounded-[7px]  bg-[#F8F9F3] p-5 text-left sm:p-8 sm:[&:nth-child(3)]:col-span-2 sm:[&:nth-child(3)]:mx-auto sm:[&:nth-child(3)]:max-w-[412px] lg:[&:nth-child(3)]:col-span-1 lg:[&:nth-child(3)]:max-w-none"
+                className="grid min-h-[516px] w-full rounded-[7px] bg-[#F8F9F3] p-5 text-left grid-rows-[1fr_auto] sm:p-8 sm:[&:nth-child(3)]:col-span-full lg:[&:nth-child(3)]:col-span-1"
               >
                 <div className="flex flex-col gap-6">
                   <h2 className="m-0 max-w-[340px] text-[22px] font-medium">
