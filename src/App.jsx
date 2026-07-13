@@ -10,7 +10,6 @@ import Solution from "./components/Solution/Solution";
 import { Testimonials } from "./components/Testimonials/Testimonials";
 import { UseCase } from "./components/UseCase/UseCase";
 // import Challenge from "./components/challenge/Challenge";
-// import Footer from "./components/Footer/Footer";
 
 
 function App() {
