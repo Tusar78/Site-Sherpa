@@ -1,8 +1,8 @@
 @reference "../../index.css";
 
 .section_header {
-  @apply bg-bge relative z-10;
-  border-bottom: 1px solid var(--color-bge-alt);
+  @apply bg-bge relative z-50; /* Changed z-index to stay above other content */
+  border-bottom: 1px solid var(--color-surface-alt);
 }
 
 .header_content {
@@ -11,31 +11,118 @@
 }
 
 .header_logo {
-  @apply w-full;
-  max-width: 220px;
+  @apply w-full max-w-[220px];
 }
+
 .header_logo-img {
   width: 92px;
   height: 35.5px;
 }
 
+/* ============================
+   DESKTOP STYLES
+============================ */
+/* Hidden on mobile, flex on large screens (lg = 1024px and up) */
 .header_nav {
-  @apply flex gap-7;
+  @apply hidden lg:flex gap-7;
 }
 
 .header_actions {
-  @apply w-full flex justify-end items-center gap-5;
-  max-width: 220px;
+  @apply hidden lg:flex justify-end items-center gap-5 w-full max-w-[220px];
 }
 
 .header_nav-link,
 .header_signin {
   @apply font-medium text-small;
-  line-height: 24px;
 }
 
+/* ============================
+   COOL CTA BUTTON ANIMATION
+============================ */
 .header_cta {
-  @apply bg-accent font-medium text-small flex items-center h-[40] py-2.5 px-5;
+  @apply bg-accent text-primary font-medium text-small flex items-center justify-center h-[40px] py-2.5 px-5 transition-all duration-300 relative overflow-hidden;
   border-radius: 6px;
   cursor: pointer;
+  /* ডিফল্ট অবস্থায় কোনো শ্যাডো থাকবে না */
+  box-shadow: 0 4px 15px transparent; 
+}
+
+/* হোভার করলে বাটন একটু বড় হবে এবং অ্যাকসেন্ট কালারের একটা গ্লো (glow) তৈরি হবে */
+.header_cta:hover {
+  @apply scale-105;
+  box-shadow: 0 4px 15px rgba(209, 255, 110, 0.4); 
+}
+
+/* Shine / Sweep ইফেক্টের জন্য Pseudo-element */
+.header_cta::after {
+  content: "";
+  @apply absolute top-0 -left-[100%] w-[50%] h-full skew-x-[-20deg];
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: left 0.5s ease-in-out;
+}
+
+/* হোভার করার সময় লাইটটি ডান দিকে চলে যাবে */
+.header_cta:hover::after {
+  left: 150%;
+}
+/* ============================
+   MOBILE TOGGLE & SVG ANIMATION
+============================ */
+/* Flex on mobile, hidden on large screens */
+.mobile_toggle {
+  @apply flex lg:hidden items-center justify-center w-10 h-10 bg-transparent border-none cursor-pointer relative z-50;
+}
+
+.mobile_toggle-icon {
+  @apply w-7 h-7;
+}
+
+/* Base style for SVG lines */
+.line {
+  stroke: var(--color-primary); /* Use your primary color variable */
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animation states when menu is active */
+.mobile_toggle.is-active .line-top {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile_toggle.is-active .line-middle {
+  opacity: 0;
+}
+
+.mobile_toggle.is-active .line-bottom {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ============================
+   MOBILE MENU DROPDOWN
+============================ */
+.mobile_menu {
+  @apply absolute top-[57px] left-0 w-full bg-surface shadow-lg flex flex-col overflow-hidden transition-all duration-300 ease-in-out lg:hidden;
+  max-height: 0; /* Hidden by default */
+  opacity: 0;
+}
+
+/* When the state is true, expand the menu */
+.mobile_menu.is-open {
+  max-height: 400px; /* Adjust if your menu is taller */
+  opacity: 1;
+  border-bottom: 1px solid var(--color-surface-alt);
+}
+
+.mobile_nav {
+  @apply flex flex-col px-6 py-4 gap-4;
+}
+
+.mobile_nav-link {
+  @apply font-medium text-regular text-primary block pb-2 border-b border-gray-200;
+}
+
+.mobile_menu-actions {
+  @apply flex flex-col px-6 pb-6 gap-4;
 }
