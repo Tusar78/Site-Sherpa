@@ -10,14 +10,14 @@ import logo8 from "../../assets/images/Partner/Partner Logo (8).webp";
 import PartnerProfile from "../../assets/images/Partner/Partner Profile.png";
 
 const logos = [
-  { src: logo3, label: "Fletcher Building", width: "171px"  },
+  { src: logo3, label: "Fletcher Building", width: "171px" },
   { src: logo4, label: "Rio Tinto", width: "120px" },
-  { src: logo5, label: "Adore Beauty", width: "120px"  },
-  { src: logo6, label: "Bayside City Council", },
+  { src: logo5, label: "Adore Beauty", width: "120px" },
+  { src: logo6, label: "Bayside City Council" },
   { src: logo7, label: "icare", width: "191px" },
   { src: logo8, label: "Boyne Smelters", width: "175px" },
-  { src: logo1, label: "Government of South Australia", },
-  { src: logo2, label: "John Holland",  },
+  { src: logo1, label: "Government of South Australia" },
+  { src: logo2, label: "John Holland" },
 ];
 
 function Partner() {
@@ -52,7 +52,13 @@ function Partner() {
             <div className="partner_logo-grid" role="list">
               {logos.map((logo) => (
                 <div key={logo.label} className="partner_logo-card" role="listitem">
-                  <img className={logo.width ? `w-[${logo.width}]` : "w-[120px]"} src={logo.src} alt={logo.label} />
+                  {/* Tailwind-এর ডাইনামিক ক্লাস কাজ করে না বলে ইনলাইন স্টাইল দিয়ে maxWidth সেট করা হয়েছে */}
+                  <img 
+                    className="partner_logo-image" 
+                    style={{ maxWidth: logo.width || "120px" }}
+                    src={logo.src} 
+                    alt={logo.label} 
+                  />
                 </div>
               ))}
             </div>

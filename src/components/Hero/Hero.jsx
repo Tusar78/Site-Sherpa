@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   circleIcon,
   heroImgOne,
@@ -13,11 +13,24 @@ import "./Hero.css";
 
 function Hero() {
   const [activeTab, setActiveTab] = useState("risk");
+
+  // Auto-play logic: Switch tab every 2 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setActiveTab((prevTab) => (prevTab === "risk" ? "voice" : "risk"));
+    }, 3000); // 2 seconds
+
+    // Cleanup timer if user clicks manually or component unmounts
+    return () => clearTimeout(timer);
+  }, [activeTab]);
+
   return (
     <section className="section_hero">
       <div className="global-padding">
         <div className="container-regular">
           <div className="hero_content">
+            
+            {/* Left Content */}
             <div className="hero_left">
               <div className="hero_badge">
                 <div className="hero_badge-left">
@@ -32,6 +45,7 @@ function Hero() {
                   Safety software built by operators, for operators
                 </span>
               </div>
+              
               <h1 className="hero_title">
                 Get on site faster with safety software that doesn't suck.
               </h1>
@@ -46,35 +60,40 @@ function Hero() {
               </div>
             </div>
 
+            {/* Right Visual Section */}
             <div className="hero_visual">
-              {/* Hero Visual Section - Right Side */}
               <div className="hero_visual-bg"></div>
 
-              {/* Cards Container */}
-              <div className="hero_visual-elements">
+              {/* Cards Container with smooth fade transition */}
+              <div key={activeTab} className="hero_visual-elements animate-fade">
+                
                 <div className="hero_card-left">
                   <div className="hero_card hero_card-site">
-                    <img src={heroImgTwo} alt="Site Details" />
+                    {/* Image changes dynamically based on activeTab */}
+                    <img src={activeTab === "risk" ? heroImgTwo : heroImgFour} alt="Site Details" />
                   </div>
 
                   <div className="hero_card hero_card-portrait">
-                    <img src={heroImgOne} alt="Safety Officer" />
+                    <img src={activeTab === "risk" ? heroImgOne : heroImgThree} alt="Safety Officer" />
                   </div>
                 </div>
+
                 <div className="hero_card-right">
                   <div className="hero_card hero_card-site">
-                    <img src={heroImgThree} alt="Site Details" />
+                    <img src={activeTab === "risk" ? heroImgThree : heroImgTwo} alt="Site Details" />
                   </div>
 
                   <div className="hero_card hero_card-portrait">
-                    <img src={heroImgFour} alt="Safety Officer" />
+                    <img src={activeTab === "risk" ? heroImgFour : heroImgOne} alt="Safety Officer" />
                   </div>
                 </div>
+
               </div>
 
               {/* Bottom Tabs */}
               <div className="hero_visual-tabs">
                 <div className="tab_container">
+                  
                   {/* Risk Assessment Tab */}
                   <button
                     className={`tab_btn ${activeTab === "risk" ? "tab_btn--active" : ""}`}
@@ -92,9 +111,11 @@ function Hero() {
                     <img src={audiLicense} alt="Voice" className="tab_icon" />
                     Voice reporting
                   </button>
+
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>

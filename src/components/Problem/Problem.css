@@ -1,11 +1,70 @@
 @reference "../../index.css";
 
-
 .problem_subtext {
     @apply font-body text-regular uppercase font-semibold bg-[image:var(--gradient-red)] bg-clip-text text-transparent;
-    
 }
 
 .problem_title {
-    @apply text-h2 font-medium text-primary w-full max-w-[535px]
+    @apply text-h2 font-medium text-primary w-full max-w-[535px];
+}
+
+/* ============================
+   SCROLL ANIMATIONS
+============================ */
+
+/
+.spring-element {
+    transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.8s ease-out;
+}
+
+.premium-reveal {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.premium-reveal.is-visible {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
+
+
+.orbit-dot {
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+/* ============================
+   RESPONSIVE MAGIC
+============================ */
+
+@media (max-width: 767px) {
+    .responsive-card-text {
+        top: 24px !important;
+        left: 20px !important;
+        gap: 16px !important;
+        padding-right: 20px !important;
+    }
+    
+    .responsive-card-text .text-medium {
+        font-size: 15px !important;
+        line-height: 22px !important;
+    }
+    
+    .responsive-card-text .text-regular {
+        font-size: 14px !important;
+        line-height: 20px !important;
+        max-width: 90% !important;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .responsive-card-text {
+        top: 30px !important;
+        left: 24px !important;
+        gap: 24px !important;
+        padding-right: 24px !important;
+    }
 }
