@@ -188,7 +188,7 @@ function BookDemoButton(props) {
                 <div className="solution_card">
                   <div className="solution_card-visual">
                     <img className="solution_dotted-bg" src={dottedPattern} alt="pattern" />
-                    
+
                     <img src={activePanel.imgUrl} alt="" className="solution_img" style={{
                       maxWidth: activePanel.width,
                       height: activePanel.height
@@ -196,7 +196,12 @@ function BookDemoButton(props) {
                   </div>
                   <div className="solution_card-content">
                     <h2 className="solution_card-title">
-                      <a href="#">{activePanel.title}</a>
+                      <a
+                        href="#"
+                        className="relative inline-block after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+                      >
+                        {activePanel.title}
+                      </a>
                     </h2>
                     <p className="solution_card-description">
                       <span>{activePanel.text}</span>
