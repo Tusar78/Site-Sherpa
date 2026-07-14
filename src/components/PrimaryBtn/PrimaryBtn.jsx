@@ -1,6 +1,6 @@
 import "./PrimaryBtn.css";
 
-export default function PrimaryBtn({ href = "#", text }) {
+export default function PrimaryBtn({ href = "#", text, bg }) {
   return (
     <a href={href} className="primary-btn">
       

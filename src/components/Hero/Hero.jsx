@@ -56,7 +56,7 @@ function Hero() {
               </p>
 
               <div className="hero_actions">
-                <PrimaryBtn href="#" text="Book a demo" />
+                <PrimaryBtn href="#" text="Book a demo" bg="red" />
               </div>
             </div>
 
