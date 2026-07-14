@@ -1,7 +1,7 @@
 @reference "../../index.css";
 
 .partner_section {
-  @apply w-full py-14
+  @apply w-full py-8 md:py-8 lg:py-10 xl:py-14;
 }
 
 .partner_header {
@@ -13,12 +13,12 @@
 }
 
 .partner_shell {
-  @apply rounded-[7px] border border-surface-alt bg-surface-alt p-[1px] grid md:grid-cols-[0.6fr_1.4fr] gap-[2px];
+  @apply rounded-[7px] border border-surface-alt bg-surface-alt p-[1px] grid grid-cols-1 md:grid-cols-[0.6fr_1.4fr] gap-[2px];
 }
 
 .partner_quote-card {
   @apply flex flex-col justify-between
-         min-h-[280px] sm:min-h-[320px] md:min-h-[372px]
+         min-h-auto md:min-h-[372px] gap-6 md:gap-0
          rounded-[4px] md:rounded-[7px]
          bg-bge
          p-4 md:p-5;
@@ -47,7 +47,7 @@
 }
 
 .partner_logo-grid {
-  @apply grid grid-cols-2 gap-[2px];
+  @apply grid grid-cols-4 gap-[2px];
 }
 
 .partner_logo-card {
@@ -63,8 +63,8 @@
   @apply h-[20px] sm:h-[30px] md:h-[35px] lg:h-[40px] w-full object-contain;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 455.99px) {
   .partner_logo-grid {
-    @apply grid-cols-4;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
