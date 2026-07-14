@@ -196,6 +196,16 @@
   @apply w-5 h-5;
 }
 
+.hero_visual-bg {
+  @apply absolute inset-0 z-0 bg-cover bg-no-repeat bg-center;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/images/herobg.png);
+    background-size: cover;
+    width: 520px;
+    height: 800px;
+    left: 0;
+    right: 0;
+    top: -90px;
 /* --- The Magic: Auto Progress Background --- */
 .tab_btn::before {
   content: "";

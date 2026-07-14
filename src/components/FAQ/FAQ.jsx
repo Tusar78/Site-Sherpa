@@ -41,86 +41,19 @@ export const FaqSection = () => {
   };
 
   return (
-    <section
-      className="group-2147223535"
-      style={{
-        width: "100%",
-        maxWidth: "1240px",
-        margin: "0 auto",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        alignItems: "flex-start",
-        gap: "40px",
-        boxSizing: "border-box",
-        padding: "140px 0 120px 0",
-      }}
-    >
+    <section className="w-full max-w-[1240px] mx-auto flex flex-row justify-between items-start gap-10 box-border py-[140px] pb-[120px] [@media(max-width:1024px)]:flex-col [@media(max-width:1024px)]:items-center [@media(max-width:1024px)]:gap-[60px] [@media(max-width:640px)]:py-10 [@media(max-width:640px)]:px-4">
       {/* Left Content Side */}
-      <div
-        className="group-2147223534 items-start bg-clip-text"
-        style={{
-          width: "100%",
-          maxWidth: "578px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-          
-        }}
-      >
-        <span
-          className="tagline bg-[image:var(--gradient-sunset)] bg-clip-text text-transparent"
-          style={{
-            display: "inline-block",        
-            fontSize: "16px",
-            fontFamily: '"Google Sans Code", monospace',
-            fontWeight: 600,
-            lineHeight: "24px",
-            letterSpacing: "0px",
-            textAlign: "left",
-            textTransform: "uppercase",
-          }}
-        >
+      <div className="w-full max-w-[578px] flex flex-col gap-3 [@media(max-width:1024px)]:max-w-full">
+        {/* Tagline with Gradient */}
+        <span className="inline-block text-base font-['Google_Sans_Code',monospace] font-semibold leading-6 tracking-normal text-left uppercase bg-clip-text text-transparent bg-[image:var(--gradient-sunset)]">
           Frequently asked questions
         </span>
 
-        <div
-          className="group-2147223532"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "16px",
-          }}
-        >
-          <h2
-            className="heading"
-            style={{
-              margin: 0,
-              color: "#072C2C",
-              fontSize: "48px",
-              fontFamily: '"Inter Display", sans-serif',
-              fontWeight: 500,
-              lineHeight: "58px",
-              letterSpacing: "-1.44px",
-              textAlign: "left",
-            }}
-          >
+        <div className="flex flex-col gap-4">
+          <h2 className="m-0 text-[#072C2C] text-[48px] font-['Inter_Display',sans-serif] font-medium leading-[58px] tracking-[-1.44px] text-left [@media(max-width:640px)]:text-[32px] [@media(max-width:640px)]:leading-10">
             Questions managers ask us before they book a demo
           </h2>
-          <p
-            className="text"
-            style={{
-              margin: 0,
-              color: "rgba(7, 44, 44, 0.7)",
-              fontSize: "18px",
-              fontFamily: '"Inter Display", sans-serif',
-              fontWeight: 400,
-              lineHeight: "28px",
-              letterSpacing: "0px",
-              textAlign: "left",
-              maxWidth: "523px",
-            }}
-          >
+          <p className="m-0 text-[#072C2C]/70 text-lg font-['Inter_Display',sans-serif] font-normal leading-7 tracking-normal text-left max-w-[523px]">
             Every concern you have about switching over, your budget and whether
             the AI actually works on site, answered below.
           </p>
@@ -128,56 +61,16 @@ export const FaqSection = () => {
       </div>
 
       {/* Right Accordion Side */}
-      <div
-        className="group-2147223533"
-        style={{
-          width: "100%",
-          maxWidth: "600px",
-          display: "flex",
-          flexDirection: "column",
-          borderRadius: "8px",
-          overflow: "hidden",
-          border: '1px solid #E3E5D7',
-          borderBottom: 'none'
-        }}
-      >
+      <div className="w-full max-w-[600px] flex flex-col rounded-lg overflow-hidden border border-[#E3E5D7] border-b-0 [@media(max-width:1024px)]:max-w-full">
         {FAQ_DATA.map((item, index) => (
           <div
             key={index}
             onClick={() => toggleAccordion(index)}
-            style={{
-              width: "100%",
-              borderBottom: "1px solid #E3E5D7",
-              // borderBottom:
-              //   index === FAQ_DATA.length - 0 ? "1px solid #E3E5D7" : "none",
-              boxSizing: "border-box",
-              cursor: "pointer",
-              backgroundColor: "transparent",
-              transition: "all 0.4s ease-out",
-              overflow: "hidden",
-            }}
+            className="w-full border-b border-[#E3E5D7] box-border cursor-pointer bg-transparent overflow-hidden group"
           >
-            <div
-              style={{
-                padding: "16px 24px",
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                minHeight: "56px",
-                borderRadius: "8px",
-              }}
-            >
-              <span
-                className="question"
-                style={{
-                  color: "#072C2C",
-                  fontSize: "18px",
-                  fontFamily: '"Inter Display", sans-serif',
-                  fontWeight: 500,
-                  lineHeight: "28px",
-                  textAlign: "left",
-                }}
-              >
+            {/* Header */}
+            <div className="py-4 px-6 flex justify-between items-center min-h-[56px] rounded-lg transition-colors duration-200 hover:bg-[#072C2C]/5">
+              <span className="text-[#072C2C] text-lg font-['Inter_Display',sans-serif] font-medium leading-7 text-left">
                 {item.question}
               </span>
               <img
@@ -187,62 +80,33 @@ export const FaqSection = () => {
                     : "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/e17e1479-ae15-431e-a82a-9a6245577fca.svg"
                 }
                 alt={activeIndex === index ? "minus" : "plus"}
-                style={{
-                  width: "20px",
-                  height: "20px",
-                }}
+                className="w-5 h-5 transition-transform duration-200"
               />
             </div>
 
+            {/* 
+              Fast & Smooth Animation Container 
+              - Duration: 300ms (Fast)
+              - Easing: ease-out (Smooth stop)
+              - Padding: Isolated in child div (No glitch)
+            */}
             <div
-              style={{
-                maxHeight: activeIndex === index ? "200px" : "0px",
-                opacity: activeIndex === index ? 1 : 0,
-                transition: "all 0.4s ease-out",
-                padding: activeIndex === index ? "0 24px 24px 24px" : "0 24px",
-              }}
+              className={`overflow-hidden transition-all duration-300 ease-out ${
+                activeIndex === index 
+                  ? "max-h-[500px] opacity-100" 
+                  : "max-h-0 opacity-0"
+              }`}
             >
-              <p
-                className="text"
-                style={{
-                  margin: 0,
-                  color: "rgba(7, 44, 44, 0.7)",
-                  fontSize: "16px",
-                  fontFamily: '"Inter Display", sans-serif',
-                  fontWeight: 400,
-                  lineHeight: "24px",
-                  maxWidth: "396px",
-                }}
-              >
-                {item.answer}
-              </p>{" "}
-              {/* Fixed: changed from </span> to </p> */}
+              {/* Inner Content Wrapper with Static Padding */}
+              <div className="px-6 pb-6">
+                <p className="m-0 text-[#072C2C]/70 text-base font-['Inter_Display',sans-serif] font-normal leading-6 max-w-[396px]">
+                  {item.answer}
+                </p>
+              </div>
             </div>
           </div>
         ))}
       </div>
-
-      <style>{`
-        @media (max-width: 1024px) {
-          .group-2147223535 {
-            flex-direction: column !important;
-            align-items: center !important;
-            gap: 60px !important;
-          }
-          .group-2147223534, .group-2147223533 {
-            max-width: 100% !important;
-          }
-        }
-        @media (max-width: 640px) {
-          .heading {
-            font-size: 32px !important;
-            line-height: 40px !important;
-          }
-          .group-2147223535 {
-            padding: 40px 16px !important;
-          }
-        }
-      `}</style>
     </section>
   );
 };
