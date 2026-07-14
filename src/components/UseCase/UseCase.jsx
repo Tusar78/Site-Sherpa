@@ -470,6 +470,7 @@ function UseCase(props) {
                 <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible md:overflow-visible md:pb-0 lg:block lg:overflow-visible lg:pb-0">
                   {tabs.map((tab) => {
                     const isActive = tab.id === activeTab.id;
+                    
                     return (
                       <button
                         key={tab.id}

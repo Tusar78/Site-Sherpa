@@ -50,8 +50,8 @@ const tabPanelContent = {
     imgUrl: tabImage2,
     imageAlt:
       "Risk assessment draft workspace representing hazards, controls and SWMS preparation",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    title: "Generate SWMS in 30 seconds, not 4 hours →",
+    text: "Type an address. AI pulls the legislation and generates a fully compliant SWMS",
     width: '488px',
     height: 'auto'
   },
@@ -59,8 +59,8 @@ const tabPanelContent = {
     imgUrl: tabImage3,
     imageAlt:
       "Toolbox talk record workspace representing briefings, attendance and worker acknowledgements",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    title: "Generate your next pre-start in just minutes →",
+    text: "AI drafts your Toolbox talk from recent site activity, translated into every worker's language.",
     width: '374px',
     height: 'auto'
   },
@@ -68,8 +68,8 @@ const tabPanelContent = {
     imgUrl: tabImage4,
     imageAlt:
       "Voice-first reporting interface with a recording card and incident reporting workflow",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    title: "Log your next report by voice →",
+    text: "Report incidents, observations, and hazards by the voice. AI classifies and files each one automatically.",
     width: '360px',
     height: 'auto'
   },
@@ -77,8 +77,8 @@ const tabPanelContent = {
     imgUrl: tabImage5,
     imageAlt:
       "WHS dashboard workspace representing site status, trends, open risks and overdue actions",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in.",
+    title: "Get live visibility across every site →",
+    text: "Get live visibility across every site, crew, and contractor from a single dashboard",
     width: '434px',
     height: 'auto'
   },
@@ -86,8 +86,8 @@ const tabPanelContent = {
     imgUrl: tabImage6,
     imageAlt:
       "Tracked actions workspace representing owners, due dates and closure evidence",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    title: "Close every corrective action on time →",
+    text: "Assign corrective actions, set deadlines, and track to completion.",
     width: '475px',
     height: 'auto'
   },
@@ -95,8 +95,8 @@ const tabPanelContent = {
     imgUrl: tabImage7,
     imageAlt:
       "ISO evidence workspace representing mapped controls, documents and audit trails",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    title: "Know your gap before your auditor does →",
+    text: "Run an AI-powered gap analysis against and get a full remediation report in hours.",
     width: '434px',
     height: 'auto'
   },
@@ -104,8 +104,8 @@ const tabPanelContent = {
     imgUrl: tabImage8,
     imageAlt:
       "Learning and inductions workspace representing training paths, tickets and site readiness",
-    title: "Pre-qualify your entire contractor list →",
-    text: "Onboard and pre-qualify contractors with insurance and licence verification built in",
+    title: "Get every contractor verified before they arrive →",
+    text: "Track training, licences, and expiries - everyone verified before they arrive.",
     width: '397px',
     height: 'auto'
   },

@@ -1,3 +1,4 @@
+import Banner from "./components/Banner/Banner";
 import Benifits from "./components/Benifits/Benifits";
 import { CTA } from "./components/CTA/CTA";
 import { FaqSection } from "./components/FAQ/FAQ";
@@ -15,6 +16,7 @@ import { UseCase } from "./components/UseCase/UseCase";
 function App() {
   return (
     <>
+      <Banner />
       <Header />
       <Hero />
       <Partner />
