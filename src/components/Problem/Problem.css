@@ -12,12 +12,11 @@
    SCROLL ANIMATIONS
 ============================ */
 
-/* কার্ডের ইমেজ এবং টেক্সটের জন্য স্মুথ রোটেশন অ্যানিমেশন */
+/
 .spring-element {
     transition: transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.8s ease-out;
 }
 
-/* সেন্টারের টেক্সট রিভিল (Blur + Slide Up) */
 .premium-reveal {
     opacity: 0;
     filter: blur(8px);
@@ -31,7 +30,7 @@
     transform: translateY(0);
 }
 
-/* অরবিট ডট অ্যানিমেশন */
+
 .orbit-dot {
     transition: transform 1.5s ease-out, opacity 1.5s ease-out;
 }
@@ -40,7 +39,6 @@
    RESPONSIVE MAGIC
 ============================ */
 
-/* ছোট স্ক্রিনে ফ্লোটিং কার্ডগুলোর ভেতরের টেক্সট এবং গ্যাপ যাতে ওভারফ্লো না করে তার ফিক্স */
 @media (max-width: 767px) {
     .responsive-card-text {
         top: 24px !important;
@@ -61,7 +59,7 @@
     }
 }
 
-/* মাঝারি স্ক্রিনের (Tablet) জন্য মাইনর ফিক্স */
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .responsive-card-text {
         top: 30px !important;
