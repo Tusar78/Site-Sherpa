@@ -47,25 +47,25 @@ import videoSeven from "./Animation/Setup-ORG.mp4";
 
 
 //UseCase Thum
-import useCaseThumOne from "./UseCase/UseCaseThum/UseCaseThum (1).webp";
-import useCaseThumTwo from "./UseCase/UseCaseThum/UseCaseThum (2).webp";
-import useCaseThumThree from "./UseCase/UseCaseThum/UseCaseThum (3).webp";
-import useCaseThumFour from "./UseCase/UseCaseThum/UseCaseThum (4).webp";
-import useCaseThumFive from "./UseCase/UseCaseThum/UseCaseThum (5).webp";
-import useCaseThumSix from "./UseCase/UseCaseThum/UseCaseThum (6).webp";
-import useCaseThumSeven from "./UseCase/UseCaseThum/UseCaseThum (7).webp";
-import useCaseThumEight from "./UseCase/UseCaseThum/UseCaseThum (8).webp";
-import useCaseThumNine from "./UseCase/UseCaseThum/UseCaseThum (9).webp";
+import useCaseThumOne from "./UseCase/UseCaseThum/UseCaseThum(1).webp";
+import useCaseThumTwo from "./UseCase/UseCaseThum/UseCaseThum(2).webp";
+import useCaseThumThree from "./UseCase/UseCaseThum/UseCaseThum(3).webp";
+import useCaseThumFour from "./UseCase/UseCaseThum/UseCaseThum(4).webp";
+import useCaseThumFive from "./UseCase/UseCaseThum/UseCaseThum(5).webp";
+import useCaseThumSix from "./UseCase/UseCaseThum/UseCaseThum(6).webp";
+import useCaseThumSeven from "./UseCase/UseCaseThum/UseCaseThum(7).webp";
+import useCaseThumEight from "./UseCase/UseCaseThum/UseCaseThum(8).webp";
+import useCaseThumNine from "./UseCase/UseCaseThum/UseCaseThum(9).webp";
 //UseCase BG
-import useCaseBgOne from "./UseCase/UseCaseBg/UseCaseBg (1).webp";
-import useCaseBgTwo from "./UseCase/UseCaseBg/UseCaseBg (2).webp";
-import useCaseBgThree from "./UseCase/UseCaseBg/UseCaseBg (3).webp";
-import useCaseBgFour from "./UseCase/UseCaseBg/UseCaseBg (4).webp";
-import useCaseBgFive from "./UseCase/UseCaseBg/UseCaseBg (5).webp";
-import useCaseBgSix from "./UseCase/UseCaseBg/UseCaseBg (6).webp";
-import useCaseBgSeven from "./UseCase/UseCaseBg/UseCaseBg (7).webp";
-import useCaseBgEight from "./UseCase/UseCaseBg/UseCaseBg (8).webp";
-import useCaseBgNine from "./UseCase/UseCaseBg/UseCaseBg (9).webp";
+import useCaseBgOne from "./UseCase/UseCaseBg/UseCaseBg(1).webp";
+import useCaseBgTwo from "./UseCase/UseCaseBg/UseCaseBg(2).webp";
+import useCaseBgThree from "./UseCase/UseCaseBg/UseCaseBg(3).webp";
+import useCaseBgFour from "./UseCase/UseCaseBg/UseCaseBg(4).webp";
+import useCaseBgFive from "./UseCase/UseCaseBg/UseCaseBg(5).webp";
+import useCaseBgSix from "./UseCase/UseCaseBg/UseCaseBg(6).webp";
+import useCaseBgSeven from "./UseCase/UseCaseBg/UseCaseBg(7).webp";
+import useCaseBgEight from "./UseCase/UseCaseBg/UseCaseBg(8).webp";
+import useCaseBgNine from "./UseCase/UseCaseBg/UseCaseBg(9).webp";
 
 
 //FounderNote
