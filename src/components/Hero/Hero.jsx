@@ -90,7 +90,7 @@ function Hero() {
                     onClick={() => setActiveTab("voice")}
                   >
                     <img src={audiLicense} alt="Voice" className="tab_icon" />
-                    Voice Incident Logged
+                    Voice reporting
                   </button>
                 </div>
               </div>
