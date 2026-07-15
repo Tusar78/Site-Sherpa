@@ -25,7 +25,7 @@
 
 /* Mobile Flex-Col, Desktop Flex-Row with your original gap */
 .solution-inner {
-  @apply mx-auto w-full max-w-[1240px] relative flex flex-col lg:flex-row justify-between gap-10 lg:gap-7 z-30;
+  @apply mx-auto w-full max-w-[1240px] relative flex flex-col lg:flex-row justify-between gap-4 sm:gap-10 lg:gap-7 z-30;
 }
 
 .solution_header {
