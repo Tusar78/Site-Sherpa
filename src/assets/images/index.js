@@ -74,13 +74,13 @@ import videoSeven from "./Animation/Setup-ORG.mp4";
 
 
 // Benifits Lottie
-import clientLottieOne from "./Benifits/Lottie/01 Get-compliant-in-days-not-weeks (1).lottie?raw"
-import clientLottieTwo from "./Benifits/Lottie/02 Risk-Assessments-done-in-seconds-not-days.json"
-import clientLottieThree from "./Benifits/Lottie/03 Always-know-who-s-on-your-site (1).json"
-import clientLottieFour from "./Benifits/Lottie/4 One-set-of-credentials-for-every-site-you-work-on (1).json"
-import clientLottieFive from "./Benifits/Lottie/5 Know-where-your-team-is-and-when-they-checked-in.json"
-import clientLottieSix from "./Benifits/Lottie/07 Reporting-Done (1).json"
-import clientLottieSeven from "./Benifits/Lottie/08 Notification.json"
+import clientLottieOne from "./Benifits/Lottie/Get-compliant-in-days-not-weeks1.json"
+import clientLottieTwo from "./Benifits/Lottie/Risk-Assessments-done-in-seconds-not-days.json"
+import clientLottieThree from "./Benifits/Lottie/Always-know-who-s-on-your-site1.json"
+import clientLottieFour from "./Benifits/Lottie/One-set-of-credentials-for-every-site-you-work-on1.json"
+import clientLottieFive from "./Benifits/Lottie/Know-where-your-team-is-and-when-they-checked-in.json"
+import clientLottieSix from "./Benifits/Lottie/Reporting-Done1.json"
+import clientLottieSeven from "./Benifits/Lottie/Notification.json"
 
 // Hero Lottie
 import heroLottieOne from "./Hero/Lottie/00 _ Hero-Voice-Report (1).json"
