@@ -202,7 +202,7 @@ export const ProblemSection = ({ className, style }) => {
                 />
 
                 <div
-                  className='absolute flex flex-col spring-element responsive-card-text h-full w-full justify-between lg:justify-start px-10 py-25 lg:px-0 lg:py-0'
+                  className='absolute flex flex-col spring-element responsive-card-text h-full  max-w-[90%] justify-between lg:justify-start px-10 py-25 lg:px-0 lg:py-0'
                   style={{
                     transform: isVisible ? asset.rotation : 'translateY(30px) rotate(0deg)',
                     opacity: isVisible ? 1 : 0,
