@@ -409,7 +409,7 @@ const Benefits = ({ className, style }) => {
                   </div>
                 </div>
                 <figure className="lg:h-100  w-full lg:max-w-[560px] p-2 pt-0 sm:h-full sm:min-h-[420px] sm:p-2 lg:min-h-[560px]">
-                  <div className="w-full h-full flex items-center justify-center">
+                  <div className="w-full h-full flex items-center justify-center bg-bge rounded-[8px] overflow-clip">
                     
                     {/* Render SafeLottie instead of raw Lottie */}
                     <SafeLottie animationData={card.image} />
