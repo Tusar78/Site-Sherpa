@@ -440,7 +440,7 @@ const Benefits = ({ className, style }) => {
                   </h2>
 
                   {/* Standardized, non-absolute visual frame for all cards */}
-                  <div className="flex w-full items-center justify-center overflow-hidden p-4">
+                  <div className="flex w-full items-center justify-center overflow-hidden ">
                     <img
                       src={card.imgSrc}
                       alt={card.imgAlt}
