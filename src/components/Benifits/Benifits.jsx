@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import Lottie from "lottie-react";
+import React, { useState, useEffect } from "react";
+import LottieReact from "lottie-react";
 import "./Benifits.css";
 
-const checkIconUrl =
-  "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/405f723e-9b7e-4f74-99fd-0799f425703b.svg";
-
+// Imports
 import {
   benifitsCheckIcon,
   benifitsFileCheckIcon,
@@ -27,13 +25,6 @@ import {
   videoFive,
   videoSix,
   videoFour,
-  clientLottieOne,
-  clientLottieTwo,
-  clientLottieThree,
-  clientLottieFour,
-  clientLottieFive,
-  clientLottieSix,
-  clientLottieSeven,
   heroLottieOne,
   benifitsHistory,
   benifitsList,
@@ -47,9 +38,64 @@ import {
   benifitsSquareChart,
 } from "../../assets/images";
 
+// Benifits Lottie
+import clientLottieOne from "../../assets/images/Benifits/Lottie/Get-compliant-in-days-not-weeks1.json";
+import clientLottieTwo from "../../assets/images/Benifits/Lottie/Risk-Assessments-done-in-seconds-not-days.json";
+import clientLottieThree from "../../assets/images/Benifits/Lottie/Always-know-who-s-on-your-site1.json";
+import clientLottieFour from "../../assets/images/Benifits/Lottie/One-set-of-credentials-for-every-site-you-work-on1.json";
+import clientLottieFive from "../../assets/images/Benifits/Lottie/Know-where-your-team-is-and-when-they-checked-in.json";
+import clientLottieSix from "../../assets/images/Benifits/Lottie/Reporting-Done1.json";
+import clientLottieSeven from "../../assets/images/Benifits/Lottie/Notification.json";
+
+
+
 const tabIcons = {
   clients: clientIcon,
   contractors: constractorIcon,
+};
+
+// ==========================================
+// Bulletproof Lottie Wrapper Component
+// Handles both JSON Objects and String URLs
+// ==========================================
+
+const Lottie = LottieReact.default || LottieReact;
+const SafeLottie = ({ animationData }) => {
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    if (!animationData) {
+      setError(true);
+      return;
+    }
+
+    // Check if the bundler returned a URL string instead of a parsed object
+    if (typeof animationData === "string") {
+      fetch(animationData)
+        .then((res) => res.json())
+        .then((json) => setData(json))
+        .catch(() => setError(true));
+    } 
+    // If it's an object, check if it's nested inside a 'default' property (common in Vite/Webpack)
+    else if (typeof animationData === "object") {
+      setData(animationData.default || animationData);
+    } else {
+      setError(true);
+    }
+  }, [animationData]);
+
+  if (error) return <div className="text-red-500 font-medium">Invalid Lottie Data</div>;
+  if (!data) return <div className="text-primary/50 text-small">Loading...</div>;
+
+  return (
+    <Lottie
+      animationData={data}
+      loop={true}
+      autoplay={true}
+      style={{ width: "100%", height: "100%" }}
+    />
+  );
 };
 
 // Dynamic Card Data based on Tab
@@ -60,7 +106,7 @@ const FEATURE_CARDS_DATA = {
       title: "A paper trail that builds itself, so your board can sleep at night",
       description:
         "Every induction, incident and sign-off logged, classified and timestamped automatically by AI. Pull up any record in seconds.",
-      imgSrc: benifitCardImg02, // Reusing existing images for consistency
+      imgSrc: benifitCardImg02, 
       imgAlt: "Compliance dashboard visualization",
     },
     {
@@ -284,7 +330,7 @@ const Benefits = ({ className, style }) => {
       aria-labelledby="benefits-heading"
     >
       <div className="mx-auto w-full pt-10 sm:pt-16 lg:pt-[120px]">
-        <div  className="global-padding">
+        <div className="global-padding">
           <div className="mx-auto flex w-full max-w-[628px] flex-col items-center text-center">
             <span className="mb-4 font-semibold font-body bg-[image:var(--gradient-teal)] bg-clip-text text-transparent uppercase">
               Benefits
@@ -364,17 +410,10 @@ const Benefits = ({ className, style }) => {
                 </div>
                 <figure className="lg:h-100  w-full lg:max-w-[560px] p-2 pt-0 sm:h-full sm:min-h-[420px] sm:p-2 lg:min-h-[560px]">
                   <div className="w-full h-full flex items-center justify-center">
-                    {/* Check if card.image is a valid object before rendering */}
-                    {card.image && typeof card.image === 'object' ? (
-                      <Lottie
-                        animationData={card.image}
-                        loop={true}
-                        autoplay={true}
-                        style={{ width: '100%', height: '100%' }}
-                      />
-                    ) : (
-                      <div className="text-red-500">Invalid Lottie Data</div>
-                    )}
+                    
+                    {/* Render SafeLottie instead of raw Lottie */}
+                    <SafeLottie animationData={card.image} />
+                    
                   </div>
                 </figure>
               </article>
