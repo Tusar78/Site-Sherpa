@@ -127,7 +127,7 @@ export const ProblemSection = ({ className, style }) => {
   return (
     <section
       ref={sectionRef}
-      className={`w-full overflow-x-hidden bg-transparent px-4 py-[60px] sm:px-6 sm:py-[80px] md:px-8 lg:px-0 lg:pt-[114px] lg:pb-[20px] ${className ?? ''}`.trim()}
+      className={`w-full overflow-hidden bg-transparent px-4 py-[60px] sm:px-6 sm:py-[80px] md:px-8 lg:px-0 lg:pt-[114px] lg:pb-[20px] ${className ?? ''}`.trim()}
       style={style}
       aria-labelledby="problem-heading"
     >
