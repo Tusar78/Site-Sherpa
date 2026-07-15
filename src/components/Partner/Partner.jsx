@@ -1,13 +1,15 @@
 import "./Partner.css";
-import logo1 from "../../assets/images/Partner/Partner Logo (1).webp";
-import logo2 from "../../assets/images/Partner/Partner Logo (2).webp";
-import logo3 from "../../assets/images/Partner/Partner Logo (3).webp";
-import logo4 from "../../assets/images/Partner/Partner Logo (4).webp";
-import logo5 from "../../assets/images/Partner/Partner Logo (5).webp";
-import logo6 from "../../assets/images/Partner/Partner Logo (6).webp";
-import logo7 from "../../assets/images/Partner/Partner Logo (7).webp";
-import logo8 from "../../assets/images/Partner/Partner Logo (8).webp";
-import PartnerProfile from "../../assets/images/Partner/Partner Profile.png";
+import { 
+    logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  PartnerProfile
+} from "../../assets/images";
 
 const logos = [
   { src: logo3, label: "Fletcher Building", width: "171px" },
@@ -34,8 +36,7 @@ function Partner() {
           <div className="partner_shell">
             <article className="partner_quote-card">
               <p className="partner_quote-text">
-                “We needed to align with the new Aged Care Quality Standards, and
-                SiteSherpa made the process seamless.”
+                "Risk assessments used to eat half a day. Now they're done in minutes and actually read like someone who knows the site wrote them."
               </p>
 
               <div className="partner_quote-author">
@@ -43,8 +44,8 @@ function Partner() {
                   <img src={PartnerProfile} alt="David Henricks" />
                 </span>
                 <div>
-                  <p className="partner_author-name">David Henricks</p>
-                  <p className="partner_author-role">National Retail Operations Lead</p>
+                  <p className="partner_author-name">HSEQ Manager</p>
+                  <p className="partner_author-role">Construction Industry</p>
                 </div>
               </div>
             </article>
@@ -52,7 +53,6 @@ function Partner() {
             <div className="partner_logo-grid" role="list">
               {logos.map((logo) => (
                 <div key={logo.label} className="partner_logo-card" role="listitem">
-                  {/* Tailwind-এর ডাইনামিক ক্লাস কাজ করে না বলে ইনলাইন স্টাইল দিয়ে maxWidth সেট করা হয়েছে */}
                   <img 
                     className="partner_logo-image" 
                     style={{ maxWidth: logo.width || "120px" }}

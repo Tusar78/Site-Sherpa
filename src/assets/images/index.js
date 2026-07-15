@@ -23,6 +23,20 @@ import tabImage6 from "./Solution/tabimage6.png";
 import tabImage7 from "./Solution/tabimage7.png";
 import tabImage8 from "./Solution/tabimage8.png";
 
+
+
+// Partner
+import logo1 from "./Partner/Partner Logo (1).webp";
+import logo2 from "./Partner/Partner Logo (2).webp";
+import logo3 from "./Partner/Partner Logo (3).webp";
+import logo4 from "./Partner/Partner Logo (4).webp";
+import logo5 from "./Partner/Partner Logo (5).webp";
+import logo6 from "./Partner/Partner Logo (6).webp";
+import logo7 from "./Partner/Partner Logo (7).webp";
+import logo8 from "./Partner/Partner Logo (8).webp";
+import PartnerProfile from "./Partner/Partner Profile.webp";
+
+// Benifits
 import benifitsClientImg01 from "./Benifits/client-(1).png";
 import benifitsClientImg02 from "./Benifits/client-(2).png";
 import benifitsClientImg03 from "./Benifits/client-(3).png";
@@ -32,9 +46,22 @@ import benifitsListCheckIcon from "./Benifits/list-checks.svg";
 import benifitsTicket from "./Benifits/ticket.svg";
 import benifitsUserCheck from "./Benifits/user-round-check.svg";
 import benifitsUserSetting from "./Benifits/user-round-cog.svg";
+import benifitsHistory from "./Benifits/history.svg";
+import benifitsList from "./Benifits/layout-list.svg"
+import benifitsAstroid from "./Benifits/astroid.svg"
+import benifitsBellDot from "./Benifits/bell-dot.svg"
+import benifitsContactRound from "./Benifits/contact-round.svg"
+import benifitsListCheckTwo from "./Benifits/list-check.svg"
+import benifitsNotebook from "./Benifits/notebook-text.svg"
+import benifitsSquareChart from "./Benifits/square-chart-gantt.svg"
 import benifitCardImg01 from "./Benifits/benifitCardImg01.png";
 import benifitCardImg02 from "./Benifits/benifitCardImg02.png";
 import benifitCardImg03 from "./Benifits/benifitCardImg03.png";
+import benifitCardImg04 from "./Benifits/benifitCardImg04.png";
+import benifitCardImg05 from "./Benifits/benifitCardImg05.png";
+import benifitCardImg06 from "./Benifits/benifitCardImg06.png";
+import clientIcon from "./Benifits/clients.svg"
+import constractorIcon from "./Benifits/contractors.svg"
 
 // Video Part
 import videoOne from "./Animation/Always-know-who-s-on-your-site.mp4";
@@ -44,6 +71,20 @@ import videoFour from "./Animation/Notification.mp4";
 import videoFive from "./Animation/Pre-Qualification.mp4";
 import videoSix from "./Animation/Risk-Assesment.mp4";
 import videoSeven from "./Animation/Setup-ORG.mp4";
+
+
+// Benifits Lottie
+import clientLottieOne from "./Benifits/Lottie/01 Get-compliant-in-days-not-weeks (1).lottie?raw"
+import clientLottieTwo from "./Benifits/Lottie/02 Risk-Assessments-done-in-seconds-not-days.json"
+import clientLottieThree from "./Benifits/Lottie/03 Always-know-who-s-on-your-site (1).json"
+import clientLottieFour from "./Benifits/Lottie/4 One-set-of-credentials-for-every-site-you-work-on (1).json"
+import clientLottieFive from "./Benifits/Lottie/5 Know-where-your-team-is-and-when-they-checked-in.json"
+import clientLottieSix from "./Benifits/Lottie/07 Reporting-Done (1).json"
+import clientLottieSeven from "./Benifits/Lottie/08 Notification.json"
+
+// Hero Lottie
+import heroLottieOne from "./Hero/Lottie/00 _ Hero-Voice-Report (1).json"
+
 
 
 //UseCase Thum
@@ -66,6 +107,11 @@ import useCaseBgSix from "./UseCase/UseCaseBG/UseCaseBG(6).webp";
 import useCaseBgSeven from "./UseCase/UseCaseBG/UseCaseBG(7).webp";
 import useCaseBgEight from "./UseCase/UseCaseBG/UseCaseBG(8).webp";
 import useCaseBgNine from "./UseCase/UseCaseBG/UseCaseBG(9).webp";
+// UseCase Icon
+import useCaseIconBuilding from "./UseCase/building.svg";
+import useCaseIconWallFire from "./UseCase/wall-fire.svg";
+import useCaseIconCog from "./UseCase/cog.svg"
+import useCaseHammer from "./UseCase/hammer.svg"
 
 
 //FounderNote
@@ -118,6 +164,9 @@ export {
   benifitCardImg01,
   benifitCardImg02,
   benifitCardImg03,
+  benifitCardImg04,
+  benifitCardImg05,
+  benifitCardImg06,
   useCaseThumOne,
   useCaseThumTwo,
   useCaseThumThree,
@@ -137,5 +186,36 @@ export {
   useCaseBgEight,
   useCaseBgNine,
   signature,
-  founderProfile
+  founderProfile,
+  clientLottieOne,
+  clientLottieTwo,
+  clientLottieThree,
+  clientLottieFour,
+  clientLottieFive,
+  clientLottieSix,
+  clientLottieSeven,
+  heroLottieOne,
+  benifitsHistory,
+  benifitsList,
+  clientIcon,
+  constractorIcon,
+  useCaseIconBuilding,
+  useCaseHammer,
+  useCaseIconWallFire,
+  useCaseIconCog,
+  logo1,
+  logo2,
+  logo3,
+  logo4,
+  logo5,
+  logo6,
+  logo7,
+  logo8,
+  PartnerProfile,
+  benifitsAstroid,
+  benifitsBellDot,
+  benifitsContactRound,
+  benifitsListCheckTwo,
+  benifitsNotebook,
+  benifitsSquareChart,
 };
