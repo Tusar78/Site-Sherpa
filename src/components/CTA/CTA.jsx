@@ -50,7 +50,7 @@ export function CTA({ className = "", style }) {
 
             {/* Action Button Link */}
             <div className="cta_btn lg:mt-7">
-              <PrimaryBtn href="#" text="Book a demo" />
+              <PrimaryBtn href="#" text="Book a demo" variant="secondary" />
             </div>
           </div>
         </div>

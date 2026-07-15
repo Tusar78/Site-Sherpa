@@ -9,11 +9,11 @@
 }
 
 .solution-shadow {
-  @apply absolute z-10 w-full top-28;
+  @apply z-10 top-28 mb-[-525px] object-cover;
 }
 
 .solution_shell-wrap {
-  @apply w-full bg-dark;
+  @apply w-full bg-dark global-padding;
 }
 
 .solution-shell {

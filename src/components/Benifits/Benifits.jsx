@@ -284,17 +284,19 @@ const Benefits = ({ className, style }) => {
       aria-labelledby="benefits-heading"
     >
       <div className="mx-auto w-full pt-10 sm:pt-16 lg:pt-[120px]">
-        <div className="mx-auto flex w-full max-w-[628px] flex-col items-center text-center">
-          <span className="mb-4 font-semibold font-body bg-[image:var(--gradient-teal)] bg-clip-text text-transparent uppercase">
-            Benefits
-          </span>
-          <h2 id="benefits-heading" className="text-h2 font-medium">
-            AI-powered safety built around how your team actually works
-          </h2>
-          <p className="mt-5 max-w-[510px] leading-7 text-primary/70 text-regular sm:text-medium">
-            Everything clients need to stay compliant and everything contractors
-            need to show up ready, all in one place.
-          </p>
+        <div  className="global-padding">
+          <div className="mx-auto flex w-full max-w-[628px] flex-col items-center text-center">
+            <span className="mb-4 font-semibold font-body bg-[image:var(--gradient-teal)] bg-clip-text text-transparent uppercase">
+              Benefits
+            </span>
+            <h2 id="benefits-heading" className="text-h2 font-medium">
+              AI-powered safety built around how your team actually works
+            </h2>
+            <p className="mt-5 max-w-[510px] leading-7 text-primary/70 text-regular sm:text-medium">
+              Everything clients need to stay compliant and everything contractors
+              need to show up ready, all in one place.
+            </p>
+          </div>
         </div>
 
         <div className="mt-[37px] relative flex w-full justify-center overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -327,7 +329,7 @@ const Benefits = ({ className, style }) => {
           <div className="h-[2px] bg-surface-alt min-w-[100vw] absolute bottom-0"></div>
         </div>
 
-        <div className=" px-2 sm:px-4 lg:px-6">
+        <div className="global-padding">
           <div
             key={activeTab}
             className="mx-auto max-w-[1240px] flex flex-col gap-15 motion-safe:animate-[benefitContentIn_250ms_ease] mt-8 lg:mt-10"
@@ -381,7 +383,7 @@ const Benefits = ({ className, style }) => {
         </div>
       </div>
 
-      <section className="w-full bg-[#F8F9F3] text-[#072C2C] px-2 sm:px-4 lg:px-6">
+      <section className="w-full bg-[#F8F9F3] text-[#072C2C] global-padding">
         <div className="mx-auto w-full max-w-[1240px]">
           {/* Feature Bento Grid - Now Dynamic */}
           <div

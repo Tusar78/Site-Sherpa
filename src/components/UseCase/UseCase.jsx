@@ -428,7 +428,7 @@ function UseCase(props) {
       style={props.style}
     >
       <section
-        className="w-full overflow-hidden global-padding py-4 sm:px-6 sm:py-8 lg:px-4 lg:py-10 xl:px-5"
+        className="w-full overflow-hidden global-padding py-4 sm:py-8 lg:py-10"
         aria-labelledby="industries-heading"
       >
         <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[10px] bg-cover bg-center px-4 py-10 sm:px-8 sm:py-14 md:py-16 lg:min-h-[951px] lg:px-20 lg:py-[100px]">
