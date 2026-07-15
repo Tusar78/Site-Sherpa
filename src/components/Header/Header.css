@@ -20,7 +20,7 @@
 }
 
 /* ============================
-   DESKTOP STYLES
+   DESKTOP STYLES & FULL HEADER LOAD ANIMATION
 ============================ */
 /* Hidden on mobile, flex on large screens (lg = 1024px and up) */
 .header_nav {
@@ -36,6 +36,102 @@
   @apply font-medium text-small;
 }
 
+/* Initial state for full header load animation.
+  Using "both" fill-mode ensures elements stay hidden during their delay.
+*/
+.header_logo,
+.header_nav-link,
+.header_signin,
+.header_cta,
+.mobile_toggle {
+  animation: headerLoadReveal 0.5s ease-out both;
+}
+
+/* Staggered delay for every element in the header from left to right */
+.header_logo {
+  animation-delay: 0.05s;
+}
+.header_nav-link:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.header_nav-link:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.header_nav-link:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.header_nav-link:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.header_nav-link:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.header_signin {
+  animation-delay: 0.35s;
+}
+.header_cta {
+  animation-delay: 0.4s;
+}
+.mobile_toggle {
+  animation-delay: 0.2s;
+} /* Animates right after logo on mobile */
+
+/* Page load keyframes: Slide down, blur to clear, opacity logic applied */
+@keyframes headerLoadReveal {
+  0% {
+    opacity: 0; /* Hidden initially to prevent popping before the delay */
+    transform: translateY(-15px);
+    filter: blur(6px);
+  }
+  30% {
+    opacity: 0.7; /* Quickly reaches 70% opacity as requested */
+  }
+  100% {
+    opacity: 1; /* Settles at 100% */
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+F
+/* ============================
+   HOVER UNDERLINE EFFECT
+============================ */
+/* Base relative positioning for pseudo-elements */
+.header_nav-link,
+.header_signin,
+.mobile_nav-link {
+  position: relative;
+}
+
+/* Underline setup: Starts from 0 scale at the right */
+.header_nav-link::after,
+.header_signin::after,
+.mobile_nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Offset for visual balance */
+  width: 100%;
+  height: 1px;
+  background-color: currentColor; /* Inherits the exact text color */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+/* Mobile nav link specific adjustment to sit exactly on the existing border */
+.mobile_nav-link::after {
+  bottom: -1px;
+}
+
+/* On hover: Fills to 1 scale originating from the left */
+.header_nav-link:hover::after,
+.header_signin:hover::after,
+.mobile_nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /* ============================
    COOL CTA BUTTON ANIMATION
 ============================ */
@@ -43,28 +139,16 @@
   @apply bg-accent text-primary font-medium text-small flex items-center justify-center h-[40px] py-2.5 px-5 transition-all duration-300 relative overflow-hidden;
   border-radius: 6px;
   cursor: pointer;
-
-  box-shadow: 0 4px 15px transparent; 
+  box-shadow: 0 4px 15px transparent;
 }
-
 
 .header_cta:hover {
   @apply scale-105;
-  box-shadow: 0 4px 15px rgba(209, 255, 110, 0.4); 
+  box-shadow: 0 4px 15px rgba(209, 255, 110, 0.4);
+  background-color: var(--color-primary);
+  color: white;
 }
 
-/* 
-.header_cta::after {
-  content: "";
-  @apply absolute top-0 -left-[100%] w-[50%] h-full skew-x-[-20deg];
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  transition: left 0.5s ease-in-out;
-}
-
-
-.header_cta:hover::after {
-  left: 150%;
-} */
 /* ============================
    MOBILE TOGGLE & SVG ANIMATION
 ============================ */
@@ -79,10 +163,12 @@
 
 /* Base style for SVG lines */
 .line {
-  stroke: var(--color-primary); /* Use your primary color variable */
+  stroke: var(--color-primary);
   stroke-width: 2;
   stroke-linecap: round;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   transform-origin: center;
 }
 
