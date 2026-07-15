@@ -8,7 +8,7 @@ export default function PrimaryBtn({ href = "#", text, bg }) {
         {text}
       </div>
 
-      <div className="primary-btn_icon">
+      <div className={`primary-btn_icon hover:bg-[${bg}] hover:bg-amber-700`}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 24 24" fill="none" stroke="currentColor" 
