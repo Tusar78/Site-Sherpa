@@ -1,13 +1,20 @@
 import React from 'react';
 import './Testimonials.css';
+import {testiLogoOne,
+  testiLogoTwo,
+  testiLogoThree,
+  testiLogoFour,
+  testiLogoFive,
+  testiProfilePicOne,
+  testiProfilePicTwo} from "../../assets/images"
 
-const companyLogoA = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/73e3c362-49c0-4acb-9ff1-a0142eb97d69.svg';
-const companyLogoB = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/2b7c90ab-5724-4d25-a57f-6036ac68c5e6.svg';
-const companyLogoC = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/afffddac-0eef-4b29-98db-e0fde618dab9.svg';
-const companyLogoD = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/5219cc1b-bf9a-411b-a753-7838968651bc.svg';
-const statLogoB = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/d6600e8a-6d59-450e-8fc8-e3923bbc5bee.svg';
-const portraitA = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/17e32877-9dee-4193-a7ac-4a7b844b71dc.png';
-const portraitD = 'https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/db86a9fd-8047-4507-876e-7992a8161257.png';
+const companyLogoA = testiLogoThree;
+const companyLogoB = testiLogoTwo;
+const companyLogoC = testiLogoOne;
+const companyLogoD = testiLogoFive;
+const statLogoB = testiLogoFour;
+const portraitA = testiProfilePicTwo;
+const portraitD = testiProfilePicOne;
 
 function TestimonialCard({ logo, quote, name, role, image, logoClass = 'testimonials__logo--default' }) {
   const isFeatured = !!image;
@@ -56,9 +63,9 @@ export function Testimonials({ className = '' }) {
             <TestimonialCard
               logo={companyLogoA}
               logoClass="testimonials__logo--a"
-              quote="“We needed to align with the new Aged Care Quality Standards, and SiteSherpa made the process seamless”"
-              name="David Henricks"
-              role="National Retail Operations Lead"
+              quote="““Transitioning to Crossover streamlined our workflow. The intuitive design and powerful capabilities have transformed our operations entirely.””"
+              name="Jordan Lee"
+              role="/ Product Manager at Sailwind"
               image={portraitA}
             />
             <TestimonialCard

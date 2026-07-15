@@ -2,8 +2,6 @@ import React from "react";
 import { shadow } from "../../assets/images";
 import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 
-const arrowIconUrl =
-  "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/76e666ac-69fb-407e-a82c-0dbf7dc9099f.svg";
 
 export function CTA({ className = "", style }) {
   return (
@@ -12,7 +10,7 @@ export function CTA({ className = "", style }) {
       style={style}
       aria-labelledby="cta-heading"
     >
-      <div className="relative mx-auto w-full overflow-hidden lg:pt-16 lg:pb-28">
+      <div className="relative mx-auto w-full overflow-hidden lg:pt-16 pb-20 lg:pb-28">
         {/* Background Radial/Blur Gradients */}
         <img
           className="solution-shadow"
@@ -49,7 +47,7 @@ export function CTA({ className = "", style }) {
             </p>
 
             {/* Action Button Link */}
-            <div className="cta_btn lg:mt-7">
+            <div className="cta_btn mt-7">
               <PrimaryBtn href="#" text="Book a demo" variant="secondary" />
             </div>
           </div>

@@ -393,10 +393,10 @@ const Benefits = ({ className, style }) => {
                     {card.features.map((feature) => (
                       <div
                         key={feature.id}
-                        className="flex items-center gap-4 border-b border-dashed border-[#C1C79C] py-4 first:pt-0 sm:gap-4 sm:py-4"
+                        className="flex flex-col sm:flex-row items-start sm:items-center gap-4 border-b border-dashed border-[#C1C79C] py-4 first:pt-0 sm:gap-4 sm:py-4"
                       >
                         <img
-                          className="mt-1 h-4 w-4 shrink-0"
+                          className="mt-1 h-4 w-4 shrink-0 hidden sm:block"
                           src={feature.checkIcon}
                           alt=""
                           aria-hidden="true"
@@ -426,15 +426,15 @@ const Benefits = ({ className, style }) => {
         <div className="mx-auto w-full max-w-[1240px]">
           {/* Feature Bento Grid - Now Dynamic */}
           <div
-            className="mt-12 grid grid-cols-1 gap-1 sm:mt-[60px] 
+            className="mt-8 md:mt-12 grid grid-cols-1 gap-1 sm:mt-[60px] 
            rounded-[10px] sm:grid-cols-2 lg:grid-cols-3 bg-surface-alt p-1"
           >
             {activeFeatureCards.map((card) => (
               <article
                 key={card.id}
-                className="grid min-h-[516px] w-full rounded-[7px] bg-[#F8F9F3] p-5 text-left grid-rows-[1fr_auto] sm:p-8 sm:[&:nth-child(3)]:col-span-full lg:[&:nth-child(3)]:col-span-1"
+                className="grid w-full rounded-[7px] bg-[#F8F9F3] p-5 text-left grid-rows-[1fr_auto] sm:p-8 sm:[&:nth-child(3)]:col-span-full lg:[&:nth-child(3)]:col-span-1"
               >
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-4 sm:gap-6">
                   <h2 className="m-0 max-w-[340px] text-[22px] font-medium">
                     {card.title}
                   </h2>

@@ -64,7 +64,7 @@
 }
 
 .solution_tab {
-  @apply flex py-3 lg:py-[16px] w-full items-center gap-3 text-medium lg:text-h4 text-white/40;
+  @apply flex py-2 lg:py-4 w-full items-center text-medium lg:text-h4 text-white/40;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -73,23 +73,40 @@
 }
 
 .solution_tab--active {
-  @apply rounded-md bg-white/[0.04] text-white sm:rounded-none sm:bg-transparent;
+  @apply  text-white sm:rounded-none;
+}
+
+
+
+.solution_tab:hover {
+  @apply text-white;
 }
 
 .solution_tab-bullet {
-  @apply h-5 w-5 shrink-0 rounded-[6px] bg-transparent opacity-0 transition duration-200 lg:ml-0;
+  /* 
+    Initial state: 
+    - w-0: 0px width
+    - mr-0: 0px space to the text
+    - opacity-0: invisible
+    - transition-all: smoothly animates width, margin, and opacity together
+  */
+  @apply h-5 w-0 rounded-[6px] bg-[#D1FF6E] opacity-0 mr-0 shrink-0 transition-all duration-300 ease-out hidden sm:block;
 }
 
-.solution_tab-bullet.is-active {
-  @apply bg-[#D1FF6E] opacity-100;
-}
-
+.solution_tab-bullet.is-active,
 .solution_tab:hover .solution_tab-bullet {
-  @apply bg-[#D1FF6E] opacity-100;
+  /* 
+    Active/Hover state: 
+    - w-5: expands to 20px width
+    - mr-3: adds 12px of space between bullet and text
+    - opacity-100: becomes fully visible
+    (Total 32px space matches your original design's w-5 + gap-3)
+  */
+  @apply w-5 opacity-100 mr-3;
 }
 
 .solution_tab-text {
-  @apply whitespace-nowrap font-['Inter_Display','Inter',sans-serif] text-[15px] font-medium leading-6 sm:whitespace-normal sm:text-[18px] sm:leading-6 md:text-[20px] md:leading-7 lg:whitespace-nowrap lg:text-[28px] lg:leading-8;
+  @apply whitespace-nowrap font-base text-h4 font-medium sm:whitespace-normal;
 }
 
 .solution-tab-fade {
@@ -115,10 +132,19 @@
 .solution_card {
   @apply w-full overflow-hidden rounded-lg border border-white/10 bg-[#122323] h-full flex flex-col justify-between;
 }
+.solution_img {
+    @apply object-contain h-auto px-3 sm:px-8;
+  }
+@media (max-width: 1023px) {
+  .solution_img {
+    max-width: auto !important;
+    width: 100%;
+  }
+}
 
 /* Visual Container Height Fix for mobile */
 .solution_card-visual {
-  @apply flex min-h-[220px] sm:min-h-[260px] items-center justify-center overflow-hidden h-auto lg:h-[393px] relative py-8 lg:py-0;
+  @apply flex sm:min-h-[260px] items-center justify-center overflow-hidden h-auto lg:h-[393px] relative py-4 md:py-8 lg:py-0;
 }
 
 .solution_card-visual-figure {

@@ -36,8 +36,8 @@ const tabs = [
     eyebrow: "Built for crews on shifting sites",
     headline:
       "Keep every contractor, SWMS, induction and site record ready before work starts.",
-    bgImage: useCaseBgTwo,    // Background for this tab
-    cardImage: useCaseThumTwo, // Image inside the card
+    bgImage: useCaseBgTwo,
+    cardImage: useCaseThumTwo,
     useCases: [
       {
         id: "construction-01",
@@ -471,16 +471,23 @@ function UseCase(props) {
                         key={tab.id}
                         type="button"
                         onClick={() => setActiveTabId(tab.id)}
-                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] lg:w-[100%] ${isActive ? "border-[#072C2C] text-[#072C2C]" : "border-[#E3E5D7] pl-0 text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"}`}
+                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] lg:w-full ${isActive
+                            ? "border-[#072C2C] text-[#072C2C]"
+                            : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"
+                          }`}
                         aria-selected={isActive}
                         role="tab"
                       >
-                        {/* Smooth Scale Animation */}
+                        {/* Smooth Scale & Width Animation for Bullet */}
                         <span
-                          className={`mr-2 h-2 w-2 shrink-0 rounded-[2px] bg-[#072C2C] transition-transform duration-300 ease-out origin-left ${isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"}`}
+                          className={`h-2 bg-primary shrink-0 transition-all duration-300 ease-out hidden sm:block ${
+                            isActive
+                              ? "w-2 opacity-100 mr-3"
+                              : "w-0 opacity-0 mr-0 group-hover:w-2 group-hover:opacity-100 group-hover:mr-3"
+                          }`}
                           aria-hidden="true"
                         />
-                        <span className="break-words text-medium font-medium md:break-normal">
+                        <span className="break-words text-medium font-medium md:break-normal whitespace-nowrap">
                           {tab.label}
                         </span>
                       </button>
@@ -525,7 +532,7 @@ function UseCase(props) {
                   </div>
 
                   {/* Dynamic Card Image */}
-                  <figure className="m-0 min-w-0 md:max-w-[380px] overflow-hidden rounded-[8px] md:min-h-[360px]  lg:min-h-0">
+                  <figure className="m-0 min-w-0 md:max-w-[380px] overflow-hidden rounded-[8px] md:min-h-[360px] lg:min-h-0">
                     <img
                       src={activeTab.cardImage}
                       alt={`${activeTab.label} industry safety operations`}

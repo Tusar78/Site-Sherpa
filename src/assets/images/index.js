@@ -114,6 +114,17 @@ import useCaseIconCog from "./UseCase/cog.svg"
 import useCaseHammer from "./UseCase/hammer.svg"
 
 
+// Testimonial
+import testiLogoOne from "./Testimonial/testiLogo(1).svg"
+import testiLogoTwo from "./Testimonial/testiLogo(2).svg"
+import testiLogoThree from "./Testimonial/testiLogo(3).svg"
+import testiLogoFour from "./Testimonial/testiLogo(4).svg"
+import testiLogoFive from "./Testimonial/testiLogo(5).svg"
+import testiProfilePicOne from "./Testimonial/testiProfilePic(1).webp"
+import testiProfilePicTwo from "./Testimonial/testiProfilePic(2).webp"
+
+
+
 //FounderNote
 import signature from "./FounderNote/Signature.webp";
 import founderProfile from "./FounderNote/FounderProfile.webp";
@@ -218,4 +229,12 @@ export {
   benifitsListCheckTwo,
   benifitsNotebook,
   benifitsSquareChart,
+  testiLogoOne,
+  testiLogoTwo,
+  testiLogoThree,
+  testiLogoFour,
+  testiLogoFive,
+  testiProfilePicOne,
+  testiProfilePicTwo,
+
 };
