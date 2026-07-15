@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Problem.css';
 import { circleAlert, Problem1, Problem2, Problem3, Problem4 } from '../../assets/images';
 
-const floatingAssets = [ 
+const floatingAssets = [
   {
     id: 'dashboard-interface',
     src: Problem4,
@@ -17,7 +17,7 @@ const floatingAssets = [
     text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
   },
   {
-    id: 'onboarding-workflow', 
+    id: 'onboarding-workflow',
     src: Problem3,
     alt: 'Onboarding workflow preview',
     width: 493,
@@ -30,7 +30,7 @@ const floatingAssets = [
     text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
   },
   {
-    id: 'safety-compliance-card', 
+    id: 'safety-compliance-card',
     src: Problem2,
     alt: 'Safety compliance card preview',
     width: 492,
@@ -43,7 +43,7 @@ const floatingAssets = [
     text: `Your time is too valuable to be rewriting the same documents for every new job that expired last week.`,
   },
   {
-    id: 'site-access-management', 
+    id: 'site-access-management',
     src: Problem1,
     alt: 'Site access management preview',
     width: 494,
@@ -125,10 +125,10 @@ export const ProblemSection = ({ className, style }) => {
   }, []);
 
   return (
-    <section 
+    <section
       ref={sectionRef}
-      className={`w-full overflow-x-hidden bg-transparent px-4 py-[60px] sm:px-6 sm:py-[80px] md:px-8 lg:px-0 lg:pt-[114px] lg:pb-[20px] ${className ?? ''}`.trim()} 
-      style={style} 
+      className={`w-full overflow-hidden bg-transparent px-4 py-[60px] sm:px-6 sm:py-[80px] md:px-8 lg:px-0 lg:pt-[114px] lg:pb-[20px] ${className ?? ''}`.trim()}
+      style={style}
       aria-labelledby="problem-heading"
     >
       <div className="mx-auto w-full max-w-7xl min-w-0 lg:max-w-[1295px]">
@@ -137,10 +137,10 @@ export const ProblemSection = ({ className, style }) => {
           <div aria-hidden="true" className="problem-ring-inner absolute left-1/2 top-24 h-[190px] w-[410px] -translate-x-1/2 sm:top-[124px] sm:h-[300px] sm:w-[560px] lg:left-[264px] lg:top-[161px] lg:h-[392px] lg:w-[736px] lg:translate-x-0" style={ringBaseStyle} />
 
           {dots.map((dot, index) => (
-            <span 
-              key={dot.id} 
-              aria-hidden="true" 
-              className="absolute z-[5] orbit-dot lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)]" 
+            <span
+              key={dot.id}
+              aria-hidden="true"
+              className="absolute z-[5] orbit-dot lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)]"
               style={{
                 ...dotBaseStyle,
                 top: dot.mobileTop,
@@ -150,11 +150,11 @@ export const ProblemSection = ({ className, style }) => {
                 transform: isVisible ? 'translate(0, 0) rotate(0deg)' : dot.orbitOffset,
                 opacity: isVisible ? 1 : 0,
                 transitionDelay: `${index * 0.2}s`
-              }} 
+              }}
             />
           ))}
 
-          <div 
+          <div
             className={`problem-content relative z-20 order-1 flex w-full max-w-[566px] min-w-0 flex-col items-center pt-4 text-center sm:pt-10 lg:absolute lg:left-[365px] lg:top-[212px] lg:h-[224px] lg:w-[566px] lg:max-w-none lg:pt-0 premium-reveal ${isVisible ? 'is-visible' : ''}`}
           >
             <div className="mb-3 flex items-center gap-2">
@@ -176,33 +176,33 @@ export const ProblemSection = ({ className, style }) => {
             </p>
           </div>
 
-          <div className="relative z-10 order-2 grid w-full max-w-full min-w-0 grid-cols-1 gap-6 pb-1 sm:max-w-[760px] sm:grid-cols-2 sm:gap-6 md:gap-8 lg:block lg:max-w-none lg:gap-0 lg:pb-0">
+          <div className="relative z-10 order-2 grid w-full max-w-full min-w-0 grid-cols-1 gap-6 pb-1 sm:max-w-[760px] lg:grid-cols-2 sm:gap-6 md:gap-8 lg:block lg:max-w-none lg:gap-0 lg:pb-0">
             {floatingAssets.map((asset, index) => (
-              <figure 
-                key={asset.id} 
-                className="problem-floating-card relative m-0 w-full min-w-0 overflow-visible p-6 md:p-7 lg:absolute lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)] lg:w-[var(--asset-width)] lg:p-0" 
+              <figure
+                key={asset.id}
+                className="problem-floating-card relative m-0 w-full min-w-0 overflow-visible p-6 md:p-7 lg:absolute lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)] lg:w-[var(--asset-width)] lg:p-0"
                 style={{
                   '--desktop-left': `${asset.desktopLeft}px`,
                   '--desktop-top': `${asset.desktopTop}px`,
                   '--asset-width': `${asset.width}px`
                 }}
               >
-                <img 
-                  src={asset.src} 
-                  alt={asset.alt} 
-                  className="block h-auto w-full max-w-full select-none spring-element" 
+                <img
+                  src={asset.src}
+                  alt={asset.alt}
+                  className="block h-auto w-full max-w-full select-none spring-element"
                   style={{
                     objectFit: 'contain',
                     transform: isVisible ? asset.rotation : 'translateY(30px) rotate(0deg)',
                     opacity: isVisible ? 1 : 0,
                     transitionDelay: `${index * 0.15}s`,
                     transformOrigin: 'center center'
-                  }} 
-                  draggable={false} 
+                  }}
+                  draggable={false}
                 />
 
-                <div 
-                  className='absolute flex flex-col spring-element responsive-card-text' 
+                <div
+                  className='absolute flex flex-col spring-element responsive-card-text h-full w-full justify-between lg:justify-start px-10 py-25 lg:px-0 lg:py-0'
                   style={{
                     transform: isVisible ? asset.rotation : 'translateY(30px) rotate(0deg)',
                     opacity: isVisible ? 1 : 0,
@@ -212,8 +212,12 @@ export const ProblemSection = ({ className, style }) => {
                     left: asset.left
                   }}
                 >
-                  <span className='text-medium font-medium text-primary'>You can't start earning until you're on-site</span>
-                  <span className='text-regular text-primary/70 max-w-[390px]'>{asset.text}</span>
+                  <div className="">
+                    <span className='text-medium font-medium text-primary'>You can't start earning until you're on-site</span>
+                  </div>
+                  <div>
+                    <span className='text-regular text-primary/70 max-w-[390px]'>{asset.text}</span>
+                  </div>
                 </div>
               </figure>
             ))}

@@ -1,54 +1,80 @@
 @reference "../../index.css";
 
-
-.primary-btn {
-  @apply flex items-center gap-1 w-fit cursor-pointer;
+/* --- Shared Base Styles --- */
+.btn {
+  @apply flex items-center gap-1 w-fit cursor-pointer no-underline;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-.primary-btn:hover {
+.btn:hover {
   transform: scale(1.02);
 }
 
-
-.primary-btn:active {
+.btn:active {
   transform: scale(0.98);
 }
 
-
-.primary-btn_text {
-  @apply flex h-12 text-regular items-center bg-accent font-medium text-primary;
+.btn__text {
+  @apply flex h-12 text-regular items-center font-medium;
   padding: 12px 24px;
   border-radius: 6px;
-  transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-
-.primary-btn_icon {
-  @apply bg-accent text-primary w-12 h-12 flex items-center justify-center;
+.btn__icon {
+  @apply w-12 h-12 flex items-center justify-center;
   border-radius: 6px;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-.primary-btn:hover .primary-btn_text {
-  background-color: #cbfb57; 
-}
-
-
-.primary-btn:hover .primary-btn_icon {
-  background-color: var(--color-primary);
-  color: var(--color-accent);
-  transform: translateX(3px);
-}
-
-.primary-btn_icon svg {
+.btn__icon svg {
   @apply w-5 h-5;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
-.primary-btn:hover .primary-btn_icon svg {
+.btn:hover .btn__icon svg {
   transform: rotate(-45deg) scale(1.1);
+}
+
+/* --- Variant 1: Primary (Hover -> White Background) --- */
+/* Initial State: Accent BG, Primary Text */
+.btn--primary .btn__text {
+  @apply bg-accent text-primary;
+}
+.btn--primary .btn__icon {
+  @apply bg-accent text-primary;
+}
+
+/* Hover State: Primary BG, Accent Text */
+.btn--primary:hover .btn__text {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+}
+
+
+.btn--secondary:hover .btn__icon {
+  background-color: #ffffff;
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+
+/* --- Variant 2: Secondary (Hover -> Primary Color Background) --- */
+/* Initial State: Accent BG, Primary Text */
+.btn--secondary .btn__text {
+  @apply bg-accent text-primary;
+}
+.btn--secondary .btn__icon {
+  @apply bg-accent text-primary;
+}
+
+.btn--primary:hover .btn__icon {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  transform: translateX(3px);
+}
+/* Hover State: White BG, Primary Text */
+.btn--secondary:hover .btn__text {
+  background-color: #ffffff;
+  color: var(--color-primary);
 }

@@ -201,11 +201,12 @@
     background-repeat: no-repeat;
     background-image: url(/src/assets/images/herobg.png);
     background-size: cover;
-    width: 520px;
-    height: 800px;
+    /* width: 520px; */
+    /* height: 800px; */
     left: 0;
     right: 0;
     top: -90px;
+    z-index: -1
 }
 /* --- The Magic: Auto Progress Background --- */
 .tab_btn::before {

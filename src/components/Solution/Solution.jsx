@@ -125,7 +125,8 @@ function BookDemoButton(props) {
       style={props.style}
     >
       <div className="solution-hero">
-        <img
+       
+          <img
           className="solution-shadow"
           src={shadow}
           alt="Shadow Illustration"
@@ -212,7 +213,7 @@ function BookDemoButton(props) {
             </div>
 
             <div className="solution_btns">
-              <PrimaryBtn href="#" text="Book a demo" />
+              <PrimaryBtn href="#" text="Book a demo" variant="secondary" />
             </div>
           </div>
         </div>

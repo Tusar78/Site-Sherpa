@@ -13,7 +13,7 @@
 }
 
 .solution_shell-wrap {
-  @apply w-full bg-dark;
+  @apply w-full bg-dark global-padding;
 }
 
 .solution-shell {

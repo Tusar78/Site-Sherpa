@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PrimaryBtn from "../PrimaryBtn/PrimaryBtn";
 import {
+  // Card Images (Thumbnails)
   useCaseThumOne,
   useCaseThumTwo,
   useCaseThumThree,
@@ -10,6 +11,7 @@ import {
   useCaseThumSeven,
   useCaseThumEight,
   useCaseThumNine,
+  // Background Images
   useCaseBgOne,
   useCaseBgTwo,
   useCaseBgThree,
@@ -18,7 +20,13 @@ import {
   useCaseBgSix,
   useCaseBgSeven,
   useCaseBgEight,
-  useCaseBgNine
+  useCaseBgNine,
+
+  // Icon
+  useCaseIconBuilding,
+  useCaseHammer,
+  useCaseIconWallFire,
+  useCaseIconCog
 } from "../../assets/images";
 
 const tabs = [
@@ -28,16 +36,15 @@ const tabs = [
     eyebrow: "Built for crews on shifting sites",
     headline:
       "Keep every contractor, SWMS, induction and site record ready before work starts.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/8aa3896c-ef0b-4c56-b833-fd772be2e43b.png",
+    bgImage: useCaseBgTwo,    // Background for this tab
+    cardImage: useCaseThumTwo, // Image inside the card
     useCases: [
       {
         id: "construction-01",
         title: "Use case 01",
         description:
           "Until your documentation is sorted, no one's working and nothing's moving.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -45,8 +52,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Generate job-specific paperwork quickly when scopes, clients or conditions change.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
@@ -54,8 +60,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Log incidents, actions and evidence while the crew is still on site.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -63,8 +68,7 @@ const tabs = [
         title: "Use case 05",
         description:
           "Track expiries, sign-offs and training records without chasing folders.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -75,16 +79,15 @@ const tabs = [
     eyebrow: "Heavy-risk work, lighter admin",
     headline:
       "Run high-risk work documentation with the evidence trail auditors expect.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/5561ef12-044a-499a-8cec-6cf5f0c1d1c5.png",
+    bgImage: useCaseBgSeven,
+    cardImage: useCaseThumSeven,
     useCases: [
       {
         id: "mining-01",
         title: "Use case 01",
         description:
           "Create task-specific SWMS for remote teams before crews mobilise.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -92,8 +95,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Keep plant, operator tickets and site competencies visible in one place.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
       {
@@ -101,8 +103,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Capture field observations by voice when typing is not practical.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -110,8 +111,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Prepare clean records for principal contractors and regulator reviews.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
     ],
@@ -122,16 +122,15 @@ const tabs = [
     eyebrow: "Supplier compliance without the scramble",
     headline:
       "Prove your team is qualified, inducted and ready across every client site.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/8493f375-ab4d-46e5-9e0b-82aa12a7cdbf.png",
+    bgImage: useCaseBgSix,
+    cardImage: useCaseThumSix,
     useCases: [
       {
         id: "mining-services-01",
         title: "Use case 01",
         description:
           "Package client-ready safety documentation for each new contract.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -139,8 +138,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Monitor tickets, licences and expiries before mobilisation day.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
       {
@@ -148,8 +146,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Assign workers to client sites with the right evidence attached.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -157,8 +154,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Respond to pre-qualification requests without rebuilding paperwork.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
     ],
@@ -169,16 +165,15 @@ const tabs = [
     eyebrow: "Safer shifts, cleaner records",
     headline:
       "Keep procedures, toolbox talks and corrective actions connected to daily operations.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/e94f9ae3-c0c5-47c0-8ca3-ab2cfd15a264.svg",
+    bgImage: useCaseBgFive,
+    cardImage: useCaseThumFive,
     useCases: [
       {
         id: "manufacturing-01",
         title: "Use case 01",
         description:
           "Turn changed work methods into updated risk controls fast.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -186,8 +181,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Track machine-area inductions and training acknowledgements.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
@@ -195,8 +189,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Log near misses and actions while details are still fresh.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -204,8 +197,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Show supervisors what is overdue before the next shift starts.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -216,16 +208,15 @@ const tabs = [
     eyebrow: "Moving teams, grounded compliance",
     headline:
       "Give drivers, depots and contractors one source of truth for safety readiness.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/d423ab36-092b-4f39-9b1d-75ac7c69f1ed.png",
+    bgImage: useCaseBgNine,
+    cardImage: useCaseThumNine,
     useCases: [
       {
         id: "transport-01",
         title: "Use case 01",
         description:
           "Manage inductions and route-specific safety requirements across depots.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -233,16 +224,14 @@ const tabs = [
         title: "Use case 02",
         description:
           "Keep contractor credentials verified before they enter the yard.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "transport-03",
         title: "Use case 03",
         description: "Capture vehicle, loading and incident notes hands-free.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -250,8 +239,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Keep full attendance and evidence history ready for audits.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -262,16 +250,15 @@ const tabs = [
     eyebrow: "Every package, every principal",
     headline:
       "Handle changing scopes, multiple contractors and site evidence without duplicate admin.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/dcb37b3f-515e-42a4-bfa4-1b7a4fa9e975.png",
+    bgImage: useCaseBgOne,
+    cardImage: useCaseThumOne,
     useCases: [
       {
         id: "civil-01",
         title: "Use case 01",
         description:
           "Build job-specific documentation for changing ground and traffic controls.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -279,8 +266,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Coordinate contractor readiness before handover gates and possessions.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
@@ -288,8 +274,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Record site changes and corrective actions in the moment.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -297,8 +282,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Provide principal contractors a clean, searchable evidence trail.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -309,16 +293,15 @@ const tabs = [
     eyebrow: "Many sites, one safety system",
     headline:
       "Know which contractors are cleared for each asset before work begins.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/108f2d25-7e32-43f5-ad12-5e35182f508b.png",
+    bgImage: useCaseBgThree,
+    cardImage: useCaseThumThree,
     useCases: [
       {
         id: "facilities-01",
         title: "Use case 01",
         description:
           "Pre-qualify providers before they arrive at tenant or public sites.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -326,8 +309,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Attach permits, insurances and inductions to each work order.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
@@ -335,8 +317,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Maintain evidence for repairs, incidents and recurring site tasks.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -344,8 +325,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Find records by site, contractor or date when someone asks.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -356,16 +336,15 @@ const tabs = [
     eyebrow: "Accountable work, accessible records",
     headline:
       "Keep contractor evidence and incident records transparent across public assets.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/660cd3c6-6e40-4e1d-bab5-81cc6e8d41bd.png",
+    bgImage: useCaseBgEight,
+    cardImage: useCaseThumEight,
     useCases: [
       {
         id: "government-01",
         title: "Use case 01",
         description:
           "Standardise contractor onboarding across departments and facilities.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -373,8 +352,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Keep signed evidence searchable for reviews and public reporting.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
@@ -382,8 +360,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Capture incidents and notifications with timestamped records.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -391,8 +368,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "See overdue actions before they become governance problems.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -403,16 +379,15 @@ const tabs = [
     eyebrow: "Sensitive sites, controlled access",
     headline:
       "Support critical environments with clear inductions, approvals and audit-ready evidence.",
-    imageUrl:
-      "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/3c94c77c-ccf3-4914-b5f9-e2a5ad7afd43.png",
+    bgImage: useCaseBgFour,
+    cardImage: useCaseThumFour,
     useCases: [
       {
         id: "healthcare-01",
         title: "Use case 01",
         description:
           "Confirm contractor readiness before work begins in live environments.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/a98008c4-48e9-4b35-9b6a-6778a34d8ce5.svg",
+        iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
@@ -420,8 +395,7 @@ const tabs = [
         title: "Use case 02",
         description:
           "Track training and site rules for controlled or restricted areas.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/1035c863-d890-4e57-aa84-600af42ab27e.svg",
+        iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
@@ -429,8 +403,7 @@ const tabs = [
         title: "Use case 03",
         description:
           "Record maintenance evidence without disturbing operational teams.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/03bc5d44-44e4-450a-9f3d-936192e737a0.svg",
+        iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
@@ -438,8 +411,7 @@ const tabs = [
         title: "Use case 04",
         description:
           "Find every document, sign-off and action when compliance teams ask.",
-        iconUrl:
-          "https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/b32587d2-0bd3-4df9-b74d-4173d8684895.svg",
+        iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
     ],
@@ -456,15 +428,18 @@ function UseCase(props) {
       style={props.style}
     >
       <section
-        className="w-full overflow-hidden px-2 py-4 sm:px-6 sm:py-8 lg:px-4 lg:py-10 xl:px-5"
+        className="w-full overflow-hidden global-padding py-4 sm:py-8 lg:py-10"
         aria-labelledby="industries-heading"
       >
         <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[10px] bg-cover bg-center px-4 py-10 sm:px-8 sm:py-14 md:py-16 lg:min-h-[951px] lg:px-20 lg:py-[100px]">
+
+          {/* Dynamic Background Image */}
           <img
-            src="https://storage.googleapis.com/storage.magicpath.ai/user/378565768339677184/figma-assets/5561ef12-044a-499a-8cec-6cf5f0c1d1c5.png"
-            className="absolute inset-0 -z-10 h-full w-full object-cover blur-[17px] scale-110 z-10"
+            src={activeTab.bgImage}
+            className="absolute inset-0 h-full w-full object-cover blur-[17px] scale-110 z-10"
             alt=""
           />
+
           <div className="relative z-10 mx-auto max-w-[1240px] text-center text-white">
             <p className="font-body text-regular font-semibold uppercase">
               <span>{"Industries and use cases"}</span>
@@ -500,8 +475,9 @@ function UseCase(props) {
                         aria-selected={isActive}
                         role="tab"
                       >
+                        {/* Smooth Scale Animation */}
                         <span
-                          className={`mr-2 h-2 w-2 shrink-0 rounded-[2px] bg-[#072C2C] transition-opacity duration-200 ${isActive ? "opacity-100" : "opacity-0"}`}
+                          className={`mr-2 h-2 w-2 shrink-0 rounded-[2px] bg-[#072C2C] transition-transform duration-300 ease-out origin-left ${isActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"}`}
                           aria-hidden="true"
                         />
                         <span className="break-words text-medium font-medium md:break-normal">
@@ -548,9 +524,10 @@ function UseCase(props) {
                     <PrimaryBtn text={"Book a demo"} />
                   </div>
 
+                  {/* Dynamic Card Image */}
                   <figure className="m-0 min-w-0 md:max-w-[380px] overflow-hidden rounded-[8px] md:min-h-[360px]  lg:min-h-0">
                     <img
-                      src={activeTab.imageUrl}
+                      src={activeTab.cardImage}
                       alt={`${activeTab.label} industry safety operations`}
                       className="h-auto max-h-[320px] min-h-[220px] w-full object-cover object-center sm:h-[320px] sm:max-h-none md:h-full lg:h-full"
                     />
