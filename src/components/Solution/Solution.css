@@ -9,7 +9,7 @@
 }
 
 .solution-shadow {
-  @apply z-10 top-28 mb-[-525px] object-cover;
+  @apply absolute z-10 w-full top-28;
 }
 
 .solution_shell-wrap {

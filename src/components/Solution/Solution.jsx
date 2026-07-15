@@ -125,15 +125,12 @@ function BookDemoButton(props) {
       style={props.style}
     >
       <div className="solution-hero">
-        <div className="flex justify-center" style={{
-          background:{shadow}, backgroundRepeat: 'repeat'
-        }}>
+       
           <img
           className="solution-shadow"
           src={shadow}
           alt="Shadow Illustration"
         />
-          </div>
 
         <div className="solution_shell-wrap">
           <div className="solution-shell">
