@@ -94,8 +94,7 @@ useEffect(() => {
               </h1>
 
               <p className="hero_description gsap-reveal">
-                Customised Risk assessments in 30 seconds and incidents logged
-                by voice— so when the auditor shows up, you're already covered.
+                Customised Risk assessments in 30 seconds and incidents logged by voice so when the auditor shows up, you're already covered.
               </p>
 
               <div className="hero_actions gsap-reveal">
