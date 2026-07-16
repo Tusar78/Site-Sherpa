@@ -9,7 +9,7 @@ export const FounderNote = ({ className, style, onDemoClick }) => {
   return (
     <div className="global-padding">
       <div
-      className={`relative w-full max-w-[780px] min-h-[840px] box-border overflow-hidden bg-[#EBECE2] border border-[#E3E5D7] rounded-[10px] mx-auto mb-[120px] flex flex-col group ${className || ''}`}
+      className={`pb-[400px] md:pb-0 relative w-full max-w-[780px] min-h-[840px] box-border overflow-hidden bg-[#EBECE2] border border-[#E3E5D7] rounded-[10px] mx-auto mb-[120px] flex flex-col group ${className || ''}`}
       style={{
         // Applying the complex background pattern and blend mode which are hard to do purely with utilities
         backgroundImage: `url("${bgPattern}")`,
@@ -55,7 +55,7 @@ After years working as a WHS consultant for some of Australia’s largest mining
         }}
       />
       {/* Signature Text */}
-      <span className="block relative  text-medium  font-base font-bold mb-3 md:mb-5">
+      <span className="block relative  text-medium  font-base font-bold mb-5">
         Justine Youl, Founder and CEO
       </span>
 
@@ -69,11 +69,11 @@ After years working as a WHS consultant for some of Australia’s largest mining
 
       {/* Founder Image - Absolute Positioned */}
       <img
-        className="static ml-auto sm:absolute pointer-events-none right-[3px] bottom-[2px] object-cover object-center"
+        className="hidden sm:block ml-auto absolute pointer-events-none right-[3px] bottom-[2px] object-cover object-center"
         src={founderProfile}
         alt="Justine Youl, Founder and CEO"
         style={{
-          width: 'clamp(270px, 39.75vw, 310px)',
+          width: 'clamp(270px, 39.75vw, 10%)',
           height: 'clamp(270px, 39.75vw, 310px)'
         }}
       />

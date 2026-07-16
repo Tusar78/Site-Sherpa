@@ -190,10 +190,14 @@ export const ProblemSection = ({ className, style }) => {
                 <img
                   src={asset.src}
                   alt={asset.alt}
-                  className="block h-auto w-full max-w-full select-none spring-element"
+                  className={`block h-auto w-full max-w-full select-none spring-element ${isVisible
+                    ? '[transform:translateY(0)] lg:[transform:var(--asset-rotation)]'
+                    : '[transform:translateY(30px)]'
+                    }`}
                   style={{
                     objectFit: 'contain',
-                    transform: isVisible ? asset.rotation : 'translateY(30px) rotate(0deg)',
+                    // Pass the rotation as a CSS variable so the lg: class can use it
+                    '--asset-rotation': asset.rotation,
                     opacity: isVisible ? 1 : 0,
                     transitionDelay: `${index * 0.15}s`,
                     transformOrigin: 'center center'
@@ -202,14 +206,16 @@ export const ProblemSection = ({ className, style }) => {
                 />
 
                 <div
-                  className='absolute flex flex-col spring-element responsive-card-text h-full  max-w-[90%] justify-between lg:justify-start px-10 py-25 lg:px-0 lg:py-0'
+                  className='absolute flex flex-col spring-element responsive-card-text w-full max-w-full lg:max-w-[90%] justify-start gap-6 lg:gap-[44px] pt-[56px] md:pt-0 mt-6 lg:mt-0 lg:top-[var(--card-top)] lg:left-[var(--card-left)] lg:px-10 lg:py-25'
                   style={{
-                    transform: isVisible ? asset.rotation : 'translateY(30px) rotate(0deg)',
+                    '--card-top': asset.top,
+                    '--card-left': asset.left,
+                    '--card-rotation': asset.rotation,
+                    transform: isVisible
+                      ? 'translateY(0) rotate(0deg) lg:var(--card-rotation)'
+                      : 'translateY(30px) rotate(0deg)',
                     opacity: isVisible ? 1 : 0,
                     transitionDelay: `${index * 0.15}s`,
-                    gap: '44px',
-                    top: asset.top,
-                    left: asset.left
                   }}
                 >
                   <div className="">
@@ -227,5 +233,3 @@ export const ProblemSection = ({ className, style }) => {
     </section>
   );
 };
-
-ProblemSection.displayName = 'Group2147223442';
