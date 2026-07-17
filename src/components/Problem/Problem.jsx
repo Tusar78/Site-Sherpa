@@ -105,6 +105,11 @@ const dotBaseStyle = {
 export const ProblemSection = ({ className, style }) => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  
+  // Track if the screen is desktop size (>= 1024px)
+  const [isDesktop, setIsDesktop] = useState(
+    typeof window !== 'undefined' ? window.innerWidth >= 1024 : false
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -121,8 +126,32 @@ export const ProblemSection = ({ className, style }) => {
       observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect();
+    // Resize listener to update desktop state
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', checkDesktop);
+    };
   }, []);
+
+  // Helper to determine card transforms without rotation on small screens
+  const getCardTransform = (asset) => {
+    if (!isVisible) return 'translateY(30px) rotate(0deg)';
+    return isDesktop ? asset.rotation : 'rotate(0deg)';
+  };
+
+  // Helper to determine dot transforms without rotation on small screens
+  const getDotTransform = (dot) => {
+    if (isVisible) return 'translate(0, 0) rotate(0deg)';
+    if (!isDesktop) {
+      // Strip out the rotation from the orbitOffset string for mobile
+      return dot.orbitOffset.replace(/rotate\([^)]+\)/, 'rotate(0deg)');
+    }
+    return dot.orbitOffset;
+  };
 
   return (
     <section
@@ -147,7 +176,7 @@ export const ProblemSection = ({ className, style }) => {
                 left: dot.mobileLeft,
                 '--desktop-left': `${dot.desktopLeft}px`,
                 '--desktop-top': `${dot.desktopTop}px`,
-                transform: isVisible ? 'translate(0, 0) rotate(0deg)' : dot.orbitOffset,
+                transform: getDotTransform(dot),
                 opacity: isVisible ? 1 : 0,
                 transitionDelay: `${index * 0.2}s`
               }}
@@ -176,11 +205,11 @@ export const ProblemSection = ({ className, style }) => {
             </p>
           </div>
 
-          <div className="relative z-10 order-2 grid w-full max-w-full min-w-0 grid-cols-1 gap-6 pb-1 sm:max-w-[760px] lg:grid-cols-2 sm:gap-6 md:gap-8 lg:block lg:max-w-none lg:gap-0 lg:pb-0">
+          <div className="relative z-10 order-2 grid w-full max-w-full min-w-0 grid-cols-1 place-items-center gap-6 pb-1 sm:max-w-[760px] lg:grid-cols-2 sm:gap-6 md:gap-8 lg:block lg:max-w-none lg:gap-0 lg:pb-0">
             {floatingAssets.map((asset, index) => (
               <figure
                 key={asset.id}
-                className="problem-floating-card relative m-0 w-full min-w-0 overflow-visible p-6 md:p-7 lg:absolute lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)] lg:w-[var(--asset-width)] lg:p-0"
+                className="problem-floating-card relative m-0 w-full min-w-0 max-w-[472px] md:max-w-full overflow-visible p-0 md:p-7 lg:absolute lg:left-[var(--desktop-left)] lg:top-[var(--desktop-top)] lg:w-[var(--asset-width)] lg:p-0 mx-auto"
                 style={{
                   '--desktop-left': `${asset.desktopLeft}px`,
                   '--desktop-top': `${asset.desktopTop}px`,
@@ -190,14 +219,10 @@ export const ProblemSection = ({ className, style }) => {
                 <img
                   src={asset.src}
                   alt={asset.alt}
-                  className={`block h-auto w-full max-w-full select-none spring-element ${isVisible
-                    ? '[transform:translateY(0)] lg:[transform:var(--asset-rotation)]'
-                    : '[transform:translateY(30px)]'
-                    }`}
+                  className="block h-auto w-full max-w-full select-none spring-element"
                   style={{
                     objectFit: 'contain',
-                    // Pass the rotation as a CSS variable so the lg: class can use it
-                    '--asset-rotation': asset.rotation,
+                    transform: getCardTransform(asset),
                     opacity: isVisible ? 1 : 0,
                     transitionDelay: `${index * 0.15}s`,
                     transformOrigin: 'center center'
@@ -206,16 +231,15 @@ export const ProblemSection = ({ className, style }) => {
                 />
 
                 <div
-                  className='absolute flex flex-col spring-element responsive-card-text w-full max-w-full lg:max-w-[90%] justify-start gap-6 lg:gap-[44px] pt-[56px] md:pt-0 mt-6 lg:mt-0 lg:top-[var(--card-top)] lg:left-[var(--card-left)] lg:px-10 lg:py-25'
+                  className='absolute flex flex-col spring-element responsive-card-text h-auto lg:h-full max-w-[90%] justify-between lg:justify-start px-2 md:px-8 pt-30 gap-20 lg:gap-0 lg:px-0 lg:py-0 mx-auto lg:mx-0'
                   style={{
-                    '--card-top': asset.top,
-                    '--card-left': asset.left,
-                    '--card-rotation': asset.rotation,
-                    transform: isVisible
-                      ? 'translateY(0) rotate(0deg) lg:var(--card-rotation)'
-                      : 'translateY(30px) rotate(0deg)',
+                    transform: getCardTransform(asset),
                     opacity: isVisible ? 1 : 0,
                     transitionDelay: `${index * 0.15}s`,
+                    gap: '44px',
+                    top: isDesktop ? asset.top : '0',
+                    left: isDesktop ? asset.left : '0',
+                    right: isDesktop ? 'auto' : '0',
                   }}
                 >
                   <div className="">
@@ -233,3 +257,5 @@ export const ProblemSection = ({ className, style }) => {
     </section>
   );
 };
+
+ProblemSection.displayName = 'Group2147223442';
