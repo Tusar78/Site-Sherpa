@@ -141,7 +141,7 @@ function BookDemoButton(props) {
                   src={solutionIcon}
                   alt="Solution Icon"
                 />
-                <span className="solution_subtext">Our Solution</span>
+                <span className="solution_subtext">Our Solutions</span>
               </div>
               <h2 className="solution_title">
                 Get on site faster, stay compliant, and put SiteSherpa’s AI to
