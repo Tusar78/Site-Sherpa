@@ -2,6 +2,7 @@ import Banner from "./components/Banner/Banner";
 import Benifits from "./components/Benifits/Benifits";
 import { CTA } from "./components/CTA/CTA";
 import { FaqSection } from "./components/FAQ/FAQ";
+import Footer from "./components/Footer/Footer";
 import { FounderNote } from "./components/FounderNote/FounderNote";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -28,6 +29,7 @@ function App() {
       <CTA />
       <FaqSection />
       <FounderNote />
+      <Footer />
     </>
   );
 }

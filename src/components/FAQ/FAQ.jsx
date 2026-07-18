@@ -43,8 +43,7 @@ export const FaqSection = () => {
   };
 
   return (
-    <div className="global-padding">
-      <section className="w-full max-w-[1240px] mx-auto flex flex-row justify-between items-start gap-10 box-border py-[140px] pb-[120px] [@media(max-width:1024px)]:flex-col [@media(max-width:1024px)]:items-center [@media(max-width:1024px)]:gap-[60px] [@media(max-width:640px)]:py-10">
+      <section className="w-full container-regular mx-auto flex flex-row justify-between items-start gap-6 box-border py-[60px] md:py-[140px] lg:pb-[200px] [@media(max-width:1024px)]:flex-col [@media(max-width:1024px)]:items-center [@media(max-width:1024px)]:gap-[60px]">
         {/* Left Content Side */}
         <div className="w-full max-w-[578px] flex flex-col gap-3 [@media(max-width:1024px)]:max-w-full">
           {/* Tagline with Gradient */}
@@ -113,6 +112,6 @@ export const FaqSection = () => {
           ))}
         </div>
       </section>
-    </div>
+
   );
 };

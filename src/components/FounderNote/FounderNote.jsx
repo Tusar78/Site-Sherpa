@@ -7,9 +7,9 @@ export const FounderNote = ({ className, style, onDemoClick }) => {
   const bgPattern = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%0A  %3Cfilter id='n' color-interpolation-filters='sRGB'%3E%0A    %3CfeTurbulence type='fractalNoise' baseFrequency='0.125' numOctaves='1' seed='1' result='turb'/%3E%0A    %3CfeGaussianBlur in='turb' stdDeviation='4' result='blur'/%3E%0A    %3CfeColorMatrix in='blur' type='saturate' values='0' result='mono'/%3E%0A    %3CfeComponentTransfer in='mono' result='alpha'%3E%0A      %3CfeFuncA type='table' tableValues='0 0.08'/%3E%0A    %3C/feComponentTransfer%3E%0A    %3CfeComposite in='SourceGraphic' in2='alpha' operator='in'/%3E%0A  %3C/filter%3E%0A  %3Crect width='100%25' height='100%25' fill='rgb(255%2C 255%2C 255)' filter='url(%23n)'/%3E%0A%3C/svg%3E";
 
   return (
-    <div className="global-padding">
+    <div className="container-regular">
       <div
-      className={`pb-[400px] md:pb-0 relative w-full max-w-[780px] min-h-[840px] box-border overflow-hidden bg-[#EBECE2] border border-[#E3E5D7] rounded-[10px] mx-auto mb-[120px] flex flex-col group ${className || ''}`}
+      className={`pb-[400px] md:pb-0 relative w-full max-w-[780px] min-h-[840px] box-border overflow-hidden bg-[#EBECE2] border border-[#E3E5D7] rounded-[10px] mx-auto mb-[60px] md:mb-[140px] flex flex-col group ${className || ''}`}
       style={{
         // Applying the complex background pattern and blend mode which are hard to do purely with utilities
         backgroundImage: `url("${bgPattern}")`,
@@ -69,12 +69,11 @@ After years working as a WHS consultant for some of Australia’s largest mining
 
       {/* Founder Image - Absolute Positioned */}
       <img
-        className="hidden sm:block ml-auto absolute pointer-events-none right-[3px] bottom-[2px] object-cover object-center"
+        className="hidden sm:block ml-auto absolute pointer-events-none right-0 bottom-0 object-cover object-center"
         src={founderProfile}
         alt="Justine Youl, Founder and CEO"
         style={{
-          width: 'clamp(270px, 39.75vw, 10%)',
-          height: 'clamp(270px, 39.75vw, 310px)'
+          width: 'clamp(270px, 39.75vw, 10%)'
         }}
       />
     </div>

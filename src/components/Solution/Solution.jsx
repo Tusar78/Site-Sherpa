@@ -112,7 +112,7 @@ const tabPanelContent = {
 };
 
 function BookDemoButton(props) {
-  const [activeTab, setActiveTab] = useState("voice-first-reporting");
+  const [activeTab, setActiveTab] = useState("contractor-management");
   const activeContent =
     solutionTabs.find((tab) => tab.id === activeTab) ?? solutionTabs[3];
   const activePanel = tabPanelContent[activeContent.id];

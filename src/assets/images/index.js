@@ -129,6 +129,11 @@ import testiProfilePicTwo from "./Testimonial/testiProfilePic(2).webp"
 import signature from "./FounderNote/Signature.webp";
 import founderProfile from "./FounderNote/FounderProfile.webp";
 
+// Footer
+import mailIcon from "./Footer/mail.svg";
+import footerLogo from "./Footer/footer-logo.svg";
+
+
 
 
 export {
@@ -236,5 +241,6 @@ export {
   testiLogoFive,
   testiProfilePicOne,
   testiProfilePicTwo,
-
+  mailIcon,
+  footerLogo
 };
