@@ -471,7 +471,7 @@ function UseCase(props) {
                         key={tab.id}
                         type="button"
                         onClick={() => setActiveTabId(tab.id)}
-                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-3 sm:min-w-0 sm:flex-[1_1_220px] lg:w-full ${isActive
+                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-2 sm:py-3 sm:min-w-0 sm:flex-[1_1_220px] lg:w-full ${isActive
                             ? "border-[#072C2C] text-[#072C2C]"
                             : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"
                           }`}
@@ -487,7 +487,7 @@ function UseCase(props) {
                           }`}
                           aria-hidden="true"
                         />
-                        <span className="break-words text-medium font-medium md:break-normal whitespace-nowrap">
+                        <span className="break-words text-small md:text-medium font-medium md:break-normal whitespace-nowrap">
                           {tab.label}
                         </span>
                       </button>

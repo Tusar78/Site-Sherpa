@@ -106,7 +106,7 @@
 }
 
 .solution_tab-text {
-  @apply whitespace-nowrap font-base text-h4 font-medium sm:whitespace-normal;
+  @apply whitespace-nowrap font-base text-small md:text-h4 font-medium sm:whitespace-normal;
 }
 
 .solution-tab-fade {

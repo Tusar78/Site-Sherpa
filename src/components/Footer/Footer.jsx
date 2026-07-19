@@ -38,14 +38,14 @@ const NavColumn = ({ title, items, className }) => (
 
 export const Footer = () => {
     // 1. Main Branding Column (handled separately below)
-    // 2. Products Column
-    const productsItems = ['Pricing & Plans', 'Workplace App', 'SWMS App', 'AI Technologies'];
-    // 3. Solutions Column
-    const solutionsItems = ['Construction', 'Mining & Resources', 'Manufacturing', 'Logistics'];
-    // 4. Company Column
-    const companyItems = ['About Us', 'Careers', 'Blog', 'Contact'];
-    // 5. Resources Column
-    const resourcesItems = ['Help Center', 'Documentation', 'API Reference', 'Community'];
+    // 2. Company Column
+    const companyItems = ['About', 'Careers', 'Partners', 'Contact', 'Roadmap'];
+    // 3. Quick Links Column
+    const quickLinksItems = ['Platform', 'Industries', 'Pricing', 'Consulting', 'ISO Pre-Audit', 'About'];
+    // 4. Resources Column
+    const resourcesItems = ['Blog', 'Help Centre', 'Free Templates', 'WHS Glossary'];
+    // 5. Legal & Trust Column
+    const legalTrustItems = ['Trust Centre', 'Security', 'Terms & Conditions', 'Privacy & Cookies Policy', 'Product Schedule'];
 
     return (
         <footer className="container-regular pb-6 relative font-base">
@@ -72,8 +72,7 @@ export const Footer = () => {
                             onClick={() => (window.location.href = '/')}
                         />
                         <p className="m-0 text-primary/70 font-base font-regular text-regular max-w-[280px]">
-                            SiteSherpa honors Aboriginal and Torres Strait Islander peoples as the Traditional Custodians of the land,
-                            respecting Elders past and present.
+                            Safety software that doesn’t suck. Built for construction, mining, and high-risk industries.
                         </p>
                     </div>
 
@@ -92,17 +91,17 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                {/* Column 2: Products */}
-                <NavColumn title="products" items={productsItems} />
-                
-                {/* Column 3: Solutions */}
-                <NavColumn title="solutions" items={solutionsItems} />
-                
-                {/* Column 4: Company */}
+                {/* Column 2: Company */}
                 <NavColumn title="company" items={companyItems} />
                 
-                {/* Column 5: Resources */}
+                {/* Column 3: Quick Links */}
+                <NavColumn title="quick links" items={quickLinksItems} />
+                
+                {/* Column 4: Resources */}
                 <NavColumn title="resources" items={resourcesItems} />
+                
+                {/* Column 5: Legal & Trust */}
+                <NavColumn title="legal & trust" items={legalTrustItems} />
             </div>
 
             {/* Copyright Footer */}
