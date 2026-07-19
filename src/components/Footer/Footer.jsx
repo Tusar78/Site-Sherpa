@@ -76,7 +76,7 @@ export const Footer = () => {
                         </p>
                     </div>
 
-                    <div className="flex flex-col gap-6">
+                    {/* <div className="flex flex-col gap-6">
                         <SectionHeader title="contact" />
                         <div className="flex items-center gap-2.5">
                             <img
@@ -88,7 +88,7 @@ export const Footer = () => {
                                 <b>ABN</b> 72 667 065 518
                             </span>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Column 2: Company */}

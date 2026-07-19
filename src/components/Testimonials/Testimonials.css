@@ -98,7 +98,7 @@
 }
 
 .testimonials__name {
-  @apply text-medium font-medium text-primary;
+  @apply text-small font-medium text-primary;
 }
 
 .testimonials__role {

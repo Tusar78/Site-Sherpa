@@ -1,12 +1,14 @@
 import React from 'react';
 import './Testimonials.css';
-import {testiLogoOne,
+import {
+  testiLogoOne,
   testiLogoTwo,
   testiLogoThree,
   testiLogoFour,
   testiLogoFive,
   testiProfilePicOne,
-  testiProfilePicTwo} from "../../assets/images"
+  testiProfilePicTwo
+} from "../../assets/images"
 
 const companyLogoA = testiLogoThree;
 const companyLogoB = testiLogoTwo;
@@ -63,23 +65,23 @@ export function Testimonials({ className = '' }) {
             <TestimonialCard
               logo={companyLogoA}
               logoClass="testimonials__logo--a"
-              quote="““Transitioning to Crossover streamlined our workflow. The intuitive design and powerful capabilities have transformed our operations entirely.””"
-              name="Jordan Lee"
-              role="/ Product Manager at Sailwind"
+              quote="“We won the contract on Friday and had the crew on site Monday, inductions done, DIMS approved. That used to take us over a week.”"
+              name="Site Manager"
+              role="/ Mining Industry"
               image={portraitA}
             />
             <TestimonialCard
               logo={companyLogoB}
-              quote="“Transitioning to Crossover streamlined our workflow. The intuitive design and powerful capabilities have transformed our operations entirely.”"
-              name="Jordan Lee"
-              role="Product Manager at Sailwind"
+              quote="I log incidents by talking into my phone from the ute. No more trying to remember details back at the office."
+              name="Contracts Manager,"
+              role="/ Facilities Management"
             />
             <TestimonialCard
               logo={companyLogoC}
               logoClass="testimonials__logo--c"
-              quote="“Transitioning to Crossover streamlined our workflow. The intuitive design and powerful capabilities have transformed our operations entirely.”"
-              name="Jordan Lee"
-              role="Product Manager at Sailwind"
+              quote="“Every worker taps in with a QR code and we know instantly if a ticket's expired — not after they're already through the gate.”"
+              name="Contracts Manager,"
+              role="/ Facilities Management"
             />
           </div>
 
@@ -111,9 +113,7 @@ export function Testimonials({ className = '' }) {
             <TestimonialCard
               logo={companyLogoD}
               logoClass="testimonials__logo--d"
-              quote="“Transitioning to Crossover streamlined our workflow. The intuitive design and powerful capabilities have transformed our operations entirely.”"
-              name="Jordan Lee"
-              role="Product Manager at Sailwind"
+              quote={`"When the auditor turned up unannounced, we weren't scrambling. Everything was there, timestamped, ready to go."`} role="/ Mining Industry"
               image={portraitD}
             />
           </div>
