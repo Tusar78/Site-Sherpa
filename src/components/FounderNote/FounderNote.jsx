@@ -66,7 +66,6 @@ After years working as a WHS consultant for some of Australia’s largest mining
       </div>
 
 
-
       {/* Founder Image - Absolute Positioned */}
       <img
         className="hidden sm:block ml-auto absolute pointer-events-none right-0 bottom-0 object-cover object-center"
