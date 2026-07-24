@@ -7,29 +7,29 @@ const FAQ_DATA = [
       "Most teams are up and running as fast as you need. With our Done-For-You WHSMS service, your system is ready before you even log in.",
   },
   {
-    question: "Do I need a dedicated Safety manager?",
+    question: "What is the difference between a full user and a field user?",
     answer:
-      "No, SiteSherpa is designed to be intuitive enough for site managers and owners to handle compliance without needing a full-time safety specialist.",
-  },
-  {
-    question: "What is the difference between a full seat and a light seat?",
-    answer:
-      "Full seats are for administrators and managers who need full editing and reporting access, while light seats are for site workers who just need to complete forms and view documents.",
+      "Full users are for administrators and managers who need full editing and reporting access, while field users are for site workers who just need to complete forms and view documents.",
   },
   {
     question: "Is SiteSherpa built for construction and mining specifically?",
     answer:
-      "Yes, our workflows and AI models are specifically trained on Australian construction and mining safety standards (ISO 45001).",
+      "SiteSherpa's risk management approach works across industries, but it's built with high-risk sectors like construction and mining specifically in mind — covering the hazards, controls, and documentation those sites need, including alignment with standards like ISO 45001.",
   },
   {
     question: "What does the ISO Gap Analysis include?",
     answer:
-      "It includes a comprehensive review of your current systems against ISO 45001 standards to identify exactly what is missing for certification.",
+      "A clause-by-clause gap report against ISO 9001, 45001, or 14001 — rated by severity, with a prioritised action plan and a downloadable PDF/Excel report. Delivered in 24 hours (Rapid) or 5 days (Expert Review).",
   },
   {
     question: "How does SiteSherpa use AI?",
     answer:
-      "Our AI helps automate form filling, risk assessments, and document analysis to save safety managers hours of manual data entry.",
+      "Our voice AI creates record, drafts risk assessments and toolbox talks, and analyses incidents — automating the everyday admin so your team spend less time on paperwork and more time on site.",
+  },
+  {
+    question: "Is SiteSherpa only for construction and mining?",
+    answer:
+      "No — SiteSherpa works across any industry with WHS obligations. Construction and mining are where we've built the deepest expertise.",
   },
 ];
 

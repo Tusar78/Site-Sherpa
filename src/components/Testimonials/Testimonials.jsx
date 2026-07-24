@@ -25,7 +25,7 @@ function TestimonialCard({ logo, quote, name, role, image, logoClass = 'testimon
     <article className={`testimonials__card ${isFeatured ? 'testimonials__card--featured' : 'testimonials__card--plain'}`}>
       <div className="testimonials__card-content">
         <div className="testimonials__quote-group">
-          <img src={logo} alt={`${name} company logo`} className={`testimonials__logo ${logoClass}`} />
+          {/* <img src={logo} alt={`${name} company logo`} className={`testimonials__logo ${logoClass}`} /> */}
           <blockquote className="testimonials__quote">
             <p><span>{quote}</span></p>
           </blockquote>

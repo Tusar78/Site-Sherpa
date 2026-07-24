@@ -30,6 +30,7 @@ function Header() {
               <a href="#" className="header_nav-link">Consulting</a>
               <a href="#" className="header_nav-link">Pricing</a>
               <a href="#" className="header_nav-link">Resources</a>
+              <a href="#" className="header_nav-link">About us</a>
             </nav>
 
             {/* Desktop Actions (Hidden on Mobile) */}

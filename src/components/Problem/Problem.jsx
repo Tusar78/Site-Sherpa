@@ -14,6 +14,7 @@ const floatingAssets = [
     rotation: 'rotate(11.18deg)',
     top: '54px',
     left: '26px',
+    heading: 'No clue what documentation you actually need', // Dynamic heading
     text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
   },
   {
@@ -27,6 +28,7 @@ const floatingAssets = [
     rotation: 'rotate(7.14deg)',
     top: '54px',
     left: '26px',
+    heading: "If something goes wrong no site, you’re become liable", // Dynamic heading
     text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
   },
   {
@@ -40,6 +42,7 @@ const floatingAssets = [
     rotation: 'rotate(-6.93deg)',
     top: '60px',
     left: '30px',
+    heading: "You didn't start this business to do paperwork.", // Dynamic heading
     text: `Your time is too valuable to be rewriting the same documents for every new job that expired last week.`,
   },
   {
@@ -53,6 +56,7 @@ const floatingAssets = [
     rotation: 'rotate(-7.5deg)',
     top: '65px',
     left: '26px',
+    heading: "You can't start earning until you're on-site", // Dynamic heading
     text: `Until your documentation is sorted, no one's working and nothing's moving.`,
   }
 ];
@@ -243,7 +247,8 @@ export const ProblemSection = ({ className, style }) => {
                   }}
                 >
                   <div className="">
-                    <span className='text-medium font-medium text-primary'>You can't start earning until you're on-site</span>
+                    {/* DYNAMIC HEADING HERE */}
+                    <span className='text-medium font-medium text-primary'>{asset.heading}</span>
                   </div>
                   <div>
                     <span className='text-regular text-primary/70 max-w-[390px]'>{asset.text}</span>
@@ -257,5 +262,3 @@ export const ProblemSection = ({ className, style }) => {
     </section>
   );
 };
-
-ProblemSection.displayName = 'Group2147223442';

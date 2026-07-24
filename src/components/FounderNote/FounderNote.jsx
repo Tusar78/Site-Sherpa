@@ -25,15 +25,19 @@ export const FounderNote = ({ className, style, onDemoClick }) => {
       </span>
 
       {/* Heading */}
-      <h2 className="block  text-primary font-base font-medium mt-0 mb-6 text-h4">
-        SiteSherpa was built because site operators deserve better than enterprise software that didn't fit.
+      <h2 className="block  text-primary font-base font-medium mt-0 mb-6 text-medium">
+        I didn’t build SiteSherpa because I wanted to build software. I built it because I was sick of watching businesses waste hours on paperwork that wasn’t keeping a single person safer.
       </h2>
 
       {/* Body Text */}
-      <p className="block max-w-[597px] text-primary/70 text-medium font-base whitespace-pre-line mb-6">
-        {`Justine Youl spent over 20 years working as a frontline heavy machinery operator on mine sites across Australia before transitioning into a career as a WHS professional. She did not learn about safety from a textbook. She learned it from working in the environments where getting it wrong has real consequences.
+      <p className="block  text-primary/70 text-medium font-base whitespace-pre-line mb-6">
+        {`I started my career on site, operating machinery, before moving into workplace health and safety across Australia. I’ve stood in crib huts. I’ve watched workers sign paperwork they hadn’t read. I’ve also worked alongside business owners who were genuinely trying to do the right thing, but found themselves buried in legislation, paperwork and compliance when all they wanted to do was run their business.
 
-After years working as a WHS consultant for some of Australia’s largest mining and construction operations, Justine built SiteSherpa because she could not find software that actually worked for the businesses she was trying to help. Everything was either too complex, too expensive, or built for enterprise companies with dedicated safety teams.`}
+Somewhere along the way, we confused paperwork with safety. We made compliance so complicated that people stopped engaging with it. That’s the problem I set out to solve.
+
+SiteSherpa wasn’t built in a boardroom. It was built from years of seeing what actually happens onsite. Every feature we build has one purpose: to save businesses time, reduce administrative chaos, and make workplace safety simple enough that people will actually use it.
+
+Because when safety becomes easier, people spend less time pushing paper and more time going home safely.`}
       </p>
 
       {/* Quote */}
@@ -42,7 +46,7 @@ After years working as a WHS consultant for some of Australia’s largest mining
           fontSize: 'clamp(17px, 2.4vw, 18px)',
           lineHeight: 'clamp(26px, 3.6vw, 28px)'
         }}>
-        “I built SiteSherpa because I knew what it was like to be the person on the tools who had to do the paperwork too. That experience is in every decision we make.”
+        “More paperwork doesn't make people safer. Better systems do. That's why I built SiteSherpa.”
       </blockquote>
 
       {/* Signature Image - Absolute Positioned */}

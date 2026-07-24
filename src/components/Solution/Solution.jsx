@@ -51,7 +51,7 @@ const tabPanelContent = {
     imageAlt:
       "Risk assessment draft workspace representing hazards, controls and SWMS preparation",
     title: "Generate SWMS in 30 seconds, not 4 hours →",
-    text: "Type an address. AI pulls the legislation and generates a fully compliant SWMS",
+    text: "Type an address. AI pulls the relevant legislation and generates a tailored SWMS in seconds.",
     width: '488px',
     height: 'auto'
   },
@@ -59,7 +59,7 @@ const tabPanelContent = {
     imgUrl: tabImage3,
     imageAlt:
       "Toolbox talk record workspace representing briefings, attendance and worker acknowledgements",
-    title: "Generate your next pre-start in just minutes →",
+    title: "Generate your next Toolbox Talk in just minutes. →",
     text: "AI drafts your Toolbox talk from recent site activity, translated into every worker's language.",
     width: '374px',
     height: 'auto'
@@ -77,8 +77,8 @@ const tabPanelContent = {
     imgUrl: tabImage5,
     imageAlt:
       "WHS dashboard workspace representing site status, trends, open risks and overdue actions",
-    title: "Get live visibility across every site →",
-    text: "Get live visibility across every site, crew, and contractor from a single dashboard",
+    title: "Get a real time view of every site →",
+    text: "Monitor compliance, actions, contractors, and site performance all in one place.",
     width: '434px',
     height: 'auto'
   },
@@ -141,7 +141,7 @@ function BookDemoButton(props) {
                   src={solutionIcon}
                   alt="Solution Icon"
                 />
-                <span className="solution_subtext">Our Solutions</span>
+                <span className="solution_subtext">Solutions</span>
               </div>
               <h2 className="solution_title">
                 Get on site faster, stay compliant, and put SiteSherpa’s AI to

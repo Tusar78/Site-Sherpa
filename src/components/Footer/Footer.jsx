@@ -76,7 +76,7 @@ export const Footer = () => {
                         </p>
                     </div>
 
-                    {/* <div className="flex flex-col gap-6">
+                    <div className="flex flex-col gap-6">
                         <SectionHeader title="contact" />
                         <div className="flex items-center gap-2.5">
                             <img
@@ -85,10 +85,10 @@ export const Footer = () => {
                                 className="w-[18px] h-[18px]"
                             />
                             <span className="text-primary font-base font-medium text-caption">
-                                <b>ABN</b> 72 667 065 518
+                                1300 790 699
                             </span>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
 
                 {/* Column 2: Company */}
@@ -105,11 +105,29 @@ export const Footer = () => {
             </div>
 
             {/* Copyright Footer */}
-            <div className="w-full mt-7 text-center px-5 box-border">
+            <div className="reletive w-full mt-7 text-center px-5 box-border">
                 <span className="text-primary font-base font-medium text-regular">
                     © 2026 SiteSherpa Pty Ltd (SiteSherpa). We are SFZ Safety Pty Ltd. All rights reserved.
                 </span>
             </div>
+            <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <div></div>
+            <span className="text-primary font-base font-medium text-regular">
+                    © 2026 SiteSherpa Pty Ltd (SiteSherpa). We are SFZ Safety Pty Ltd. All rights reserved.
+                </span>
+
+            {/* Built by */}
+            <div className="flex items-center space-x-4">
+              <span className="text-sm text-gray-500">
+                built by{' '}
+                <span className="font-semibold text-gray-800">clarity</span>
+                <span className="text-gray-500"> design studio</span>
+              </span>
+            </div>
+          </div>
+        </div>
         </footer>
     );
 };

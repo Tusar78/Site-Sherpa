@@ -81,7 +81,7 @@
 }
 
 .testimonials__quote {
-  @apply text-regular text-primary;
+  @apply text-regular text-primary md:mt-0 lg:mt-13;
 }
 
 .testimonials__quote p {

@@ -41,33 +41,49 @@ const tabs = [
     useCases: [
       {
         id: "construction-01",
-        title: "Use case 01",
+        title: "SWMS AI",
         description:
-          "Until your documentation is sorted, no one's working and nothing's moving.",
+          "Task-specific SWMS drafted in seconds, ready for your team to review, approve, and sign on to from any phone",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "construction-03",
-        title: "Use case 03",
+        title: "Contractor prequalification",
         description:
-          "Generate job-specific paperwork quickly when scopes, clients or conditions change.",
+          "Insurances, licences, and safety management plans collected, scored against your criteria, and tracked with expiry alerts.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "construction-04",
-        title: "Use case 04",
+        title: "Permits to work",
         description:
-          "Log incidents, actions and evidence while the crew is still on site.",
+          "Digital permits with approval workflows for any work requiring formal authorisation before it starts",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "construction-05",
-        title: "Use case 05",
+        title: "Site attendance",
         description:
-          "Track expiries, sign-offs and training records without chasing folders.",
+          "QR check-in and check-out with a live view of every worker, contractor, and visitor on site",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "construction-05",
+        title: "AI toolbox talks",
+        description:
+          "Pre-start talks drafted from your site's recent hazards and incidents, with QR or photo roll-call attendance",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "construction-05",
+        title: "Emergency muster",
+        description:
+          "One-tap muster with a live accounted/unaccounted roll, aligned to AS 3745 emergency planning principles",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -84,33 +100,49 @@ const tabs = [
     useCases: [
       {
         id: "mining-01",
-        title: "Use case 01",
+        title: "Risk register and controls",
         description:
-          "Create task-specific SWMS for remote teams before crews mobilise.",
+          "Risks recorded, categorised, and monitored with linked controls and configurable risk matrices.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "mining-02",
-        title: "Use case 02",
+        title: "Live safety dashboards",
         description:
-          "Keep plant, operator tickets and site competencies visible in one place.",
+          "TRIFR, LTIFR, days since last injury, and open actions calculated live, not compiled monthly.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
       {
         id: "mining-03",
-        title: "Use case 03",
+        title: "Multi-language toolbox talks",
         description:
-          "Capture field observations by voice when typing is not practical.",
+          "AI-drafted pre-starts auto-translated into workers' preferred languages for CALD workforces.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "mining-04",
-        title: "Use case 04",
+        title: "Multi-company structure",
         description:
-          "Prepare clean records for principal contractors and regulator reviews.",
+          "Multiple entities and sites under one organisation, with central oversight and company-level data separation.",
+        iconUrl: useCaseIconWallFire,
+        iconAlt: "Brick wall icon",
+      },
+      {
+        id: "mining-04",
+        title: "SherpaWatch voice reporting",
+        description:
+          "Workers speak incidents and hazards; AI structures and files the report.",
+        iconUrl: useCaseIconWallFire,
+        iconAlt: "Brick wall icon",
+      },
+      {
+        id: "mining-04",
+        title: "Training & competency register",
+        description:
+          "Every qualification, licence, and competency tracked by role with expiry notifications.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
@@ -127,33 +159,49 @@ const tabs = [
     useCases: [
       {
         id: "mining-services-01",
-        title: "Use case 01",
+        title: "Credential tracking",
         description:
-          "Package client-ready safety documentation for each new contract.",
+          "Every worker's tickets, licences, and qualifications tracked with expiry alerts and site access eligibility.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "mining-services-02",
-        title: "Use case 02",
+        title: "SWMS AI",
         description:
-          "Monitor tickets, licences and expiries before mobilisation day.",
+          "Draft SWMS for drill and blast, confined space, and high-risk tasks in seconds, reviewed and approved by your team.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
       {
         id: "mining-services-03",
-        title: "Use case 03",
+        title: "Site-specific inductions",
         description:
-          "Assign workers to client sites with the right evidence attached.",
+          "Inductions assigned and completed on mobile before workers arrive at each site.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "mining-services-04",
-        title: "Use case 04",
+        title: "Permits to work",
         description:
-          "Respond to pre-qualification requests without rebuilding paperwork.",
+          "Digital high-risk work permits with configurable approval workflows per site.",
+        iconUrl: useCaseIconWallFire,
+        iconAlt: "Brick wall icon",
+      },
+      {
+        id: "mining-services-04",
+        title: "Voice incident reporting",
+        description:
+          "Report once by voice on site; export or integrate via API to your principal's systems.",
+        iconUrl: useCaseIconWallFire,
+        iconAlt: "Brick wall icon",
+      },
+      {
+        id: "mining-services-04",
+        title: "Compliance evidence on demand",
+        description:
+          "Attendance, toolbox talk, and safety performance reports exportable for principals, auditors, and tenders.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
@@ -170,33 +218,49 @@ const tabs = [
     useCases: [
       {
         id: "manufacturing-01",
-        title: "Use case 01",
+        title: "Inspections and audits",
         description:
-          "Turn changed work methods into updated risk controls fast.",
+          "Configurable forms with photos, signatures, and findings that automatically generate corrective actions.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "manufacturing-02",
-        title: "Use case 02",
+        title: "Multi-language toolbox talks",
         description:
-          "Track machine-area inductions and training acknowledgements.",
+          "Safety messages AI-translated into your workforce's preferred languages.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "manufacturing-03",
-        title: "Use case 03",
+        title: "Voice incident reporting",
         description:
-          "Log near misses and actions while details are still fresh.",
+          "Floor workers speak the incident; AI classifies and files it in seconds.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "manufacturing-04",
-        title: "Use case 04",
+        title: "ISO Pre-Audit App",
         description:
-          "Show supervisors what is overdue before the next shift starts.",
+          "AI-assisted gap analysis across ISO 9001, 45001, and 14001, with gap registers and readiness dashboards.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "manufacturing-04",
+        title: "Live KPI dashboards",
+        description:
+          "TRIFR, LTIFR, and inspection completion rates visible in real time, with scheduled reports to the board.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "manufacturing-04",
+        title: "Training and competency register",
+        description:
+          "Role-based training, licences, and competencies with automated expiry alerts.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -213,32 +277,48 @@ const tabs = [
     useCases: [
       {
         id: "transport-01",
-        title: "Use case 01",
+        title: "Digital pre-start checks",
         description:
-          "Manage inductions and route-specific safety requirements across depots.",
+          "Vehicle and plant pre-starts on mobile, with defects raised as corrective actions with owners and due dates.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "transport-02",
-        title: "Use case 02",
+        title: "Depot attendance",
         description:
-          "Keep contractor credentials verified before they enter the yard.",
+          "QR check-in and check-out across every depot and distribution centre, with attendance reports on demand.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "transport-03",
-        title: "Use case 03",
-        description: "Capture vehicle, loading and incident notes hands-free.",
+        title: "Contractor management",
+        description: "Owner-drivers and subcontractor companies registered, prequalified, and insurance-tracked in one place.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "transport-04",
-        title: "Use case 04",
+        title: "Voice incident reporting",
         description:
-          "Keep full attendance and evidence history ready for audits.",
+          "Incidents reported by voice from any phone — no app store download required.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "transport-04",
+        title: "Licence and medical tracking",
+        description:
+          "Driver credentials tracked with automated expiry notifications before they lapse.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "transport-04",
+        title: "Quiet Hours",
+        description:
+          "Non-critical notifications suppressed outside working hours, supporting right-to-disconnect obligations.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -255,33 +335,49 @@ const tabs = [
     useCases: [
       {
         id: "civil-01",
-        title: "Use case 01",
+        title: "Contractor prequalification",
         description:
-          "Build job-specific documentation for changing ground and traffic controls.",
+          "Subcontractor submissions assessed and scored against your criteria, down to individual worker records.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "civil-02",
-        title: "Use case 02",
+        title: "Daily forms with sign-off",
         description:
-          "Coordinate contractor readiness before handover gates and possessions.",
+          "JSEAs, pre-starts, and inspections completed on mobile with digital signatures and photo evidence.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "civil-03",
-        title: "Use case 03",
+        title: "QR site access",
         description:
-          "Record site changes and corrective actions in the moment.",
+          "Attendance and visitor management across metro and regional sites from one platform.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "civil-04",
-        title: "Use case 04",
+        title: "Risk assessments",
         description:
-          "Provide principal contractors a clean, searchable evidence trail.",
+          "Structured assessments with configurable likelihood and consequence matrices, consistent across every crew.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "civil-04",
+        title: "Permits to work",
+        description:
+          "Formal authorisation workflows for high-risk activities, tracked to closure.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "civil-04",
+        title: "Scheduled client reporting",
+        description:
+          "Safety performance, attendance, and contractor compliance reports generated and distributed automatically.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -298,33 +394,49 @@ const tabs = [
     useCases: [
       {
         id: "facilities-01",
-        title: "Use case 01",
+        title: "Mobile-first platform",
         description:
-          "Pre-qualify providers before they arrive at tenant or public sites.",
+          "A web app that works on any phone with no app store install — built for a workforce that's never at a desk.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "facilities-02",
-        title: "Use case 02",
+        title: "Multi-company structure",
         description:
-          "Attach permits, insurances and inductions to each work order.",
+          "Every division or brand under one organisation, with separate data and consolidated oversight.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "facilities-03",
-        title: "Use case 03",
+        title: "Contractor prequalification",
         description:
-          "Maintain evidence for repairs, incidents and recurring site tasks.",
+          "Requirements you define, from light-touch for low-risk trades to rigorous for high-risk work.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "facilities-04",
-        title: "Use case 04",
+        title: "My Work",
         description:
-          "Find records by site, contractor or date when someone asks.",
+          "Each worker sees only their tasks, forms, training, and documents — one clear view of what's due.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "facilities-04",
+        title: "Document compliance",
+        description:
+          "Version-controlled document library with compliance reporting, so every site works from current documents.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "facilities-04",
+        title: "SherpaConnect",
+        description:
+          "Alerts, announcements, and messages linked to incidents and actions — one channel instead of scattered emails.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -341,33 +453,49 @@ const tabs = [
     useCases: [
       {
         id: "government-01",
-        title: "Use case 01",
+        title: "Multi-department structure",
         description:
-          "Standardise contractor onboarding across departments and facilities.",
+          "Departments and entities configured in one hierarchy with role-based access for every level.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "government-02",
-        title: "Use case 02",
+        title: "Contractor compliance",
         description:
-          "Keep signed evidence searchable for reviews and public reporting.",
+          "Contractors submit their own documentation for assessment and scoring, with expiry tracking.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "government-03",
-        title: "Use case 03",
+        title: "Live KPI dashboards",
         description:
-          "Capture incidents and notifications with timestamped records.",
+          "TRIFR, LTIFR, and open actions visible in real time for executive and council reporting.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "government-04",
-        title: "Use case 04",
+        title: "Scheduled reports",
         description:
-          "See overdue actions before they become governance problems.",
+          "Safety performance and compliance reports generated and distributed automatically on your cycle.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "government-04",
+        title: "Visitor management",
+        description:
+          "Registration, inductions, and access records for every facility, with SMS verification.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "government-04",
+        title: "Quiet Hours",
+        description:
+          "Configurable suppression of out-of-hours notifications, supporting right-to-disconnect compliance.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -384,33 +512,49 @@ const tabs = [
     useCases: [
       {
         id: "healthcare-01",
-        title: "Use case 01",
+        title: "Sherpa Learn",
         description:
-          "Confirm contractor readiness before work begins in live environments.",
+          "Training assigned, tracked, and certificated across clinical, manufacturing, and support workforces.",
         iconUrl: useCaseIconBuilding,
         iconAlt: "Building icon",
       },
       {
         id: "healthcare-02",
-        title: "Use case 02",
+        title: "Attendance and visitors",
         description:
-          "Track training and site rules for controlled or restricted areas.",
+          "Real-time visibility of exactly who is in your facility, with visitor inductions on arrival.",
         iconUrl: useCaseIconWallFire,
         iconAlt: "Brick wall icon",
       },
       {
         id: "healthcare-03",
-        title: "Use case 03",
+        title: "Audit-ready reporting",
         description:
-          "Record maintenance evidence without disturbing operational teams.",
+          "Training, incident, and document compliance records exportable as evidence for accreditation & audits.",
         iconUrl: useCaseHammer,
         iconAlt: "Hammer icon",
       },
       {
         id: "healthcare-04",
-        title: "Use case 04",
+        title: "Document control",
         description:
-          "Find every document, sign-off and action when compliance teams ask.",
+          "One version-controlled document library with compliance reporting across every facility.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "healthcare-04",
+        title: "Hazard and observation reporting",
+        description:
+          "Simple reporting of hazards physical & psychosocial with corrective actions tracked to closure.",
+        iconUrl: useCaseIconCog,
+        iconAlt: "Cog icon",
+      },
+      {
+        id: "healthcare-04",
+        title: "Credential and registration tracking",
+        description:
+          "Registrations, licences, and mandatory training tracked per role with automated expiry alerts.",
         iconUrl: useCaseIconCog,
         iconAlt: "Cog icon",
       },
@@ -505,13 +649,13 @@ function UseCase(props) {
                   className="h-full flex min-w-0 flex-col gap-7 animate-[fadeIn_280ms_ease-out] md:flex-row md:gap-4 lg:gap-6"
                 >
                   <div className="flex justify-between gap-5 min-h-0 min-w-0 flex-col px-0 py-1 sm:px-2 sm:py-2 md:min-h-[420px] lg:min-h-[460px] lg:px-4 lg:py-4">
-                    <div className="grid min-w-0 gap-x-8 gap-y-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 lg:gap-x-12 lg:gap-y-9 lg:pb-7">
+                    <div className="grid min-w-0 gap-x-8 gap-y-7 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-8 lg:pb-7">
                       {activeTab.useCases.map((useCase) => (
                         <article
                           key={useCase.id}
                           className="w-full max-w-none sm:max-w-[260px] md:max-w-none lg:max-w-[211px]"
                         >
-                          <div className="flex flex-wrap items-center gap-2">
+                          <div className="flex items-center gap-2">
                             <img
                               src={useCase.iconUrl}
                               alt={useCase.iconAlt}
