@@ -49,7 +49,7 @@ function TestimonialCard({ logo, quote, name, role, image, logoClass = 'testimon
 
       {isFeatured && (
         <>
-          <img src={logo} alt={`${name} workspace context`} className="testimonials__image testimonials__image--mobile" />
+          <img src={image} alt={`${name} workspace context`} className="testimonials__image testimonials__image--mobile" />
           <div className="testimonials__desktop-media">
             <img src={image} alt={`${name} workspace context`} className="testimonials__desktop-image" />
           </div>
