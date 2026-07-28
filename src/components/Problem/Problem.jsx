@@ -29,7 +29,7 @@ const floatingAssets = [
     top: '54px',
     left: '26px',
     heading: "If something goes wrong no site, you’re become liable", // Dynamic heading
-    text: `SWMS, inductions, risk assessments - every site and client wants something different.`,
+    text: `Emails, paperwork, folders nobody maintains - none of that holds up when it matters.`,
   },
   {
     id: 'safety-compliance-card',
