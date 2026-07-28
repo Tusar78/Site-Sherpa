@@ -80,20 +80,20 @@ export function Testimonials({ className = '' }) {
             <TestimonialCard
               logo={testiStar}
               quote="I log incidents by talking into my phone from the ute. No more trying to remember details back at the office."
-              name="Contracts Manager,"
-              role="/ Facilities Management"
+              name="Site Supervisor"
+              role="/ Civil Contracting"
             />
             <TestimonialCard
               logo={testiStar}
               logoClass="testimonials__logo--c"
-              quote="“Every worker taps in with a QR code and we know instantly if a ticket's expired — not after they're already through the gate.”"
-              name="Contracts Manager,"
+              quote="“We won the contract on Friday and had the crew on site Monday, inductions done, DIMS approved. That used to take us over a week.”"
+              name="Contracts Manager"
               role="/ Facilities Management"
             />
           </div>
 
           <div className="testimonials__row testimonials__row--bottom">
-            <article className="testimonials__metric-card">
+            {/* <article className="testimonials__metric-card">
               <div className="testimonials__metric-copy">
                 <p className="testimonials__metric-value">
                   <span>1000hr</span>
@@ -103,9 +103,16 @@ export function Testimonials({ className = '' }) {
                 </p>
               </div>
               <img src={companyLogoC} alt="Customer logo for saved hours result" className="testimonials__metric-logo testimonials__metric-logo--primary" />
-            </article>
+            </article> */}
+            <TestimonialCard
+              logo={testiStar}
+              logoClass="testimonials__logo--c"
+              quote="“We ran safety out of five spreadsheets and a shared drive nobody trusted. SiteSherpa replaced all of it inside a month”"
+              name="General Manager"
+              role="/ Earthmoving"
+            />
 
-            <article className="testimonials__metric-card">
+            {/* <article className="testimonials__metric-card">
               <div className="testimonials__metric-copy">
                 <p className="testimonials__metric-value">
                   <span>10X</span>
@@ -115,7 +122,15 @@ export function Testimonials({ className = '' }) {
                 </p>
               </div>
               <img src={statLogoB} alt="Customer logo for risk reduction result" className="testimonials__metric-logo testimonials__metric-logo--secondary" />
-            </article>
+            </article> */}
+
+            <TestimonialCard
+              logo={testiStar}
+              logoClass="testimonials__logo--c"
+              quote="“Sign-off on toolbox talks used to mean chasing every worker with a clipboard. Now it's done before the shift starts.”"
+              name="Operations Manager"
+              role="/ Transport & Logistics"
+            />
 
             <TestimonialCard
               logo={testiStar}
