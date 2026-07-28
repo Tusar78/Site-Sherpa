@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 
 export default function Banner() {
-  // Initialize state based on localStorage to prevent showing the banner if it was previously closed
+  // Initialize state to always show the banner on each load
   const [isVisible, setIsVisible] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('isoBannerClosed') !== 'true'
-    }
-    return true // Default to visible on server-side rendering
+    // Commented out localStorage check so it doesn't remember previous closures
+    // if (typeof window !== 'undefined') {
+    //   return localStorage.getItem('isoBannerClosed') !== 'true'
+    // }
+    return true // Always default to visible on every load
   })
 
   const handleClose = () => {
     setIsVisible(false)
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('isoBannerClosed', 'true')
-    }
+    // Commented out localStorage setting so it doesn't persist across reloads
+    // if (typeof window !== 'undefined') {
+    //   localStorage.setItem('isoBannerClosed', 'true')
+    // }
   }
 
   if (!isVisible) return null
