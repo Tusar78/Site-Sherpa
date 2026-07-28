@@ -71,6 +71,27 @@ In the project directory, you can run the following scripts:
 * `npm run preview`: Previews the production build locally before deploying.
 * `npm run lint`: Analyzes the code to catch potential errors using ESLint.
 
+## 🌍 Deployment & Hosting
+
+This project is optimized for modern web hosting platforms. It is currently hosted on **Netlify**, but it can be easily deployed to other platforms like **Vercel** or any **Personal Domain/Shared Hosting**.
+
+### 1. Vercel / Netlify (Recommended)
+Deploying to Vercel or Netlify is seamless:
+1. Import your GitHub repository to Vercel or Netlify.
+2. The platform should automatically detect **Vite**. If not, configure the following:
+   * **Build Command:** `npm run build`
+   * **Output Directory:** `dist`
+3. Click Deploy!
+
+### 2. Personal Domain / cPanel Hosting
+If you want to host this on a traditional shared hosting server (like Hostinger, Namecheap, etc.):
+1. Run the build command locally:
+   ```bash
+   npm run build
+   ```
+2. A new `dist` folder will be generated in your project root.
+3. Upload all the contents **inside** the `dist` folder directly to your server's `public_html` directory via File Manager or FTP.
+
 ## 🤝 Handover & Maintenance
 
 If you are a new developer taking over this project:
