@@ -57,7 +57,11 @@
 }
 
 .testimonials__quote-group {
-  @apply flex min-w-0 flex-col gap-5;
+  @apply flex min-w-0 flex-col gap-0;
+}
+
+.testimonials__stars {
+  @apply flex gap-1
 }
 
 .testimonials__logo {
@@ -65,23 +69,11 @@
 }
 
 .testimonials__logo--default {
-  @apply h-7 max-w-[120px];
-}
-
-.testimonials__logo--a {
-  @apply h-7 max-w-[130px] opacity-60;
-}
-
-.testimonials__logo--c {
-  @apply h-7 max-w-[120px] opacity-70;
-}
-
-.testimonials__logo--d {
-  @apply h-[34px] max-w-[140px];
+  @apply h-5 w-5;
 }
 
 .testimonials__quote {
-  @apply text-regular text-primary md:mt-0 lg:mt-13;
+  @apply text-regular text-primary md:mt-0 lg:mt-4;
 }
 
 .testimonials__quote p {
@@ -141,7 +133,7 @@
 }
 
 .testimonials__metric-logo {
-  @apply mt-6 h-8 max-w-[130px] object-contain object-left opacity-60;
+  @apply mt-6 h-8 max-w-[130px] object-contain object-left;
 }
 
 .testimonials__metric-logo--secondary {

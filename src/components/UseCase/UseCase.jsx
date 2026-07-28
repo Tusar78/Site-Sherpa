@@ -268,7 +268,7 @@ function UseCase(props) {
 
           <div className="relative z-10 mx-auto max-w-[1240px] text-center text-white">
             <p className="font-body text-regular font-semibold uppercase">
-              <span>Industries and use cases</span>
+              <span>Industries</span>
             </p>
             <h1 id="industries-heading" className="mx-auto mt-3 md:mt-4 max-w-[788px] text-h2 font-medium sm:mt-4">
               <span>SiteSherpa is built for every industry where safety is non-negotiable</span>

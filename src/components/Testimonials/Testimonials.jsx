@@ -7,7 +7,8 @@ import {
   testiLogoFour,
   testiLogoFive,
   testiProfilePicOne,
-  testiProfilePicTwo
+  testiProfilePicTwo,
+  testiStar
 } from "../../assets/images"
 
 const companyLogoA = testiLogoThree;
@@ -25,7 +26,13 @@ function TestimonialCard({ logo, quote, name, role, image, logoClass = 'testimon
     <article className={`testimonials__card ${isFeatured ? 'testimonials__card--featured' : 'testimonials__card--plain'}`}>
       <div className="testimonials__card-content">
         <div className="testimonials__quote-group">
-          {/* <img src={logo} alt={`${name} company logo`} className={`testimonials__logo ${logoClass}`} /> */}
+          <div className='testimonials__stars'>
+            <img src={logo} alt={`${name} Star`} className={`testimonials__logo ${logoClass}`} />
+            <img src={logo} alt={`${name} Star`} className={`testimonials__logo ${logoClass}`} />
+            <img src={logo} alt={`${name} Star`} className={`testimonials__logo ${logoClass}`} />
+            <img src={logo} alt={`${name} Star`} className={`testimonials__logo ${logoClass}`} />
+            <img src={logo} alt={`${name} Star`} className={`testimonials__logo ${logoClass}`} />
+          </div>
           <blockquote className="testimonials__quote">
             <p><span>{quote}</span></p>
           </blockquote>
@@ -42,7 +49,7 @@ function TestimonialCard({ logo, quote, name, role, image, logoClass = 'testimon
 
       {isFeatured && (
         <>
-          <img src={image} alt={`${name} workspace context`} className="testimonials__image testimonials__image--mobile" />
+          <img src={logo} alt={`${name} workspace context`} className="testimonials__image testimonials__image--mobile" />
           <div className="testimonials__desktop-media">
             <img src={image} alt={`${name} workspace context`} className="testimonials__desktop-image" />
           </div>
@@ -63,7 +70,7 @@ export function Testimonials({ className = '' }) {
         <div className="testimonials__rows">
           <div className="testimonials__row testimonials__row--top">
             <TestimonialCard
-              logo={companyLogoA}
+              logo={testiStar}
               logoClass="testimonials__logo--a"
               quote="“We won the contract on Friday and had the crew on site Monday, inductions done, DIMS approved. That used to take us over a week.”"
               name="Site Manager"
@@ -71,13 +78,13 @@ export function Testimonials({ className = '' }) {
               image={portraitA}
             />
             <TestimonialCard
-              logo={companyLogoB}
+              logo={testiStar}
               quote="I log incidents by talking into my phone from the ute. No more trying to remember details back at the office."
               name="Contracts Manager,"
               role="/ Facilities Management"
             />
             <TestimonialCard
-              logo={companyLogoC}
+              logo={testiStar}
               logoClass="testimonials__logo--c"
               quote="“Every worker taps in with a QR code and we know instantly if a ticket's expired — not after they're already through the gate.”"
               name="Contracts Manager,"
@@ -111,9 +118,10 @@ export function Testimonials({ className = '' }) {
             </article>
 
             <TestimonialCard
-              logo={companyLogoD}
+              logo={testiStar}
               logoClass="testimonials__logo--d"
               quote={`"When the auditor turned up unannounced, we weren't scrambling. Everything was there, timestamped, ready to go."`} role="/ Mining Industry"
+              name="Compliance Lead,"
               image={portraitD}
             />
           </div>

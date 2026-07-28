@@ -122,6 +122,7 @@ import testiLogoFour from "./Testimonial/testiLogo(4).svg"
 import testiLogoFive from "./Testimonial/testiLogo(5).svg"
 import testiProfilePicOne from "./Testimonial/testiProfilePic(1).webp"
 import testiProfilePicTwo from "./Testimonial/testiProfilePic(2).webp"
+import testiStar from "./Testimonial/star.svg"
 
 
 
@@ -241,6 +242,7 @@ export {
   testiLogoFive,
   testiProfilePicOne,
   testiProfilePicTwo,
+  testiStar,
   mailIcon,
   footerLogo
 };

@@ -53,7 +53,7 @@ export const FaqSection = () => {
 
           <div className="flex flex-col gap-4">
             <h2 className="m-0 text-[#072C2C] text-[48px] font-['Inter_Display',sans-serif] font-medium leading-[58px] tracking-[-1.44px] text-left [@media(max-width:640px)]:text-[32px] [@media(max-width:640px)]:leading-10">
-              Questions managers ask us before they book a demo
+              The questions we get <br/>before every demo
             </h2>
             <p className="m-0 text-[#072C2C]/70 text-lg font-['Inter_Display',sans-serif] font-normal leading-7 tracking-normal text-left max-w-[523px]">
               Every concern you have about switching over, your budget and whether

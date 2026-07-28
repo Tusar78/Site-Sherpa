@@ -110,11 +110,10 @@ export const Footer = () => {
                     © 2026 SiteSherpa Pty Ltd (SiteSherpa). We are SFZ Safety Pty Ltd. All rights reserved.
                 </span>
             </div> */}
-            <div className="mt-12 pt-8">
-                <div className="flex flex-col md:flex-row gap-3 md:gap-12 justify-center md:justify-between items-center text-center">
+            <div className="mt-8 md:mt-12 lg:mt-20">
+                <div className="flex flex-col items-center text-center gap-4 lg:flex-row justify-center  lg:justify-between">
 
                     {/* Copyright */}
-                    <div></div>
                     <span className="text-primary font-medium text-regular">
                         © 2026 SiteSherpa Pty Ltd (SiteSherpa). We are SFZ Safety Pty Ltd. All rights reserved.
                     </span>
@@ -124,7 +123,7 @@ export const Footer = () => {
                         <span className="text-sm text-gray-500">built by</span>
 
                         <a
-                            href="https://claritydesign.studio"
+                            href="https://designwithclarity.co/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center font-semibold text-gray-800 transition-opacity duration-200 hover:opacity-70"

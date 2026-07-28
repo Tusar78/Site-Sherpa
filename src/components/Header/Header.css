@@ -174,7 +174,7 @@ F
 
 /* Animation states when menu is active */
 .mobile_toggle.is-active .line-top {
-  transform: translateY(6px) rotate(45deg);
+  transform: translateY(4px) rotate(45deg);
 }
 
 .mobile_toggle.is-active .line-middle {
@@ -182,7 +182,7 @@ F
 }
 
 .mobile_toggle.is-active .line-bottom {
-  transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-4.5px) rotate(-45deg);
 }
 
 /* ============================
