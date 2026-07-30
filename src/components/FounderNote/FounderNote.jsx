@@ -70,7 +70,6 @@ Because when safety becomes easier, people spend less time pushing paper and mor
       </div>
 
 
-
       {/* Founder Image - Absolute Positioned */}
       <img
         className="hidden sm:block ml-auto absolute pointer-events-none right-0 bottom-0 object-cover object-center"
