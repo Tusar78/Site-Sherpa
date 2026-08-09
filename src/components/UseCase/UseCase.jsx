@@ -280,40 +280,39 @@ function UseCase(props) {
               
               {/* Nav - Fixed 280px on desktop */}
               <nav aria-label="Industries" className="min-w-0 lg:w-[280px] lg:flex-shrink-0">
-                <div className="flex min-w-0 gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible md:overflow-visible md:pb-0 lg:block lg:overflow-visible lg:pb-0">
-                  {tabs.map((tab) => {
-                    const isActive = tab.id === activeTab.id;
-                    return (
-                      <button
-                        key={tab.id}
-                        type="button"
-                        onClick={() => setActiveTabId(tab.id)}
-                        className={`group relative flex shrink-0 items-center border-b text-left transition-colors duration-200 py-2 sm:py-3 sm:min-w-0 sm:flex-[1_1_220px] lg:w-full ${
-                          isActive
-                            ? "border-[#072C2C] text-[#072C2C]"
-                            : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"
-                        }`}
-                        aria-selected={isActive}
-                        role="tab"
-                      >
-                        {/* Smooth Scale & Width Animation for Bullet */}
-                        <span
-                          className={`h-2 bg-primary shrink-0 transition-all duration-300 ease-out hidden sm:block ${
-                            isActive
-                              ? "w-2 opacity-100 mr-3"
-                              : "w-0 opacity-0 mr-0 group-hover:w-2 group-hover:opacity-100 group-hover:mr-3"
-                          }`}
-                          aria-hidden="true"
-                        />
-                        <span className="break-words text-small md:text-medium font-medium md:break-normal whitespace-nowrap">
-                          {tab.label}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </nav>
-
+  <div className="flex min-w-0 flex-wrap gap-2 pb-2 sm:pb-0 lg:block lg:pb-0">
+    {tabs.map((tab) => {
+      const isActive = tab.id === activeTab.id;
+      return (
+        <button
+          key={tab.id}
+          type="button"
+          onClick={() => setActiveTabId(tab.id)}
+          className={`group relative flex grow items-center border-b text-left transition-colors duration-200 py-1.5 sm:py-2 lg:grow-0 lg:py-3 lg:w-full ${
+            isActive
+              ? "border-[#072C2C] text-[#072C2C]"
+              : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"
+          }`}
+          aria-selected={isActive}
+          role="tab"
+        >
+          {/* Smooth Scale & Width Animation for Bullet */}
+          <span
+            className={`h-2 bg-primary shrink-0 transition-all duration-300 ease-out hidden sm:block ${
+              isActive
+                ? "w-2 opacity-100 mr-3"
+                : "w-0 opacity-0 mr-0 group-hover:w-2 group-hover:opacity-100 group-hover:mr-3"
+            }`}
+            aria-hidden="true"
+          />
+          <span className="break-words text-xsmall sm:text-small lg:text-medium font-medium md:break-normal whitespace-nowrap">
+            {tab.label}
+          </span>
+        </button>
+      );
+    })}
+  </div>
+</nav>
               {/* Right side - Takes remaining width */}
               <div className="min-w-0 flex-1 rounded-[8px] border border-[#E3E5D7] p-3 sm:p-4 md:p-4 lg:p-2">
                 <div

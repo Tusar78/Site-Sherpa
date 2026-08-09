@@ -187,7 +187,7 @@ const contentByAudience = {
       },
       {
         id: "clients-paper-trail",
-        title: "Risk Assessments done in \n seconds, not days ",
+        title: "Risk Assessments done \n in seconds, not days ",
         image: clientLottieTwo,
         imageAlt:
           "Automated compliance records and induction evidence in SiteSherpa",

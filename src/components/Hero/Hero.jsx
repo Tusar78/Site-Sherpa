@@ -61,15 +61,15 @@ function Hero() {
   );
 
   // Auto-play logic
-useEffect(() => {
-  const delay = activeTab === "risk" ? 4000 : 8200; // risk: 4s, voice: 7s
+// useEffect(() => {
+//   const delay = activeTab === "risk" ? 4000 : 8200; // risk: 4s, voice: 7s
 
-  const timer = setTimeout(() => {
-    setActiveTab((prevTab) => (prevTab === "risk" ? "voice" : "risk"));
-  }, delay);
+//   const timer = setTimeout(() => {
+//     setActiveTab((prevTab) => (prevTab === "risk" ? "voice" : "risk"));
+//   }, delay);
 
-  return () => clearTimeout(timer);
-}, [activeTab]);
+//   return () => clearTimeout(timer);
+// }, [activeTab]);
 
   return (
     <section className="section_hero" ref={container}>

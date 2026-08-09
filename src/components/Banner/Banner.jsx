@@ -1,21 +1,12 @@
 import React, { useState } from 'react'
 
 export default function Banner() {
-  // Initialize state to always show the banner on each load
   const [isVisible, setIsVisible] = useState(() => {
-    // Commented out localStorage check so it doesn't remember previous closures
-    // if (typeof window !== 'undefined') {
-    //   return localStorage.getItem('isoBannerClosed') !== 'true'
-    // }
     return true // Always default to visible on every load
   })
 
   const handleClose = () => {
     setIsVisible(false)
-    // Commented out localStorage setting so it doesn't persist across reloads
-    // if (typeof window !== 'undefined') {
-    //   localStorage.setItem('isoBannerClosed', 'true')
-    // }
   }
 
   if (!isVisible) return null
@@ -23,12 +14,13 @@ export default function Banner() {
   return (
     <div className="sticky top-0 z-100 bg-primary px-4 py-2 text-white">
       <div className="relative mx-auto flex max-w-7xl items-center justify-center">
-        <p className="text-center text-sm pr-8">
+        {/* text-xs on mobile → 2 lines, sm:text-sm on bigger screens → 1 line */}
+        <p className="text-center text-xs sm:text-sm leading-snug sm:leading-normal pr-8">
           ISO audit coming up? Know exactly where you stand before the external
           auditor does{" "}
           <a
             href="#"
-            className="inline-flex items-center gap-1 underline underline-offset-2"
+            className="inline-flex items-center gap-1 underline underline-offset-2 whitespace-nowrap"
           >
             from $499, not $15,000
             <svg
@@ -46,7 +38,7 @@ export default function Banner() {
             </svg>
           </a>
         </p>
-        
+
         {/* Close Button */}
         <button
           onClick={handleClose}

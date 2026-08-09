@@ -16,7 +16,13 @@
   gap: 6px;
   border-radius: 6px;
 }
-
+/* Mobile → tablet: left-align ONLY the dot + "AI-Powered" part */
+@media (max-width: 1023.98px) {
+  .hero_badge-left {
+    align-self: flex-start; /* overrides parent centering for this child only */
+    padding-left: 10px;     /* little breathing room from the left side */
+  }
+}
 .hero_badge-left {
   @apply flex items-center;
   gap: 6px;
@@ -250,5 +256,80 @@
   }
   to {
     width: 100%;
+  }
+}
+
+:root {
+  /* Banner (~36px) + Header (~60px). Set 0px for literal 100vh */
+  --top-offset: 96px;
+}
+
+@media (min-width: 1024px) {
+  .section_hero {
+    height: calc(100vh - var(--top-offset));
+    max-height: 1024px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .section_hero .global-padding,
+  .section_hero .container-regular {
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .hero_content {
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero_left {
+    justify-content: center;
+  }
+
+  .hero_visual {
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+  }
+
+  .hero_visual-bg {
+    height: 100% !important;
+    top: 0 !important;
+  }
+
+  /* Card area = leftover space.
+     container-type lets us read its height with cqh units */
+  .hero_visual-elements {
+    flex: 1 1 auto;
+    min-height: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    container-type: size;
+  }
+
+  /* The grid keeps Figma's exact ratio (421w x 428h) and scales
+     down uniformly — every card stays in perfect proportion */
+  .hero_tab-content:first-child {
+    width: 100%; /* fallback for older browsers */
+    width: min(100%, calc(100cqh * 421 / 428));
+    height: auto;
+  }
+
+  /* Images use natural ratio — exactly like Figma, no cropping,
+     no independent letterboxing */
+  .hero_card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero_visual-tabs {
+    flex: 0 0 auto;
+    margin-top: 16px;
   }
 }
