@@ -57,7 +57,7 @@
    HERO VISUAL SECTION
 ============================ */
 .hero_visual {
-  @apply relative w-full h-full flex md:block flex-col-reverse gap-8 md:gap-0;
+  @apply relative w-full h-full flex md:block flex-col gap-8 md:gap-0;
   max-width: 636px;
 }
 
@@ -75,7 +75,7 @@
 /* Cards Layout - Container for both tabs */
 .hero_visual-elements {
   @apply relative;
-  min-height: 400px;
+  /* min-height: 400px; */
 }
 
 /* ============================

@@ -34,7 +34,7 @@ import {
   FacilitiesIcon01, FacilitiesIcon02, FacilitiesIcon03, FacilitiesIcon04, FacilitiesIcon05, FacilitiesIcon06,
   GovernmentIcon01, GovernmentIcon02, GovernmentIcon03, GovernmentIcon04, GovernmentIcon05, GovernmentIcon06,
   HealthcareIcon01, HealthcareIcon02, HealthcareIcon03, HealthcareIcon04, HealthcareIcon05, HealthcareIcon06,
-} from "./UseCaseIcons"; 
+} from "./UseCaseIcons";
 
 // Map each use case ID to its specific, unique icon component
 const iconMap = {
@@ -258,7 +258,7 @@ function UseCase(props) {
     <main className={`w-full bg-[#F8F9F3] ${props.className || ""}`.trim()} style={props.style}>
       <section className="w-full overflow-hidden global-padding py-4 sm:py-8 lg:py-10" aria-labelledby="industries-heading">
         <div className="relative mx-auto w-full max-w-[1400px] overflow-hidden rounded-[10px] bg-cover bg-center px-4 py-10 sm:px-8 sm:py-14 md:py-16 lg:min-h-[951px] lg:px-20 lg:py-[100px]">
-          
+
           {/* Dynamic Background Image */}
           <img
             src={activeTab.bgImage}
@@ -277,10 +277,11 @@ function UseCase(props) {
 
           <div className="relative z-10 mx-auto mt-8 w-full max-w-[1240px] min-w-0 rounded-[12px] bg-white py-2 pr-2 pl-2 lg:pl-6 sm:mt-10 lg:mt-12">
             <div className="flex min-w-0 flex-col gap-4 lg:flex-row">
-              
+
               {/* Nav - Fixed 280px on desktop */}
               <nav aria-label="Industries" className="min-w-0 lg:w-[280px] lg:flex-shrink-0">
-  <div className="flex min-w-0 flex-wrap gap-2 pb-2 sm:pb-0 lg:block lg:pb-0">
+  {/* Added `justify-center` to center items when they wrap */}
+  <div className="flex min-w-0 flex-wrap gap-2 justify-center pb-2 sm:pb-0 lg:block lg:pb-0">
     {tabs.map((tab) => {
       const isActive = tab.id === activeTab.id;
       return (
@@ -288,21 +289,21 @@ function UseCase(props) {
           key={tab.id}
           type="button"
           onClick={() => setActiveTabId(tab.id)}
-          className={`group relative flex grow items-center border-b text-left transition-colors duration-200 py-1.5 sm:py-2 lg:grow-0 lg:py-3 lg:w-full ${
-            isActive
-              ? "border-[#072C2C] text-[#072C2C]"
-              : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C]"
-          }`}
+          className={`group relative flex items-center justify-center border transition-colors duration-200 py-0.5 sm:py-1 px-2 
+            lg:justify-start lg:w-full lg:rounded-none lg:border-0 lg:border-b lg:px-0 lg:py-3 
+            ${isActive
+              ? "border-[#072C2C] bg-[#072C2C] text-[#E3E5D7] lg:bg-transparent"
+              : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C] hover:border-[#072C2C]"
+            }`}
           aria-selected={isActive}
           role="tab"
         >
           {/* Smooth Scale & Width Animation for Bullet */}
           <span
-            className={`h-2 bg-primary shrink-0 transition-all duration-300 ease-out hidden sm:block ${
-              isActive
+            className={`h-2 bg-primary shrink-0 transition-all duration-300 ease-out hidden lg:block ${isActive
                 ? "w-2 opacity-100 mr-3"
                 : "w-0 opacity-0 mr-0 group-hover:w-2 group-hover:opacity-100 group-hover:mr-3"
-            }`}
+              }`}
             aria-hidden="true"
           />
           <span className="break-words text-xsmall sm:text-small lg:text-medium font-medium md:break-normal whitespace-nowrap">
@@ -325,7 +326,7 @@ function UseCase(props) {
                       {activeTab.useCases.map((useCase) => {
                         // Dynamically resolve the correct, unique icon component
                         const IconComponent = iconMap[useCase.id];
-                        
+
                         return (
                           <article
                             key={useCase.id}
