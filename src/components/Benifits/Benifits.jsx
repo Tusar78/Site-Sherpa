@@ -76,7 +76,7 @@ const SafeLottie = ({ animationData }) => {
         .then((res) => res.json())
         .then((json) => setData(json))
         .catch(() => setError(true));
-    } 
+    }
     // If it's an object, check if it's nested inside a 'default' property (common in Vite/Webpack)
     else if (typeof animationData === "object") {
       setData(animationData.default || animationData);
@@ -106,7 +106,7 @@ const FEATURE_CARDS_DATA = {
       title: "A paper trail that builds itself, so your board can sleep at night",
       description:
         "Every induction, incident and sign-off logged, classified and timestamped automatically by AI. Pull up any record in seconds.",
-      imgSrc: benifitCardImg02, 
+      imgSrc: benifitCardImg02,
       imgAlt: "Compliance dashboard visualization",
     },
     {
@@ -290,7 +290,7 @@ const contentByAudience = {
       },
       {
         id: "contractors-voice-reporting",
-        title: "Reporting done at the \nspeed of your voice",
+        title: "Know your team is work ready before they step on site",
         image: clientLottieSix,
         imageAlt:
           "Worker on an industrial site using a mobile safety reporting workflow",
@@ -386,8 +386,7 @@ const Benefits = ({ className, style }) => {
                 className="flex flex-col lg:flex-row justify-between items-start lg:items-center overflow-hidden rounded-[12px] bg-surface"
               >
                 <div className="flex flex-col justify-center px-8 py-8 sm:px-8 sm:py-10 lg:py-12 lg:px-12">
-                  <h3 className="text-h3 font-medium text-primary whitespace-pre-line">
-                    {card.title}
+                  <h3 className="text-h3 font-medium text-primary whitespace-normal md:whitespace-pre-line">                    {card.title}
                   </h3>
                   <div className="mt-[24px] flex flex-col sm:mt-[32px] lg:mt-[40px] lg:max-w-[530px]">
                     {card.features.map((feature) => (
@@ -410,10 +409,10 @@ const Benefits = ({ className, style }) => {
                 </div>
                 <figure className="lg:h-100  w-full lg:max-w-[560px] p-2 pt-0 sm:h-full sm:min-h-[420px] sm:p-2 lg:min-h-[560px]">
                   <div className="w-full h-full flex items-center justify-center bg-bge rounded-[8px] overflow-clip">
-                    
+
                     {/* Render SafeLottie instead of raw Lottie */}
                     <SafeLottie animationData={card.image} />
-                    
+
                   </div>
                 </figure>
               </article>

@@ -292,7 +292,7 @@ function UseCase(props) {
           className={`group relative flex items-center justify-center border transition-colors duration-200 py-0.5 sm:py-1 px-2 
             lg:justify-start lg:w-full lg:rounded-none lg:border-0 lg:border-b lg:px-0 lg:py-3 
             ${isActive
-              ? "border-[#072C2C] bg-[#072C2C] text-[#E3E5D7] lg:bg-transparent"
+              ? "border-[#072C2C] bg-[#072C2C] text-[#E3E5D7] lg:text-primary lg:bg-transparent"
               : "border-[#E3E5D7] text-[rgba(7,44,44,0.5)] hover:text-[#072C2C] hover:border-[#072C2C]"
             }`}
           aria-selected={isActive}

@@ -8,9 +8,6 @@
   @apply relative w-full overflow-hidden; 
 }
 
-/* Shadow Fix: Centered on mobile to prevent squishing.
-  Restores original behavior on desktop (lg:).
-*/
 .solution-shadow {
   @apply absolute w-full z-10 -top-1 sm:-top-3 lg:top-40 h-[240px] sm:h-[280px] lg:h-[390px];
 }
@@ -23,7 +20,6 @@
   @apply w-full max-w-[1240px] mx-auto pb-10 md:pb-14 lg:pb-20 xl:pb-28;
 }
 
-/* Mobile Flex-Col, Desktop Flex-Row with your original gap */
 .solution-inner {
   @apply mx-auto w-full max-w-[1240px] relative flex flex-col lg:flex-row justify-between gap-4 sm:gap-10 lg:gap-7 z-30;
 }
@@ -32,7 +28,6 @@
   @apply relative z-30 mx-auto mb-8 lg:mb-12 max-w-[1240px];
 }
 
-/* Margin Fix: Reduced on mobile to prevent huge blank space, exact 400px on desktop */
 .solution_subtext-wrapper {
   @apply flex items-center gap-2 mt-32 md:mt-48 lg:mt-[400px];
 }
@@ -53,8 +48,9 @@
   @apply relative z-10 w-full lg:max-w-[651px];
 }
 
+/* --- SWAPPED ACTIVE / INACTIVE DESIGNS --- */
 .solution_tablist {
-  @apply -mx-4 flex flex-nowrap gap-3 overflow-x-auto px-4 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-0 sm:overflow-visible sm:px-0 sm:pb-0 md:gap-x-8 lg:block;
+  @apply flex flex-wrap gap-2 lg:gap-3 justify-center pb-4 sm:justify-start lg:block lg:pb-0;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -64,50 +60,45 @@
 }
 
 .solution_tab {
-  @apply flex py-2 lg:py-4 w-full items-center text-medium lg:text-h4 text-white/40;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* Base layout */
+  @apply flex py-1.5 px-3 lg:px-0 lg:py-4 w-auto lg:w-full items-center justify-center lg:justify-start text-small lg:text-h4 rounded transition-colors duration-200;
+  
+  /* INACTIVE — Mobile/Tablet: dark box, white text (previously the active look) */
+  @apply bg-[#072C2C] text-white border border-[#072C2C];
+  
+  /* INACTIVE — Desktop: transparent, white text, brighter bottom border (previously active) */
+  @apply lg:bg-transparent lg:rounded-none lg:border-0 lg:border-b lg:border-white/30 lg:text-white;
 }
 
 .solution_tab:hover {
-  @apply text-white;
+  /* Hover previews the new active (white) state on mobile/tablet */
+  @apply bg-white text-primary border-[#E3E5D7];
+  
+  /* Desktop hover */
+  @apply lg:bg-transparent lg:text-white lg:border-white/40;
 }
 
 .solution_tab--active {
-  @apply  text-white sm:rounded-none;
-}
-
-
-
-.solution_tab:hover {
-  @apply text-white;
+  /* ACTIVE — Mobile/Tablet: white box, primary text (previously the inactive look) */
+  @apply bg-white text-primary border border-[#E3E5D7];
+  
+  /* ACTIVE — Desktop: transparent, faded text, subtle bottom border (previously inactive) */
+  @apply lg:bg-transparent lg:rounded-none lg:border-0 lg:border-b lg:border-white/10 lg:text-white/40;
 }
 
 .solution_tab-bullet {
-  /* 
-    Initial state: 
-    - w-0: 0px width
-    - mr-0: 0px space to the text
-    - opacity-0: invisible
-    - transition-all: smoothly animates width, margin, and opacity together
-  */
-  @apply h-5 w-0 rounded-[6px] bg-[#D1FF6E] opacity-0 mr-0 shrink-0 transition-all duration-300 ease-out hidden sm:block;
+  @apply h-5 w-0 rounded-[6px] bg-[#D1FF6E] opacity-0 mr-0 shrink-0 transition-all duration-300 ease-out hidden lg:block;
 }
 
 .solution_tab-bullet.is-active,
 .solution_tab:hover .solution_tab-bullet {
-  /* 
-    Active/Hover state: 
-    - w-5: expands to 20px width
-    - mr-3: adds 12px of space between bullet and text
-    - opacity-100: becomes fully visible
-    (Total 32px space matches your original design's w-5 + gap-3)
-  */
   @apply w-5 opacity-100 mr-3;
 }
 
 .solution_tab-text {
   @apply whitespace-nowrap font-base text-small md:text-h4 font-medium sm:whitespace-normal;
 }
+/* ----------------------------------------- */
 
 .solution-tab-fade {
   animation: solutionTabFade 260ms ease-out both;
@@ -124,7 +115,6 @@
   }
 }
 
-/* Panel Width Fix: 100% on mobile, exactly 560px max on desktop */
 .solution_panel {
   @apply w-full overflow-hidden rounded-lg bg-[#122323] max-w-full lg:max-w-[560px] mx-auto mt-6 lg:mt-0;
 }
@@ -142,7 +132,6 @@
   }
 }
 
-/* Visual Container Height Fix for mobile */
 .solution_card-visual {
   @apply flex sm:min-h-[260px] items-center justify-center overflow-hidden h-auto lg:h-[393px] relative py-4 md:py-8 lg:py-0;
 }
@@ -155,7 +144,6 @@
   @apply h-auto max-h-[280px] w-full max-w-full object-contain object-center sm:max-h-[320px] md:h-full md:max-h-none md:object-cover lg:h-[540px] lg:w-[560px];
 }
 
-/* Responsive Padding for the card content */
 .solution_card-content {
   @apply px-5 sm:px-8 pt-5 sm:pt-7 pb-6 gap-3;
 }
