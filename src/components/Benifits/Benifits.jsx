@@ -290,7 +290,7 @@ const contentByAudience = {
       },
       {
         id: "contractors-voice-reporting",
-        title: "Know your team is work ready before they step on site",
+        title: "Know where your team is and when they checked in",
         image: clientLottieSix,
         imageAlt:
           "Worker on an industrial site using a mobile safety reporting workflow",
