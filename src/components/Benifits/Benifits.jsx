@@ -266,7 +266,7 @@ const contentByAudience = {
       },
       {
         id: "contractors-risk-assessments",
-        title: "Reporting done at the speed of your voice",
+        title: "Know where your team is and when they checked in",
         image: clientLottieFive,
         imageAlt:
           "Abstract SiteSherpa interface pattern representing AI-generated safety documents",
@@ -290,7 +290,7 @@ const contentByAudience = {
       },
       {
         id: "contractors-voice-reporting",
-        title: "Know where your team is and when they checked in",
+        title: "Reporting done at the speed of your voice",
         image: clientLottieSix,
         imageAlt:
           "Worker on an industrial site using a mobile safety reporting workflow",
